@@ -3,7 +3,6 @@ import { Menu } from '@headlessui/react'
 function ProfileDropdown() {
   return (
     <Menu>
-      <Menu.Button>More</Menu.Button>
       <Menu.Items>
         <Menu.Item>
           {({ active }) => (
@@ -23,7 +22,7 @@ function ProfileDropdown() {
             >
               Documentation
             </a>
-          )}
+          )} 
         </Menu.Item>
         <Menu.Item disabled>
           <span className="opacity-75">Invite a friend (coming soon!)</span>

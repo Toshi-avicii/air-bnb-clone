@@ -3,7 +3,7 @@ import { AiOutlineSearch } from 'react-icons/ai';
 function SearchBar() {
   return (
     <div className='flex-1'>
-    <div className='search-bar flex py-3 px-1 rounded-[50px] justify-between items-center w-[85%]'>
+    <div className='search-bar ring-slate-300 ring-1 flex py-3 px-1 rounded-[50px] justify-between items-center w-[85%]'>
       <div className='border-r-[1px] border-r-[#aaa] mr-1'>
         <p className='mx-3 font-semibold'>Anywhere</p>
       </div>
