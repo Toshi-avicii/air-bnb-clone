@@ -70,3 +70,21 @@
 .tab-slide:hover p {
   color: black;
 }
+
+.swiper-pagination-bullet {
+  background-color: rgb(255, 255, 255);
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: white;
+}
+
+.swiper .swiper-button-prev {
+  color: black !important; 
+  background-color: white !important;
+}
+
+.swiper .swiper-button-next {
+  color: black !important; 
+  background-color: white !important;
+}

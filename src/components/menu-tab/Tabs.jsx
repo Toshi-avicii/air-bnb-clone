@@ -141,7 +141,7 @@ function Tabs() {
             return (
                 <SwiperSlide 
                     key={img.id} 
-                    className='tab-slide pb-2 flex justify-center items-center min-w-[80px] flex-col cursor-pointer hover:border-b-4 hover:border-gray-300'
+                    className='tab-slide pb-2 overflow-hidden flex justify-center items-center min-w-[80px] flex-col cursor-pointer border-b-4 border-white hover:border-b-4 hover:border-gray-300'
                 >
                     <img src={img.icon} alt={img.name} width={35} className='mb-4' />
                     <p className='text-gray-400 text-center font-semibold' style={{ fontSize: 15 }}>{img.name}</p>
