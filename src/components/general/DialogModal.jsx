@@ -1,18 +1,14 @@
 import { Fragment, useEffect, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
-import { AiFillFacebook, AiFillApple, AiOutlineMail, AiFillCheckCircle, AiFillCloseCircle } from 'react-icons/ai'
+import { AiFillFacebook, AiFillApple, AiOutlineMail, AiFillCloseCircle } from 'react-icons/ai'
 import { FcGoogle } from 'react-icons/fc'
 import { GrClose } from 'react-icons/gr';
 import { BsChevronLeft } from 'react-icons/bs';
 import { useForm } from 'react-hook-form';
+import { DevTool } from '@hookform/devtools';
+import Logo from '../../assets/logo-w-name.png';
 
-function DialogModal({ isOpen, setIsOpen, closeModal }) {
-    const [formSteps, setFormSteps] = useState({
-        firstStep: true,
-        secondStep: false,
-        thirdStep: false
-    });
-
+function DialogModal({ isOpen, closeModal }) {
     const [formStep, setFormStep] = useState(1);
 
     const form = useForm({
@@ -27,46 +23,46 @@ function DialogModal({ isOpen, setIsOpen, closeModal }) {
         }
     });
 
-    const { register, handleSubmit, formState, reset } = form;
+    const { register, handleSubmit, formState, getFieldState, getValues, control } = form;
     const { errors, isSubmitting, isSubmitSuccessful } = formState;
 
+    const currentYear = new Date().getFullYear();
 
     const changeSteps = () => {
-        if(formStep === 1) {
-            setFormStep((prev) => prev + 1);
+        if(
+            !getFieldState('country').isTouched || 
+            !getFieldState('phoneNumber').isTouched ||
+            errors.phoneNumber
+        ) {
+            setFormStep(1);
+            return;
+        } else {
+            setFormStep(2);
+            console.log('it bypassed 2');
         }
 
-        if(errors.email) {
+        if(errors.email || !getFieldState('email').isTouched || getValues('email') === '') {
             setFormStep(2);
-            setFormSteps({
-                firstStep: false,
-                secondStep: true,
-                thirdStep: false
-            })
+            console.log('it ran');
+            return;
         } else {
-            setFormStep((prev) => prev + 1);
-            setFormSteps({
-                firstStep: false,
-                secondStep: true,
-                thirdStep: false
-            })
+            setFormStep(3)
         }
 
     }
 
     const backModal = () => {
-        if(formStep > 2 || formStep === 3) {
+        if(formStep === 3) {
             setFormStep(2);
         }
-        setFormSteps({
-            firstStep: false,
-            secondStep: true,
-            thirdStep: false
-        })
     }
 
     const submitHandler = (data) => {
         console.log('Form Submitted', data);
+        
+        if(isSubmitSuccessful) {
+            setFormStep(4)
+        }
     }
 
     const onError = (errors) => {
@@ -76,40 +72,17 @@ function DialogModal({ isOpen, setIsOpen, closeModal }) {
     useEffect(() => {
         if(!isOpen) {
             setFormStep(1);
-            setFormSteps({
-                firstStep: true,
-                secondStep: false,
-                thirdStep: false
-            })
         }
-        if(formStep === 1) {
-            setFormSteps({
-                firstStep: true,
-                secondStep: false,
-                thirdStep: false
-            })
-        } else if(formStep === 2) {
-            setFormSteps({
-                firstStep: false,
-                secondStep: true,
-                thirdStep: false
-            })
-        } else {
-            setFormSteps({
-                firstStep: false,
-                secondStep: false,
-                thirdStep: true
-            })
-        }
-    }, [isOpen, setFormSteps, formStep]);
+    }, [isOpen, setFormStep, formStep]);
 
-    useEffect(() => {
-        if(isSubmitSuccessful) {
-            reset();
-        }
-    }, [isSubmitSuccessful, reset])
+    // useEffect(() => {
+    //     if(isSubmitSuccessful) {
+    //         reset();
+    //     }
+    // }, [isSubmitSuccessful, reset])
  
      return (
+        <>
         <Transition appear show={isOpen} as={Fragment}>
             <Dialog as="div" className="relative z-10" onClose={closeModal}>
                 <Transition.Child
@@ -136,32 +109,53 @@ function DialogModal({ isOpen, setIsOpen, closeModal }) {
                             leaveTo="opacity-0 scale-95"
                         >
                             <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white text-left align-middle shadow-xl transition-all min-w-[550px]">
-                                <div className="border-b-2 border-gray-200 p-6">
-                                    <div className="relative">
-                                        <Dialog.Title
-                                            as="h3"
-                                            className="text-xl text-center leading-6 text-gray-900 font-bold"
-                                        >
+                                {
+                                    (formStep <= 3) &&
+                                    <div className="border-b-2 border-gray-200 p-6">
+                                        <div className="relative">
+                                            <Dialog.Title
+                                                as="h3"
+                                                className="text-xl text-center leading-6 text-gray-900 font-bold"
+                                            >
+                                                {
+                                                    formStep !== 3 ? "Log In or Signup" : "Finish Signing Up"
+                                                }
+                                            </Dialog.Title>
                                             {
-                                                formStep !== 3 ? "Log In or Signup" : "Finish Signing Up"
+                                                formStep !== 3 ?
+                                                <button className='absolute left-0 top-2' onClick={closeModal}>
+                                                    <GrClose />
+                                                </button> : 
+                                                <button className='absolute left-0 top-2' onClick={backModal}>
+                                                    <BsChevronLeft />
+                                                </button>
                                             }
-                                        </Dialog.Title>
-                                        {
-                                            formStep !== 3 ?
+                                        </div>
+                                    </div>
+                                }
+
+                                {
+                                    (formStep === 5) &&
+                                    <div className="border-b-2 border-gray-200 p-6">
+                                        <div className="relative">
+                                            <Dialog.Title
+                                                as="h3"
+                                                className="text-xl text-center leading-6 text-gray-900 font-bold"
+                                            >
+                                                Create your profile
+                                            </Dialog.Title>
+                                    
                                             <button className='absolute left-0 top-2' onClick={closeModal}>
                                                 <GrClose />
-                                            </button> : 
-                                            <button className='absolute left-0 top-2' onClick={backModal}>
-                                                <BsChevronLeft />
                                             </button>
-                                        }
+                                        </div>
                                     </div>
-                                </div>
+                                }
 
                                 <div className="px-8">
                                     {/* form title */}
                                     {
-                                        (formSteps.firstStep || formSteps.secondStep && !formSteps.thirdStep) &&
+                                        (formStep === 1 || formStep === 2) &&
                                         <Dialog.Title
                                             as="h1"
                                             className="text-2xl leading-6 text-gray-900 font-semibold mb-6 mt-4"
@@ -174,7 +168,7 @@ function DialogModal({ isOpen, setIsOpen, closeModal }) {
                                         <form onSubmit={handleSubmit(submitHandler, onError)} noValidate>
                                             {/* 1st step */}
                                             {
-                                                (formSteps.firstStep && (!formSteps.secondStep) && (!formSteps.thirdStep)) &&
+                                                (formStep === 1) &&
                                                 <div>
                                                     <div className="ring-1 ring-slate-400 rounded-lg">
                                                         <div className="border-b-2 border-gray-600">
@@ -210,15 +204,17 @@ function DialogModal({ isOpen, setIsOpen, closeModal }) {
                                                                             value: true,
                                                                             message: 'Please Enter your phone number'
                                                                         },
-                                                                        validate: {
-                                                                            notValid: (fieldValue) => {
-                                                                                return /^[0-9]+$/.test(fieldValue) === false || "Enter a Valid Phone number"
-                                                                            },
-                                                                            leastLength: (fieldValue) => {
-                                                                                if(fieldValue.length < 10) {
-                                                                                    return "Phone number must be of 10 digits"
-                                                                                }
-                                                                            }
+                                                                        maxLength: {
+                                                                            value: 10,
+                                                                            message: "Phone must be of 10 characters only"
+                                                                        },
+                                                                        minLength: {
+                                                                            value: 10,
+                                                                            message: "Phone must be of 10 characters only"
+                                                                        },
+                                                                        pattern: {
+                                                                            value: /^[0-9]+$/,
+                                                                            message: 'Enter a valid phone number'
                                                                         }
                                                                     })
                                                                 }
@@ -226,7 +222,7 @@ function DialogModal({ isOpen, setIsOpen, closeModal }) {
                                                         </div>
                                                     </div>
                                                     <p className="text-sm py-2 text-semibold my-2">
-                                                        We'll call or text you to confirm your number. Standard message and
+                                                        We &apos; ll call or text you to confirm your number. Standard message and
                                                         data rate apply. <span className="underline">Privacy Policy</span>
                                                     </p>
                                                 </div>
@@ -234,7 +230,7 @@ function DialogModal({ isOpen, setIsOpen, closeModal }) {
 
                                             {/* 2nd step */}
                                             {
-                                                (!formSteps.firstStep && formSteps.secondStep && !formSteps.thirdStep) &&
+                                                (formStep === 2) &&
                                                 <div className={`rounded-lg ${errors.email?.message ? "ring-2 ring-red-400" : "ring-slate-400 ring-1"}`}> 
                                                     <div>
                                                         <input 
@@ -248,10 +244,11 @@ function DialogModal({ isOpen, setIsOpen, closeModal }) {
                                                                         value: true,
                                                                         message: 'Please Enter your Email id'
                                                                     },
+                                                                    pattern: {
+                                                                        value: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/,
+                                                                        message: "Enter a Valid Email"
+                                                                    },
                                                                     validate: {
-                                                                        notValid: (fieldValue) => {
-                                                                            return /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(fieldValue) !== false || "Enter a Valid Email"
-                                                                        },
                                                                         notValidLength: (fieldValue) => {
                                                                             if(fieldValue.length === 0) {
                                                                                 return 'Email must not be empty'
@@ -268,7 +265,7 @@ function DialogModal({ isOpen, setIsOpen, closeModal }) {
                                             {/* 3rd step */}
 
                                             {
-                                                (!formSteps.firstStep && !formSteps.secondStep && formSteps.thirdStep) &&
+                                                (formStep === 3) &&
                                                 <div className="mt-6">
                                                     <div className="border border-gray-400 rounded-lg">
                                                         <div className="border-b-2 border-gray-600">
@@ -337,17 +334,22 @@ function DialogModal({ isOpen, setIsOpen, closeModal }) {
                                                     </div>
                                                     <p className="py-2 text-sm text-gray-400 text-bold mb-4">
                                                         To sign up you must be at least 18. Your birthday
-                                                        won't be shared with other people who uses Airbnb.
+                                                        won &apos; t be shared with other people who uses Airbnb.
                                                     </p>
 
                                                     <div className="border border-gray-400 rounded-lg">    
                                                         <input 
                                                             type='email' 
+                                                            id="email"
                                                             placeholder="Email Id" 
                                                             className="p-3 w-full" 
                                                             {
                                                                 ...register("email", {
-                                                                    required: true
+                                                                    required: {
+                                                                        value: true,
+                                                                        message: 'Email must not be empty'
+                                                                    }
+                                                                    
                                                                 })
                                                             }
                                                         />
@@ -368,6 +370,10 @@ function DialogModal({ isOpen, setIsOpen, closeModal }) {
                                                                         value: true,
                                                                         message: 'Please Enter your password'
                                                                     },
+                                                                    minLength: {
+                                                                        value: 8,
+                                                                        message: 'Password must be at least 8 characters long'
+                                                                    },
                                                                     validate: {
                                                                         notValidLength: (fieldValue) => {
                                                                             if(fieldValue.length < 8) {
@@ -383,8 +389,70 @@ function DialogModal({ isOpen, setIsOpen, closeModal }) {
                                                 </div>
                                             }
 
+                                            {/* 4th step */}
+
                                             {
-                                                errors.firstName &&
+                                                (formStep === 4) &&
+                                                <div className="py-4">
+                                                    <div className="my-4">
+                                                        <img src={Logo} width={50} height={50} />
+                                                    </div>
+                                                    <div>
+                                                        <h4 className="font-bold leading-1 mb-2">Our Community Commitment</h4>
+                                                        <h1 className="font-bold leading-1 mb-2 text-2xl">Airbnb is a community where everyone can belong</h1>
+                                                        <p className="leading-1 mb-4">To ensure this, we are asking you to commit to the following:</p>
+                                                        <p className="leading-1 mb-4">
+                                                            I agree to treat everyone in the Airbnb community - regardless of their 
+                                                            race, religion, national origin, ethnicity, skin color, disablity,
+                                                            sex, gender identity, sexual orientation or age - with respect, and 
+                                                            without judgement or bias.
+                                                        </p>
+                                                        <p className="underline font-bold mb-4">Learn More &gt; </p>
+                                                    </div>
+                                                    <div>
+                                                        <button 
+                                                            type="submit"
+                                                            className="px-4 py-3 my-2 bg-pink-600 text-white font-semibold rounded-lg w-full"
+                                                            onClick={() => setFormStep(5)}
+                                                        >
+                                                            Agree and Continue
+                                                        </button>
+
+                                                        <button 
+                                                            className="px-4 py-3 my-2 bg-white font-semibold rounded-lg w-full border border-black"
+                                                        >
+                                                            Decline
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            }
+
+                                            {/* 5th step */}
+
+                                            {
+                                                (formStep === 5) &&
+                                                <div className="py-4">
+                                                    <div className="my-4 flex justify-center items-center">
+                                                        <img src={Logo} width={50} height={50} />
+                                                    </div>
+                                                    <div>
+                                                        <h1 className="text-2xl text-center mb-2 font-semibold">Welcome to Airbnb</h1>
+                                                        <p className="text-center mb-2 text-lg">
+                                                            Discover places to stay and unique experiences around the world.
+                                                        </p>
+                                                        <button 
+                                                            type="submit"
+                                                            className="px-4 py-3 my-2 bg-black text-white font-semibold rounded-lg w-full"
+                                                            onClick={() => closeModal()}
+                                                        >
+                                                            Continue
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            }
+
+                                            {
+                                                (errors.firstName && formStep === 3) &&
                                                 <p className="flex items-center my-2">
                                                     <AiFillCloseCircle className="text-red-600 mr-1" />
                                                     <span className="text-sm text-red-400 font-bold">{errors.firstName?.message}</span>
@@ -392,7 +460,7 @@ function DialogModal({ isOpen, setIsOpen, closeModal }) {
                                             }
 
                                             {
-                                                errors.lastName &&
+                                                (errors.lastName && formStep === 3) &&
                                                 <p className="flex items-center mb-2">
                                                     <AiFillCloseCircle className="text-red-600 mr-1" />
                                                     <span className="text-sm text-red-400 font-bold">{errors.lastName?.message}</span>
@@ -400,7 +468,15 @@ function DialogModal({ isOpen, setIsOpen, closeModal }) {
                                             }
 
                                             {
-                                                errors.email &&
+                                               (formStep === 3 && (currentYear - new Date(getValues('dob')).getFullYear() < 18)) &&
+                                               <p className="flex items-center mb-2">
+                                                    <AiFillCloseCircle className="text-red-600 mr-1" />
+                                                    <span className="text-sm text-red-400 font-bold">Minimum age must be 18</span>
+                                                </p> 
+                                            }
+
+                                            {
+                                                (errors.email && formStep === 3) &&
                                                 <p className="flex items-center mb-2">
                                                     <AiFillCloseCircle className="text-red-600 mr-1" />
                                                     <span className="text-sm text-red-400 font-bold">{errors.email?.message}</span>
@@ -408,7 +484,7 @@ function DialogModal({ isOpen, setIsOpen, closeModal }) {
                                             }
 
                                             {
-                                                errors.password &&
+                                                (errors.password && formStep === 3) &&
                                                 <p className="flex items-center mb-2">
                                                     <AiFillCloseCircle className="text-red-600 mr-1" />
                                                     <span className="text-sm text-red-400 font-bold">{errors.password?.message}</span>
@@ -416,7 +492,7 @@ function DialogModal({ isOpen, setIsOpen, closeModal }) {
                                             }
 
                                             {
-                                                (formSteps.firstStep || formSteps.secondStep && !formSteps.thirdStep) &&
+                                                (formStep === 1 || formStep === 2) &&
                                                 <button 
                                                     className="px-4 py-3 my-8 bg-pink-600 text-white font-semibold rounded-lg w-full"
                                                     onClick={changeSteps}
@@ -427,7 +503,7 @@ function DialogModal({ isOpen, setIsOpen, closeModal }) {
 
 
                                             {
-                                                (!formSteps.firstStep && !formSteps.secondStep && formSteps.thirdStep) &&
+                                                (formStep === 3) &&
                                                 <button 
                                                     type="submit"
                                                     className={`px-4 py-3 my-8 bg-pink-600 text-white font-semibold rounded-lg w-full ${(errors.email || errors.firstName || errors.lastName || errors.password || errors.dob) && "bg-slate-400" }`}
@@ -441,7 +517,7 @@ function DialogModal({ isOpen, setIsOpen, closeModal }) {
                                     </div>
 
                                     {
-                                        (formSteps.firstStep || formSteps.secondStep && !formSteps.thirdStep) &&
+                                        (formStep === 1 || formStep === 2) &&
                                         <div className="flex items-center">
                                             <hr className="w-full" />
                                             <span className="inline-block mx-6">or</span>
@@ -453,7 +529,7 @@ function DialogModal({ isOpen, setIsOpen, closeModal }) {
 
                                     {/* other signup options */}
                                     {
-                                        (formSteps.firstStep || formSteps.secondStep && !formSteps.thirdStep) &&
+                                        (formStep === 1 || formStep === 2) &&
                                         <div className="my-4">
                                             <button className='my-4 flex p-3 items-center border-2 w-full border-black rounded-lg'>
                                                 <AiFillFacebook className="self-start" style={{
@@ -492,6 +568,8 @@ function DialogModal({ isOpen, setIsOpen, closeModal }) {
                 </div>
             </Dialog>
         </Transition>
+        <DevTool control={control} />
+        </>
     )
 }
 
