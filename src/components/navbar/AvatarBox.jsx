@@ -3,10 +3,10 @@ import { BsGlobe } from 'react-icons/bs';
 import { FaBars } from 'react-icons/fa';
 import Avatar from '../../assets/react.svg';
 import { Menu, Transition } from '@headlessui/react';
-import DialogModal from '../general/DialogModal';
+import OnBoardingDialog from '../onboarding/OnBoardingDialog';
 
 function AvatarBox() {
-  let [isOpen, setIsOpen] = useState(true);
+  let [isOpen, setIsOpen] = useState(false);
 
   const openModal = () => {
     setIsOpen(true)
@@ -56,7 +56,7 @@ function AvatarBox() {
                 </Menu.Item>
                 <Menu.Item className="py-2">
                   {() => (
-                    <button>
+                    <button onClick={openModal}>
                       Login
                     </button>
                   )} 
@@ -82,7 +82,7 @@ function AvatarBox() {
           </Menu.Items>
         </Transition>
       </Menu>
-      <DialogModal isOpen={isOpen} setIsOpen={setIsOpen} closeModal={closeModal} />
+      <OnBoardingDialog isOpen={isOpen} setIsOpen={setIsOpen} closeModal={closeModal} />
     </div>
   )
 }
