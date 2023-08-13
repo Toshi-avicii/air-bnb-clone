@@ -1,6 +1,8 @@
 import Logo from '../../assets/logo-w-name.png';
 import { useForm } from 'react-hook-form';
 import { AiFillCloseCircle } from 'react-icons/ai';
+import { useDispatch } from 'react-redux';
+import { fetchProfileData } from '../../store/reducers/profileReducer';
 
 function OnBoardingForm({ formStep, setFormStep, closeModal }) {
     const form = useForm({
@@ -14,6 +16,8 @@ function OnBoardingForm({ formStep, setFormStep, closeModal }) {
             password: ''
         }
     });
+
+    const dispatch = useDispatch();
 
     const { register, handleSubmit, formState, getFieldState, getValues } = form;
     const { errors, isSubmitting, isSubmitSuccessful } = formState;
@@ -46,7 +50,15 @@ function OnBoardingForm({ formStep, setFormStep, closeModal }) {
         console.log('Form Submitted', data);
         
         if(isSubmitSuccessful) {
-            setFormStep(4)
+            dispatch(fetchProfileData({
+                country: data.country,
+                dob: data.dob.getTime(),
+                firstName: data.firstName,
+                lastName: data.lastName,
+                email: data.email,
+                phoneNumber: data.phoneNumber
+            }))
+            setFormStep(4);
         }
     }
 

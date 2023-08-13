@@ -16,8 +16,8 @@ function Locations() {
                             <Swiper
                                     modules={[ Navigation, Pagination ]}
                                     slidesPerView={1}
-                                    onSlideChange={() => console.log('slide change')}
-                                    onSwiper={(swiper) => console.log(swiper)}
+                                    // onSlideChange={() => console.log('slide change')}
+                                    // onSwiper={(swiper) => console.log(swiper)}
                                     navigation
                                     pagination={{ clickable: true }}
                                     className='overflow-hidden max-w-[375px] rounded-2xl bg-slate-300 min-h-[360px]'

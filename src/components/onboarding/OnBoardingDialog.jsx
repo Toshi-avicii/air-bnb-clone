@@ -11,7 +11,7 @@ import { DevTool } from '@hookform/devtools';
 import ConfirmPhoneNumber from "./profile/ConfirmPhoneNumber"
 
 function OnBoardingDialog({ isOpen, closeModal }) {
-    const [formStep, setFormStep] = useState(7);
+    const [formStep, setFormStep] = useState(1);
     const form = useForm();
 
     const { control } = form;
@@ -29,8 +29,6 @@ function OnBoardingDialog({ isOpen, closeModal }) {
     useEffect(() => {
         if(!isOpen) {
             setFormStep(1);
-        } else {
-            setFormStep(7);
         }
     }, [isOpen, setFormStep, formStep]);
 
