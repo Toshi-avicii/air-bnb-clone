@@ -1,6 +1,9 @@
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
-function ConfirmPhoneNumber({ formStep }) {
+function ConfirmPhoneNumber({ formStep, setFormStep }) {
+  const [otp, setOtp] = useState(new Array(4).fill(""));
+
   const form = useForm({
    defaultValues: {
     country: '',
@@ -9,7 +12,7 @@ function ConfirmPhoneNumber({ formStep }) {
    }
   });
 
-  const { register, formState, handleSubmit } = form;
+  const { register, formState, handleSubmit, getValues } = form;
 
   const { isSubmitting, errors } = formState
 
@@ -19,6 +22,33 @@ function ConfirmPhoneNumber({ formStep }) {
 
   const onError = (errors) => {
     console.log(errors)
+  }
+
+  const handleChange = (element, index) => {
+    if(isNaN(element.value)) return false;
+
+    setOtp([...otp.map((d, idx) => (idx === index) ? element.value : d)]);
+
+    // focus next input
+    if(element.nextSibling && element.value !== '') {
+        element.nextSibling.focus();
+    }
+  }
+
+  const handleKey = (element, index) => {
+    if(element.target.previousSibling) {
+        if(element.keyCode === 8) {
+            element.target.previousSibling.focus();
+        }
+    }
+
+    if(index === 3) {
+        if(element.keyCode === 8) {
+            console.log('last element is pressed');
+            element.target.value = '';
+            element.target.previousSibling.focus();
+        }
+    }
   }
 
   return (
@@ -112,6 +142,7 @@ function ConfirmPhoneNumber({ formStep }) {
                             type='submit'
                             className={`px-4 py-3 my-8 bg-black text-white font-semibold rounded-lg w-full ${(errors.country || errors.phoneNumber) && "bg-slate-400" }`}
                             disabled={isSubmitting || errors.country || errors.phoneNumber}
+                            onClick={() => setFormStep(7)}
                         >
                             Continue
                         </button>
@@ -119,11 +150,78 @@ function ConfirmPhoneNumber({ formStep }) {
                         <button 
                             type='submit'
                             className="text-lg mb-8 underline font-semibold w-full"
+                            onClick={() => setFormStep(7)}
                         >
                             I&apos;ll do it later
                         </button>
-
                     </form>
+                </div>
+            </>
+        }
+
+        {
+            (formStep === 7) &&
+            <>
+                <div className='my-4'>
+                    <p className="font-bold text-center text-sm uppercase mb-2">Step 1 of 2</p>
+                    <h2 className="font-semibold text-center text-2xl mb-2">
+                        Confirm your phone number
+                    </h2>
+                    <p className="text-lg text-center mb-2">
+                        Enter the 4-digit code Airbnb just sent to { getValues('phoneNumber') };
+                    </p>
+                </div>
+                <div>
+                    <form onSubmit={handleSubmit(onSubmit, onError)} noValidate className='flex flex-col justify-center items-center'>
+                        <div className='border border-gray-400 rounded-lg'>
+                            {
+                                otp.map((data, index) => {
+                                    return (
+                                        <input 
+                                            key={index}
+                                            type="text" 
+                                            maxLength={1}
+                                            id='otp'
+                                            className='w-[50px] h-[50px] py-2 px-4 mx-1 rounded font-bold text-center text-lg outline-none'
+                                            placeholder='-'
+                                            onChange={e => handleChange(e.target, index)}
+                                            onFocus={e => e.target.select()}
+                                            onKeyDown={(e) => handleKey(e, index)}
+                                        />
+                                    )
+                                })
+                            }
+
+                        </div>
+                        <button 
+                            type='submit'
+                            className={`px-4 py-3 my-6 bg-black text-white font-semibold rounded-lg w-[140px] ${(errors.country || errors.phoneNumber) && "bg-slate-400" }`}
+                            disabled={isSubmitting || errors.country || errors.phoneNumber}
+                        >
+                            Continue
+                        </button>
+                    </form>
+
+                    <div className='mb-4 flex items-center justify-center'>
+                        <span>Didn&apos;t get a text?</span>
+                        <button 
+                            className="underline font-semibold ml-1"
+                            onClick={() => setFormStep(7)}
+                        >
+                            Send again
+                        </button>
+                    </div>
+                    <div className='mb-4'>
+                        <button className="text-lg underline font-semibold w-full">
+                            Call me instead
+                        </button>
+                    </div>
+                    
+                    <div className='mb-4'>
+                        <button className="text-lg underline font-semibold w-full">
+                            I&apos;ll do it later
+                        </button>
+                    </div>
                 </div>
             </>
         }

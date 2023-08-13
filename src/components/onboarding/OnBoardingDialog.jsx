@@ -11,7 +11,7 @@ import { DevTool } from '@hookform/devtools';
 import ConfirmPhoneNumber from "./profile/ConfirmPhoneNumber"
 
 function OnBoardingDialog({ isOpen, closeModal }) {
-    const [formStep, setFormStep] = useState(1);
+    const [formStep, setFormStep] = useState(7);
     const form = useForm();
 
     const { control } = form;
@@ -20,11 +20,17 @@ function OnBoardingDialog({ isOpen, closeModal }) {
         if(formStep === 3) {
             setFormStep(2);
         }
+
+        if(formStep >= 5) {
+            setFormStep((prev) => prev - 1);
+        }
     }
 
     useEffect(() => {
         if(!isOpen) {
             setFormStep(1);
+        } else {
+            setFormStep(7);
         }
     }, [isOpen, setFormStep, formStep]);
 
@@ -32,7 +38,7 @@ function OnBoardingDialog({ isOpen, closeModal }) {
   return (
     <DialogModal isOpen={isOpen} closeModal={closeModal}>
         <FormHeader backModal={backModal} closeModal={closeModal} formStep={formStep} />
-        <CreateProfileView closeModal={closeModal} formStep={formStep} />
+        <CreateProfileView closeModal={closeModal} formStep={formStep} backModal={backModal} />
 
         <div className="px-8">
             {/* form title */}
@@ -45,7 +51,7 @@ function OnBoardingDialog({ isOpen, closeModal }) {
             <OtherSignupOptions formStep={formStep} />
 
             {/* create profile form */}
-            <ConfirmPhoneNumber formStep={formStep} />
+            <ConfirmPhoneNumber formStep={formStep} setFormStep={setFormStep} />
         </div>
         <DevTool control={control} />
     </DialogModal>
