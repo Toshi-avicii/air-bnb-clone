@@ -236,7 +236,10 @@ function OnBoardingForm({ formStep, setFormStep, closeModal }) {
                                 className="p-3 w-full" 
                                 {...register('dob', {
                                     valueAsDate: true,
-                                    required: 'D.O.B is required',
+                                    required: {
+                                        value: true,
+                                        message: 'D.O.B is required'
+                                    }
                                 })}
                             />
                         </div>

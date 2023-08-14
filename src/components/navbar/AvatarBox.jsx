@@ -4,9 +4,11 @@ import { FaBars } from 'react-icons/fa';
 import Avatar from '../../assets/react.svg';
 import { Menu, Transition } from '@headlessui/react';
 import OnBoardingDialog from '../onboarding/OnBoardingDialog';
+import { useSelector } from 'react-redux';
 
 function AvatarBox() {
   let [isOpen, setIsOpen] = useState(false);
+  const profilePic = useSelector((state) => state.profileReducer.profile?.profilePic);
 
   const openModal = () => {
     setIsOpen(true)
@@ -27,11 +29,11 @@ function AvatarBox() {
           <Menu.Button className="mr-2">
             <FaBars />
           </Menu.Button>
-          <div className="avatar bg-black w-[25px] h-[25px] rounded-full">  
+          <div className="avatar w-[25px] h-[25px] rounded-full">  
             <img 
-              src={Avatar}
+              src={(profilePic) ? profilePic : Avatar}
               alt="avatar-icon" 
-              className="w-[25px] h-[25px]"
+              className="w-[25px] h-[25px] rounded-full"
             />
           </div>
         </div>

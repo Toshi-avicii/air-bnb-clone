@@ -20,7 +20,7 @@ export const store = configureStore({
     },
     middleware: (getDefaultMiddleware) => getDefaultMiddleware({
         serializableCheck: {
-            ignoredActions: ['profile/fetchProfileData']
+            ignoredActions: ['profile/fetchProfileData', 'persist/PERSIST']
         }
     }),
     devTools: process.env.NODE_ENV !== "production"

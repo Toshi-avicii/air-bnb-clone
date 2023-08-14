@@ -6,9 +6,10 @@ import FormTitle from "./FormTitle"
 import HorizontalRow from "./HorizontalRow"
 import OnBoardingForm from "./OnBoardingForm"
 import OtherSignupOptions from "./OtherSignupOptions"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { DevTool } from '@hookform/devtools';
 import ConfirmPhoneNumber from "./profile/ConfirmPhoneNumber"
+import ProfilePicUploader from "./profile/ProfilePicUploader"
 
 function OnBoardingDialog({ isOpen, closeModal }) {
     const [formStep, setFormStep] = useState(1);
@@ -26,11 +27,11 @@ function OnBoardingDialog({ isOpen, closeModal }) {
         }
     }
 
-    useEffect(() => {
-        if(!isOpen) {
-            setFormStep(1);
-        }
-    }, [isOpen, setFormStep, formStep]);
+    // useEffect(() => {
+    //     if(!isOpen) {
+    //         setFormStep(1);
+    //     }
+    // }, [isOpen, setFormStep]);
 
 
   return (
@@ -50,6 +51,9 @@ function OnBoardingDialog({ isOpen, closeModal }) {
 
             {/* create profile form */}
             <ConfirmPhoneNumber formStep={formStep} setFormStep={setFormStep} />
+
+            {/* upload profile pic */}
+            <ProfilePicUploader formStep={formStep} setFormStep={setFormStep} closeModal={closeModal} />
         </div>
         <DevTool control={control} />
     </DialogModal>

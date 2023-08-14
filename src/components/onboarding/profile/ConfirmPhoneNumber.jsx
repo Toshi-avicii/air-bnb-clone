@@ -18,6 +18,7 @@ function ConfirmPhoneNumber({ formStep, setFormStep }) {
 
   const onSubmit = (data) => {
     console.log(data);
+    setFormStep(8);
   }
 
   const onError = (errors) => {
@@ -218,7 +219,7 @@ function ConfirmPhoneNumber({ formStep, setFormStep }) {
                     </div>
                     
                     <div className='mb-4'>
-                        <button className="text-lg underline font-semibold w-full">
+                        <button className="text-lg underline font-semibold w-full" onClick={() => setFormStep(8)}>
                             I&apos;ll do it later
                         </button>
                     </div>

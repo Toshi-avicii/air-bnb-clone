@@ -8,7 +8,8 @@ const profileSlice = createSlice({
         email: '',
         phoneNumber: '',
         country: '',
-        dob: ''
+        dob: '',
+        profilePic: ''
     },
     reducers: {
         fetchProfileData: (state, action) => {
@@ -36,9 +37,15 @@ const profileSlice = createSlice({
             if(action.payload.phoneNumber) {
                 state.phoneNumber = Number(action.payload.phoneNumber);
             }
+        },
+
+        uploadProfilePic: (state, action) => {
+            if(action.payload.profilePic) {
+                state.profilePic = action.payload.profilePic
+            }
         }
     }
 })
 
-export const { fetchProfileData } = profileSlice.actions;
+export const { fetchProfileData, uploadProfilePic } = profileSlice.actions;
 export default profileSlice.reducer
