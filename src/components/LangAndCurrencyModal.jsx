@@ -4,12 +4,15 @@ import ToggleSwitch from "./general/ToggleSwitch"
 import { BsTranslate } from 'react-icons/bs';
 import languages from '../mockData/languageData';
 import { GrClose } from 'react-icons/gr';
+import currencies from "../mockData/currencyData";
 
 function LangAndCurrencyModal({ isOpen, closeModal, setIsOpen }) {
 
     function classNames(...classes) {
         return classes.filter(Boolean).join(' ')
     }
+
+    console.log(currencies);
 
     // const clickHandler = (e) => {
     //     const langBtns = document.querySelectorAll('.lang-btn');
@@ -27,6 +30,17 @@ function LangAndCurrencyModal({ isOpen, closeModal, setIsOpen }) {
     const childClickHandler = (e) => {
         const langBtnChildren = document.querySelectorAll('.child');
         langBtnChildren.forEach((child) => {
+            child.style.border = "none";
+            child.parentElement.style.border = '3px solid transparent';
+            child.parentElement.style.backgroundColor = "transparent";
+            e.target.parentElement.style.border = "3px solid gray";
+            e.target.parentElement.style.backgroundColor = "rgba(210, 210, 210, 0.2)";
+        })
+    }
+
+    const childCurrencyClickHandler = (e) => {
+        const currencyBtnChildren = document.querySelectorAll('.currency-child');
+        currencyBtnChildren.forEach((child) => {
             child.style.border = "none";
             child.parentElement.style.border = '3px solid transparent';
             child.parentElement.style.backgroundColor = "transparent";
@@ -112,7 +126,21 @@ function LangAndCurrencyModal({ isOpen, closeModal, setIsOpen }) {
                             </div>
                         </Tab.Panel>
                         <Tab.Panel>
-                            <p>this is the second</p>
+                        <div className="mt-8">
+                                <h1 className="leading-10 font-bold text-2xl">Choose a currency</h1>
+                                <div className="grid grid-cols-new5 gap-2 w-auto mt-6">
+                                    {
+                                        currencies.map((currency) => {
+                                            return (
+                                                <button key={currency.id} className={`flex flex-col rounded-xl lang-${currency.id} lang-btn border-2 border-transparent`}>
+                                                    <span className={`p-1 pl-2 font-semibold lang-${currency.id} text-left currency-child w-full`} onClick={childCurrencyClickHandler}>{currency.name}</span>
+                                                    <span className={`p-1 pl-2 text-zinc-500 lang-${currency.id} text-left currency-child w-full`} onClick={childCurrencyClickHandler}>{currency.symbol}</span>
+                                                </button>
+                                            )
+                                        })
+                                    }
+                                </div>
+                            </div>
                             
                         </Tab.Panel>
                     </Tab.Panels>
