@@ -43,9 +43,18 @@ const profileSlice = createSlice({
             if(action.payload.profilePic) {
                 state.profilePic = action.payload.profilePic
             }
+        },
+        logout: (state) => {
+            state.country = '';
+            state.lastName = '';
+            state.email = '';
+            state.phoneNumber = '';
+            state.firstName = '';
+            state.dob = '';
+            state.profilePic = '';
         }
     }
 })
 
-export const { fetchProfileData, uploadProfilePic } = profileSlice.actions;
+export const { fetchProfileData, uploadProfilePic, logout } = profileSlice.actions;
 export default profileSlice.reducer

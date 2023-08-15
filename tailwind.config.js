@@ -5,7 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
-    extend: {},
+    extend: {
+      gridTemplateColumns: {
+        'new5': 'repeat(5, minmax(200px, 500px))'
+      }
+    },
   },
   plugins: [
     require('@headlessui/tailwindcss'),

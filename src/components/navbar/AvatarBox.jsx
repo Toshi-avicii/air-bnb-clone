@@ -4,11 +4,15 @@ import { FaBars } from 'react-icons/fa';
 import Avatar from '../../assets/react.svg';
 import { Menu, Transition } from '@headlessui/react';
 import OnBoardingDialog from '../onboarding/OnBoardingDialog';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { logout } from '../../store/reducers/profileReducer';
+import LangAndCurrencyModal from '../LangAndCurrencyModal';
 
 function AvatarBox() {
   let [isOpen, setIsOpen] = useState(false);
+  let [isLangModalOpen, setIsLangModalOpen] = useState(false);
   const profilePic = useSelector((state) => state.profileReducer.profile?.profilePic);
+  const dispatch = useDispatch();
 
   const openModal = () => {
     setIsOpen(true)
@@ -18,11 +22,25 @@ function AvatarBox() {
     setIsOpen(false);
   }
 
+  const openLangModal = () => {
+    setIsLangModalOpen(true);
+  }
+
+  const closeLangModal = () => {
+    setIsLangModalOpen(false);
+  }
+
+  const logoutHandler = () => {
+    dispatch(logout());
+  }
+
   return (  
     <div className='flex flex-1 items-center justify-end relative'>
       <div className="lang-box flex px-4 items-center">
         <p className='px-6 font-semibold'>Airbnb your home</p>
-        <BsGlobe />
+        <button onClick={openLangModal}>
+          <BsGlobe />
+        </button>
       </div>
       <Menu>
         <div className="menu border-2 border-gray-200 rounded-full px-2 flex py-1">
@@ -47,19 +65,69 @@ function AvatarBox() {
           className="z-50"
         >
           <Menu.Items>
-            <div className="absolute z-50 right-1 top-10 bg-white flex flex-col ring-gray-900/5 ring-1 rounded-md min-w-[225px] text-md leading-6">
+            {
+              !profilePic ? 
+              <div className="absolute z-50 right-1 top-10 bg-white flex flex-col ring-gray-900/5 ring-1 rounded-md min-w-[225px] text-md leading-6">
+                <div className="border-b-2 border-gray-200 p-4 flex flex-col justify-start items-start">
+                  <Menu.Item className="py-2">
+                    {() => (
+                      <button onClick={openModal}>
+                        Sign Up
+                      </button>
+                    )}
+                  </Menu.Item>
+                  <Menu.Item className="py-2">
+                    {() => (
+                      <button onClick={openModal}>
+                        Login
+                      </button>
+                    )} 
+                  </Menu.Item>
+                </div>
+                <div className="border-b-2 border-gray-200 p-4">
+                  <Menu.Item className="py-2">
+                    {() => (
+                      <p>
+                        Airbnb Your Home
+                      </p>
+                    )}
+                  </Menu.Item>
+                  <Menu.Item className="py-2">
+                    {() => (
+                      <p>
+                        Help
+                      </p>
+                    )} 
+                  </Menu.Item>
+                </div>
+              </div> : 
+              <div className="absolute z-50 right-1 top-10 bg-white flex flex-col ring-gray-900/5 ring-1 rounded-md min-w-[225px] text-md leading-6">
               <div className="border-b-2 border-gray-200 p-4 flex flex-col justify-start items-start">
                 <Menu.Item className="py-2">
                   {() => (
-                    <button onClick={openModal}>
-                      Sign Up
+                    <button className="font-semibold">
+                      Messages
                     </button>
                   )}
                 </Menu.Item>
                 <Menu.Item className="py-2">
                   {() => (
-                    <button onClick={openModal}>
-                      Login
+                    <button className="font-semibold">
+                      Notifications
+                    </button>
+                  )} 
+                </Menu.Item>
+                <Menu.Item className="py-2">
+                  {() => (
+                    <button className="font-semibold">
+                      Trips
+                    </button>
+                  )} 
+                </Menu.Item>
+                <Menu.Item className="py-2">
+                  {() => (
+                    <button className="font-semibold">
+                      Wishlists
                     </button>
                   )} 
                 </Menu.Item>
@@ -75,15 +143,33 @@ function AvatarBox() {
                 <Menu.Item className="py-2">
                   {() => (
                     <p>
-                      Help
+                      Account
                     </p>
                   )} 
                 </Menu.Item>
               </div>
+              <div className="p-4">
+                <Menu.Item className="py-2">
+                  {() => (
+                    <p>
+                      Help
+                    </p>
+                  )}
+                </Menu.Item>
+                <Menu.Item className="py-2">
+                  {() => (
+                    <button onClick={logoutHandler}>
+                      Log out
+                    </button>
+                  )} 
+                </Menu.Item>
+              </div>
             </div>
+            }
           </Menu.Items>
         </Transition>
       </Menu>
+      <LangAndCurrencyModal isOpen={isLangModalOpen} setIsOpen={setIsLangModalOpen} closeModal={closeLangModal} />
       <OnBoardingDialog isOpen={isOpen} setIsOpen={setIsOpen} closeModal={closeModal} />
     </div>
   )
