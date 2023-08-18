@@ -9,7 +9,7 @@ function ProfilePicUploader({ formStep, setFormStep, closeModal }) {
   const [selectedFile, setSelectedFile] = useState(null);
   const [uploadedImageUrl, setUploadedImageUrl] = useState('');
   const dispatch = useDispatch();
-  const profilePic = useSelector((state) => state.profileReducer.profile?.profilePic)
+  const profilePic = useSelector((state) => state.appReducers.profile?.profilePic)
 
   useEffect(() => {
     console.log(uploadedImageUrl);

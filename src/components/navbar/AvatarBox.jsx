@@ -11,7 +11,7 @@ import LangAndCurrencyModal from '../LangAndCurrencyModal';
 function AvatarBox() {
   let [isOpen, setIsOpen] = useState(false);
   let [isLangModalOpen, setIsLangModalOpen] = useState(false);
-  const profilePic = useSelector((state) => state.profileReducer.profile?.profilePic);
+  const profilePic = useSelector((state) => state.appReducers.profile?.profilePic);
   const dispatch = useDispatch();
 
   const openModal = () => {

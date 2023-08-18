@@ -1,5 +1,6 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import profileReducer from './reducers/profileReducer';
+import globalReducer from './reducers/globalReducer';
 import storage from 'redux-persist/lib/storage';
 import { persistReducer, persistStore } from 'redux-persist';
 
@@ -8,7 +9,8 @@ const persistConfig = {
     storage
 }
 const rootReducer = combineReducers({
-    profile: profileReducer
+    profile: profileReducer,
+    global: globalReducer
 })
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
@@ -16,11 +18,11 @@ const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 export const store = configureStore({
     reducer: {
-        "profileReducer": persistedReducer
+        "appReducers": persistedReducer
     },
     middleware: (getDefaultMiddleware) => getDefaultMiddleware({
         serializableCheck: {
-            ignoredActions: ['profile/fetchProfileData', 'persist/PERSIST']
+            ignoredActions: ['appReducers/profile/fetchProfileData', 'persist/PERSIST']
         }
     }),
     devTools: process.env.NODE_ENV !== "production"

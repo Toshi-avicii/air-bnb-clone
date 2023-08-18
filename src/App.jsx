@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
 
 function App() {
-  const profile = useSelector((state) => state.profileReducer.profile);
+  const profile = useSelector((state) => state.appReducers.profile);
   
   useEffect(() => {
     console.log({
