@@ -4,8 +4,10 @@ import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
 import 'swiper/css';
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
-import { useState } from "react";
-import { useSelector } from 'react-redux';
+import { useEffect, useState } from "react";
+import { useSelector, useDispatch } from 'react-redux';
+import WishlistModal from "./WishlistModal";
+import { addToWishlist, removeFromWishlist } from "../store/reducers/wishlistReducer";
 
 function LocationCardSlider({ 
     sliderId, 
@@ -15,16 +17,64 @@ function LocationCardSlider({
     rating,
     stayDate,
     price,
-    roomOwner
+    roomOwner,
+    category
 }) {
     const [isLiked, setIsLiked] = useState(false);
     const shouldDisplayTaxes = useSelector(state => state.appReducers.global.displayTaxes);
+    const wishlist = useSelector(state => state.appReducers.wishlist.rooms);
+    const [isWishlistModalOpen, setIsWishlistModalOpen] = useState(false);
+    const dispatch = useDispatch();
 
     const likeHandler = () => {
-        setIsLiked((prev) => !prev);
+        setIsLiked((prev) => !prev); 
+
+        const foundedRoom = wishlist.find((room) => {
+            return room.id === sliderId;
+        });
+
+        if(foundedRoom) {
+            dispatch(removeFromWishlist({ roomId: sliderId }))
+        } 
+
+        if(!foundedRoom) {
+            dispatch(addToWishlist({
+                id: sliderId,
+                roomImage: images[0],
+                mainAddress,
+                secondaryAddress,
+                stay: stayDate,
+                rating,
+                category,
+                roomOwner,
+                price: Math.round(Number(`${((price * 7) + (price * 10 / 100))}`))
+            }));
+        }
+        
     }
 
+    const closeWishlistModal = () => {
+        setIsWishlistModalOpen(false);
+    }
+
+    useEffect(() => {
+        wishlist.find((room) => {
+            if(room.id === sliderId) {
+                setIsLiked(true);
+            }
+        })
+
+    }, [wishlist, sliderId]);
+
+    useEffect(() => {
+        if(isLiked) {
+            setIsWishlistModalOpen(true);
+        }
+    }, [isLiked])
+
+
   return (
+    <>
     <div key={sliderId} className="relative">
         <Swiper
                 modules={[ Navigation, Pagination ]}
@@ -93,6 +143,12 @@ function LocationCardSlider({
         }
 
     </div>
+    <WishlistModal 
+        isOpen={isWishlistModalOpen} 
+        setOpenWishlistModal={setIsWishlistModalOpen} 
+        closeModal={closeWishlistModal} 
+    />
+    </>
   )
 }
 

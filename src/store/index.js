@@ -3,6 +3,7 @@ import profileReducer from './reducers/profileReducer';
 import globalReducer from './reducers/globalReducer';
 import storage from 'redux-persist/lib/storage';
 import { persistReducer, persistStore } from 'redux-persist';
+import wishlistReducer from './reducers/wishlistReducer';
 
 const persistConfig = {
     key: 'root',
@@ -10,7 +11,8 @@ const persistConfig = {
 }
 const rootReducer = combineReducers({
     profile: profileReducer,
-    global: globalReducer
+    global: globalReducer,
+    wishlist: wishlistReducer
 })
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

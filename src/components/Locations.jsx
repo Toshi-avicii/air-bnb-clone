@@ -37,10 +37,11 @@ function Locations() {
         <div className="grid grid-cols-4 place-items-start gap-5">
             {
                 selectedLocations.length > 0 ?
-                selectedLocations.map((location, index) => {
+                selectedLocations.map((location) => {
                     return (
                         <LocationCardSlider 
-                            sliderId={index}
+                            sliderId={location.id}
+                            category={location.category}
                             images={location.images}
                             mainAddress={location.mainAddress}
                             secondaryAddress={location.secondaryAddress || location.stay}
@@ -48,7 +49,7 @@ function Locations() {
                             rating={location.rating}
                             stayDate={location.stayDate}
                             roomOwner={location.roomOwner ? location.roomOwner : null}
-                            key={index}
+                            key={location.id}
                         />
                     )
                 }) : new Array(12).fill(' ').map((_, index) => {

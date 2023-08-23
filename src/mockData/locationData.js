@@ -2,6 +2,7 @@ import RoomOwnerProfilePic from '../assets/room-owner-profile-pic.jpg';
 
 const locations = [
     {
+        id: 'av1',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -17,6 +18,7 @@ const locations = [
         category: 'amazing_views'
     },
     {
+        id: 'av2',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -32,6 +34,7 @@ const locations = [
         category: 'amazing_views'
     },
     {
+        id: 'av3',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -47,6 +50,7 @@ const locations = [
         category: 'amazing_views'
     },
     {
+        id: 'av4',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -62,6 +66,7 @@ const locations = [
         category: 'amazing_views'
     },
     {
+        id: 'av5',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -77,6 +82,7 @@ const locations = [
         category: 'amazing_views'
     },
     {
+        id: 'av6',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -92,6 +98,7 @@ const locations = [
         category: 'amazing_views'
     },
     {
+        id: 'av7',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -107,6 +114,7 @@ const locations = [
         category: 'amazing_views'
     },
     {
+        id: 'av8',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -122,6 +130,7 @@ const locations = [
         category: 'amazing_views'
     },
     {
+        id: 'av9',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -137,6 +146,7 @@ const locations = [
         category: 'amazing_views'
     },
     {
+        id: 'av10',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -152,6 +162,7 @@ const locations = [
         category: 'amazing_views'
     },
     {
+        id: 'av11',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -167,6 +178,7 @@ const locations = [
         category: 'amazing_views'
     },
     {
+        id: 'av12',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -184,12 +196,13 @@ const locations = [
 
     // rooms data
     {
+        id: 'r1',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
-            'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720'
+            'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720' 
         ],
         mainAddress: 'Ottawa, Canada',
         stay: 'Stay with Lewis - Artist',
@@ -200,6 +213,7 @@ const locations = [
         roomOwner: RoomOwnerProfilePic
     },
     {
+        id: 'r2',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -216,6 +230,7 @@ const locations = [
         roomOwner: RoomOwnerProfilePic
     },
     {
+        id: 'r3',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -232,6 +247,7 @@ const locations = [
         roomOwner: RoomOwnerProfilePic
     },
     {
+        id: 'r4',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -248,6 +264,7 @@ const locations = [
         roomOwner: RoomOwnerProfilePic
     },
     {
+        id: 'r5',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -264,6 +281,7 @@ const locations = [
         roomOwner: RoomOwnerProfilePic
     },
     {
+        id: 'r6',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -280,6 +298,7 @@ const locations = [
         roomOwner: RoomOwnerProfilePic
     },
     {
+        id: 'r7',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -296,6 +315,7 @@ const locations = [
         roomOwner: RoomOwnerProfilePic
     },
     {
+        id: 'r8',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -312,6 +332,7 @@ const locations = [
         roomOwner: RoomOwnerProfilePic
     },
     {
+        id: 'r9',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -328,6 +349,7 @@ const locations = [
         roomOwner: RoomOwnerProfilePic
     },
     {
+        id: 'r10',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -343,6 +365,7 @@ const locations = [
         roomOwner: RoomOwnerProfilePic
     },
     {
+        id: 'r11',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -359,6 +382,7 @@ const locations = [
         roomOwner: RoomOwnerProfilePic
     },
     {
+        id: 'r12',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -375,6 +399,7 @@ const locations = [
         roomOwner: RoomOwnerProfilePic
     },
     {
+        id: 'r13',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -392,6 +417,7 @@ const locations = [
         roomOwner: RoomOwnerProfilePic
     },
     {
+        id: 'r14',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -408,6 +434,7 @@ const locations = [
         roomOwner: RoomOwnerProfilePic
     },
     {
+        id: 'r15',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -424,6 +451,7 @@ const locations = [
         roomOwner: RoomOwnerProfilePic
     },
     {
+        id: 'r16',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
