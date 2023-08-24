@@ -22,9 +22,10 @@ function LocationCardSlider({
 }) {
     const [isLiked, setIsLiked] = useState(false);
     const shouldDisplayTaxes = useSelector(state => state.appReducers.global.displayTaxes);
-    const wishlist = useSelector(state => state.appReducers.wishlist.rooms);
+    const wishlist = useSelector(state => state.appReducers.wishlist.wishlists[0].defaultWishlist.rooms);
     const [isWishlistModalOpen, setIsWishlistModalOpen] = useState(false);
     const dispatch = useDispatch();
+    const loginEmail = useSelector(state => state.appReducers.profile.email);
 
     const likeHandler = () => {
         setIsLiked((prev) => !prev); 
@@ -58,6 +59,7 @@ function LocationCardSlider({
     }
 
     useEffect(() => {
+
         wishlist.find((room) => {
             if(room.id === sliderId) {
                 setIsLiked(true);
@@ -125,15 +127,18 @@ function LocationCardSlider({
                 </span>
             </p>
         </div>
-        <div className="absolute top-2 z-10 right-2 w-[50px] h-[50px] flex justify-center items-center">
-            <button className="cursor-pointer" onClick={likeHandler}>
-                {
-                    isLiked ? 
-                        <AiFillHeart className="text-3xl text-red-400" /> : 
-                        <AiOutlineHeart className="text-3xl text-white" />
-                }
-            </button>
-        </div>
+        {
+            loginEmail && 
+            <div className="absolute top-2 z-10 right-2 w-[50px] h-[50px] flex justify-center items-center">
+                <button className="cursor-pointer" onClick={likeHandler}>
+                    {
+                        isLiked ? 
+                            <AiFillHeart className="text-3xl text-red-400" /> : 
+                            <AiOutlineHeart className="text-3xl text-white" />
+                    }
+                </button>
+            </div>
+        }
 
         {
             roomOwner &&
@@ -148,6 +153,16 @@ function LocationCardSlider({
         setOpenWishlistModal={setIsWishlistModalOpen} 
         closeModal={closeWishlistModal} 
     />
+    <div className="p-4 rounded-lg flex justify-between items-center fixed bottom-10 left-6 z-10 bg-white shadow-sm">
+        <div className="flex items-center">
+            <img src={wishlist[0].roomImage} className="max-w-[70px] max-h-[70px] rounded-lg" />
+            <div className="ml-4 flex items-center space-x-2">
+                <p className="text-zinc-500">Saved To</p>
+                <h3 className="font-bold">Rooms {new Date().getFullYear()}</h3>
+            </div>
+        </div>
+        <button className="underline ml-6">Change</button>
+    </div>
     </>
   )
 }

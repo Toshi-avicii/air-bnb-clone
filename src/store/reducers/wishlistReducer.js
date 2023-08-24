@@ -3,20 +3,26 @@ import { createSlice } from "@reduxjs/toolkit";
 const wishlistSlice = createSlice({
     name: 'wishlist',
     initialState: {
-        rooms: [],
-        totalPrice: 0,
-        totalRooms: 0
+        wishlists: [
+            {
+                defaultWishlist: {
+                    rooms: [],
+                    totalPrice: 0,
+                    totalRooms: 0
+                }
+            }
+        ]
     },
     reducers: {
         addToWishlist: (state, action) => {
-            const foundedRoom = state.rooms.find((room) => {
+            const foundedRoom = state.wishlists[0].defaultWishlist.rooms.find((room) => {
                 return room.id === action.payload.id;
             });
             if(foundedRoom) {
                 return;
             }
             if(!foundedRoom) {
-                state.rooms.push({
+                state.wishlists[0].defaultWishlist.rooms.push({
                     id: action.payload.id,
                     roomImage: action.payload.roomImage,
                     mainAddress: action.payload.mainAddress,
@@ -28,23 +34,23 @@ const wishlistSlice = createSlice({
                     roomPrice: action.payload.price ? action.payload.price : action.payload.pricePerNight
                 });
                 
-                const totalRoomPrice = state.rooms.reduce((accumulator, room) => {
+                const totalRoomPrice = state.wishlists[0].defaultWishlist.rooms.reduce((accumulator, room) => {
                     return accumulator + room.roomPrice;
                 }, 0);
                 
-                state.totalPrice = totalRoomPrice;
+                state.wishlists[0].defaultWishlist.totalPrice = totalRoomPrice;
 
-                state.totalRooms = state.rooms.length;
+                state.wishlists[0].defaultWishlist.totalRooms = state.wishlists[0].defaultWishlist.rooms.length;
                 
             }
         },
 
         removeFromWishlist: (state, action) => {
-            const remainingRooms = state.rooms.filter((room) => {
+            const remainingRooms = state.wishlists[0].defaultWishlist.rooms.filter((room) => {
                 return room.id !== action.payload.roomId;
             })
 
-            state.rooms = remainingRooms;
+            state.wishlists[0].defaultWishlist.rooms = remainingRooms;
 
             let remainingTotalPrice = 0;
 
@@ -52,9 +58,9 @@ const wishlistSlice = createSlice({
                 remainingTotalPrice += room.roomPrice;
             });
 
-            state.totalPrice = remainingTotalPrice;
+            state.wishlists[0].defaultWishlist.totalPrice = remainingTotalPrice;
 
-            state.totalRooms = remainingRooms.length;
+            state.wishlists[0].defaultWishlist.totalRooms = remainingRooms.length;
         }
     }
 });

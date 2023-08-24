@@ -6,14 +6,17 @@ import FormTitle from "./FormTitle"
 import HorizontalRow from "./HorizontalRow"
 import OnBoardingForm from "./OnBoardingForm"
 import OtherSignupOptions from "./OtherSignupOptions"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { DevTool } from '@hookform/devtools';
 import ConfirmPhoneNumber from "./profile/ConfirmPhoneNumber"
 import ProfilePicUploader from "./profile/ProfilePicUploader"
+import { useSelector } from "react-redux"
 
 function OnBoardingDialog({ isOpen, closeModal }) {
     const [formStep, setFormStep] = useState(1);
     const form = useForm();
+    const loginPhone = useSelector(state => state.appReducers.profile.phoneNumber);
+
 
     const { control } = form;
 
@@ -27,11 +30,13 @@ function OnBoardingDialog({ isOpen, closeModal }) {
         }
     }
 
-    // useEffect(() => {
-    //     if(!isOpen) {
-    //         setFormStep(1);
-    //     }
-    // }, [isOpen, setFormStep]);
+    useEffect(() => {
+        if(!loginPhone) {
+            setFormStep(1);
+        } 
+    }, [setFormStep, loginPhone]);
+
+    console.log(formStep);
 
 
   return (
