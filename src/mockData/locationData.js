@@ -15,7 +15,28 @@ const locations = [
         rating: 4.96,
         stayDate: 'Dec 3 - 9',
         price: 412,
-        category: 'amazing_views'
+        category: 'amazing_views',
+        beds: 7,
+        bathrooms: 7,
+        amenities: {
+            wifi: true,
+            kitchen: true,
+            privateBath: true,
+            washer: true,
+            airConditioning: true
+        },
+        propertyType: "guesthouse",
+        instantBook: false,
+        selfCheckIn: true,
+        accessibility: {
+            stepFreeGuestEntrance: true,
+            parking: true,
+            entrance32: true,
+            stepFreePath: true
+        },
+        superhost: true,
+        airbnbPlus: true,
+        hostLanguages: ["english", "french"]
     },
     {
         id: 'av2',
@@ -31,7 +52,28 @@ const locations = [
         rating: 4.96,
         stayDate: 'Dec 3 - 9',
         price: 412,
-        category: 'amazing_views'
+        category: 'amazing_views',
+        beds: 4,
+        bathrooms: 2,
+        amenities: {
+            wifi: true,
+            kitchen: true,
+            privateBath: true,
+            washer: false,
+            airConditioning: true
+        },
+        propertyType: "house",
+        instantBook: true,
+        selfCheckIn: false,
+        accessibility: {
+            stepFreeGuestEntrance: false,
+            parking: true,
+            entrance32: false,
+            stepFreePath: true
+        },
+        superhost: false,
+        airbnbPlus: true,
+        hostLanguages: ["english", "spanish"]
     },
     {
         id: 'av3',
@@ -47,7 +89,28 @@ const locations = [
         rating: 4.96,
         stayDate: 'Dec 3 - 9',
         price: 412,
-        category: 'amazing_views'
+        category: 'amazing_views',
+        beds: 9,
+        bathrooms: 9,
+        amenities: {
+            wifi: true,
+            kitchen: true,
+            privateBath: true,
+            washer: true,
+            airConditioning: true
+        },
+        propertyType: "guesthouse",
+        instantBook: true,
+        selfCheckIn: true,
+        accessibility: {
+            stepFreeGuestEntrance: true,
+            parking: true,
+            entrance32: true,
+            stepFreePath: true
+        },
+        superhost: true,
+        airbnbPlus: true,
+        hostLanguages: ["english", "french", "spanish", "italian"]
     },
     {
         id: 'av4',
@@ -63,7 +126,28 @@ const locations = [
         rating: 4.96,
         stayDate: 'Dec 3 - 9',
         price: 412,
-        category: 'amazing_views'
+        category: 'amazing_views',
+        beds: 3,
+        bathrooms: 2,
+        amenities: {
+            wifi: true,
+            kitchen: true,
+            privateBath: true,
+            washer: false,
+            airConditioning: true
+        },
+        propertyType: "house",
+        instantBook: false,
+        selfCheckIn: true,
+        accessibility: {
+            stepFreeGuestEntrance: true,
+            parking: true,
+            entrance32: false,
+            stepFreePath: false
+        },
+        superhost: false,
+        airbnbPlus: false,
+        hostLanguages: ["english"]
     },
     {
         id: 'av5',
@@ -79,7 +163,28 @@ const locations = [
         rating: 4.96,
         stayDate: 'Dec 3 - 9',
         price: 412,
-        category: 'amazing_views'
+        category: 'amazing_views',
+        beds: 5,
+        bathrooms: 5,
+        amenities: {
+            wifi: true,
+            kitchen: true,
+            privateBath: true,
+            washer: true,
+            airConditioning: true
+        },
+        propertyType: "guesthouse",
+        instantBook: true,
+        selfCheckIn: true,
+        accessibility: {
+            stepFreeGuestEntrance: true,
+            parking: true,
+            entrance32: false,
+            stepFreePath: true
+        },
+        superhost: false,
+        airbnbPlus: true,
+        hostLanguages: ["english", "french", "portuguese"]
     },
     {
         id: 'av6',
@@ -95,7 +200,28 @@ const locations = [
         rating: 4.96,
         stayDate: 'Dec 3 - 9',
         price: 412,
-        category: 'amazing_views'
+        category: 'amazing_views',
+        beds: 7,
+        bathrooms: 7,
+        amenities: {
+            wifi: true,
+            kitchen: true,
+            privateBath: true,
+            washer: true,
+            airConditioning: true
+        },
+        propertyType: "guesthouse",
+        instantBook: false,
+        selfCheckIn: true,
+        accessibility: {
+            stepFreeGuestEntrance: true,
+            parking: true,
+            entrance32: false,
+            stepFreePath: true
+        },
+        superhost: true,
+        airbnbPlus: true,
+        hostLanguages: ["english", "french", "chinese"]
     },
     {
         id: 'av7',
@@ -111,7 +237,28 @@ const locations = [
         rating: 4.96,
         stayDate: 'Dec 3 - 9',
         price: 412,
-        category: 'amazing_views'
+        category: 'amazing_views',
+        beds: 11,
+        bathrooms: 11,
+        amenities: {
+            wifi: true,
+            kitchen: true,
+            privateBath: true,
+            washer: true,
+            airConditioning: true
+        },
+        propertyType: "guesthouse",
+        instantBook: true,
+        selfCheckIn: true,
+        accessibility: {
+            stepFreeGuestEntrance: true,
+            parking: true,
+            entrance32: true,
+            stepFreePath: true
+        },
+        superhost: true,
+        airbnbPlus: true,
+        hostLanguages: ["english", "french", "chinese", "spanish", "italian", "greek"]
     },
     {
         id: 'av8',
@@ -127,7 +274,28 @@ const locations = [
         rating: 4.96,
         stayDate: 'Dec 3 - 9',
         price: 412,
-        category: 'amazing_views'
+        category: 'amazing_views',
+        beds: 6,
+        bathrooms: 6,
+        amenities: {
+            wifi: true,
+            kitchen: true,
+            privateBath: true,
+            washer: true,
+            airConditioning: true
+        },
+        propertyType: "apartments",
+        instantBook: false,
+        selfCheckIn: true,
+        accessibility: {
+            stepFreeGuestEntrance: true,
+            parking: true,
+            entrance32: false,
+            stepFreePath: false
+        },
+        superhost: false,
+        airbnbPlus: true,
+        hostLanguages: ["english"]
     },
     {
         id: 'av9',
@@ -143,7 +311,28 @@ const locations = [
         rating: 4.96,
         stayDate: 'Dec 3 - 9',
         price: 412,
-        category: 'amazing_views'
+        category: 'amazing_views',
+        beds: 4,
+        bathrooms: 3,
+        amenities: {
+            wifi: true,
+            kitchen: true,
+            privateBath: true,
+            washer: true,
+            airConditioning: true
+        },
+        propertyType: "guesthouse",
+        instantBook: false,
+        selfCheckIn: true,
+        accessibility: {
+            stepFreeGuestEntrance: true,
+            parking: true,
+            entrance32: true,
+            stepFreePath: true
+        },
+        superhost: true,
+        airbnbPlus: true,
+        hostLanguages: ["english", "french"]
     },
     {
         id: 'av10',
@@ -159,7 +348,28 @@ const locations = [
         rating: 4.96,
         stayDate: 'Dec 3 - 9',
         price: 412,
-        category: 'amazing_views'
+        category: 'amazing_views',
+        beds: 4,
+        bathrooms: 4,
+        amenities: {
+            wifi: true,
+            kitchen: true,
+            privateBath: true,
+            washer: false,
+            airConditioning: true
+        },
+        propertyType: "guesthouse",
+        instantBook: true,
+        selfCheckIn: true,
+        accessibility: {
+            stepFreeGuestEntrance: true,
+            parking: true,
+            entrance32: false,
+            stepFreePath: false
+        },
+        superhost: true,
+        airbnbPlus: true,
+        hostLanguages: ["spanish", "french"]
     },
     {
         id: 'av11',
@@ -175,7 +385,28 @@ const locations = [
         rating: 4.96,
         stayDate: 'Dec 3 - 9',
         price: 412,
-        category: 'amazing_views'
+        category: 'amazing_views',
+        beds: 8,
+        bathrooms: 8,
+        amenities: {
+            wifi: true,
+            kitchen: true,
+            privateBath: true,
+            washer: true,
+            airConditioning: true
+        },
+        propertyType: "house",
+        instantBook: true,
+        selfCheckIn: true,
+        accessibility: {
+            stepFreeGuestEntrance: true,
+            parking: true,
+            entrance32: true,
+            stepFreePath: true
+        },
+        superhost: true,
+        airbnbPlus: true,
+        hostLanguages: ["english", "french", "italian"]
     },
     {
         id: 'av12',
@@ -191,7 +422,28 @@ const locations = [
         rating: 4.96,
         stayDate: 'Dec 3 - 9',
         price: 412,
-        category: 'amazing_views'
+        category: 'amazing_views',
+        beds: 5,
+        bathrooms: 5,
+        amenities: {
+            wifi: true,
+            kitchen: true,
+            privateBath: true,
+            washer: true,
+            airConditioning: true
+        },
+        propertyType: "guesthouse",
+        instantBook: true,
+        selfCheckIn: true,
+        accessibility: {
+            stepFreeGuestEntrance: false,
+            parking: true,
+            entrance32: true,
+            stepFreePath: true
+        },
+        superhost: false,
+        airbnbPlus: false,
+        hostLanguages: ["english", "french", "portuguese", "hindi"]
     },
 
     // rooms data
@@ -210,7 +462,28 @@ const locations = [
         stayDate: 'Dec 3 - 9',
         category: 'rooms',
         pricePerNight: 31,
-        roomOwner: RoomOwnerProfilePic
+        roomOwner: RoomOwnerProfilePic,
+        beds: 3,
+        bathrooms: 2,
+        amenities: {
+            wifi: true,
+            kitchen: true,
+            privateBath: false,
+            washer: false,
+            airConditioning: true
+        },
+        propertyType: "flat",
+        instantBook: true,
+        selfCheckIn: true,
+        accessibility: {
+            stepFreeGuestEntrance: false,
+            parking: false,
+            entrance32: false,
+            stepFreePath: true
+        },
+        superhost: false,
+        airbnbPlus: false,
+        hostLanguages: ["english", "hindi"]
     },
     {
         id: 'r2',
@@ -227,7 +500,28 @@ const locations = [
         stayDate: 'Dec 3 - 9',
         category: 'rooms',
         pricePerNight: 36,
-        roomOwner: RoomOwnerProfilePic
+        roomOwner: RoomOwnerProfilePic,
+        beds: 2,
+        bathrooms: 2,
+        amenities: {
+            wifi: true,
+            kitchen: true,
+            privateBath: false,
+            washer: false,
+            airConditioning: true
+        },
+        propertyType: "house",
+        instantBook: true,
+        selfCheckIn: true,
+        accessibility: {
+            stepFreeGuestEntrance: false,
+            parking: true,
+            entrance32: false,
+            stepFreePath: true
+        },
+        superhost: false,
+        airbnbPlus: false,
+        hostLanguages: ["english", "french", "portuguese", "hindi"]
     },
     {
         id: 'r3',
@@ -244,7 +538,28 @@ const locations = [
         stayDate: 'Dec 3 - 9',
         category: 'rooms',
         pricePerNight: 21,
-        roomOwner: RoomOwnerProfilePic
+        roomOwner: RoomOwnerProfilePic,
+        beds: 1,
+        bathrooms: 1,
+        amenities: {
+            wifi: true,
+            kitchen: true,
+            privateBath: false,
+            washer: false,
+            airConditioning: true
+        },
+        propertyType: "flat",
+        instantBook: true,
+        selfCheckIn: true,
+        accessibility: {
+            stepFreeGuestEntrance: false,
+            parking: true,
+            entrance32: false,
+            stepFreePath: true
+        },
+        superhost: false,
+        airbnbPlus: false,
+        hostLanguages: ["english"]
     },
     {
         id: 'r4',
@@ -261,7 +576,28 @@ const locations = [
         stayDate: 'Dec 3 - 9',
         category: 'rooms',
         pricePerNight: 39,
-        roomOwner: RoomOwnerProfilePic
+        roomOwner: RoomOwnerProfilePic,
+        beds: 3,
+        bathrooms: 2,
+        amenities: {
+            wifi: true,
+            kitchen: true,
+            privateBath: false,
+            washer: false,
+            airConditioning: true
+        },
+        propertyType: "house",
+        instantBook: true,
+        selfCheckIn: true,
+        accessibility: {
+            stepFreeGuestEntrance: false,
+            parking: true,
+            entrance32: false,
+            stepFreePath: true
+        },
+        superhost: false,
+        airbnbPlus: true,
+        hostLanguages: ["english", "french"]
     },
     {
         id: 'r5',
@@ -278,7 +614,28 @@ const locations = [
         stayDate: 'Dec 3 - 9',
         category: 'rooms',
         pricePerNight: 17,
-        roomOwner: RoomOwnerProfilePic
+        roomOwner: RoomOwnerProfilePic,
+        beds: 2,
+        bathrooms: 2,
+        amenities: {
+            wifi: true,
+            kitchen: true,
+            privateBath: true,
+            washer: true,
+            airConditioning: true
+        },
+        propertyType: "flat",
+        instantBook: true,
+        selfCheckIn: true,
+        accessibility: {
+            stepFreeGuestEntrance: false,
+            parking: true,
+            entrance32: false,
+            stepFreePath: true
+        },
+        superhost: true,
+        airbnbPlus: false,
+        hostLanguages: ["english"]
     },
     {
         id: 'r6',
@@ -295,7 +652,28 @@ const locations = [
         stayDate: 'Dec 3 - 9',
         category: 'rooms',
         pricePerNight: 25,
-        roomOwner: RoomOwnerProfilePic
+        roomOwner: RoomOwnerProfilePic,
+        beds: 2,
+        bathrooms: 2,
+        amenities: {
+            wifi: true,
+            kitchen: true,
+            privateBath: false,
+            washer: false,
+            airConditioning: true
+        },
+        propertyType: "house",
+        instantBook: true,
+        selfCheckIn: true,
+        accessibility: {
+            stepFreeGuestEntrance: false,
+            parking: true,
+            entrance32: false,
+            stepFreePath: true
+        },
+        superhost: false,
+        airbnbPlus: false,
+        hostLanguages: ["english", "french", "portuguese", "hindi"]
     },
     {
         id: 'r7',
@@ -312,7 +690,28 @@ const locations = [
         stayDate: 'Dec 3 - 9',
         category: 'rooms',
         pricePerNight: 55,
-        roomOwner: RoomOwnerProfilePic
+        roomOwner: RoomOwnerProfilePic,
+        beds: 3,
+        bathrooms: 2,
+        amenities: {
+            wifi: true,
+            kitchen: true,
+            privateBath: true,
+            washer: true,
+            airConditioning: true
+        },
+        propertyType: "guesthouse",
+        instantBook: true,
+        selfCheckIn: true,
+        accessibility: {
+            stepFreeGuestEntrance: false,
+            parking: true,
+            entrance32: false,
+            stepFreePath: true
+        },
+        superhost: false,
+        airbnbPlus: false,
+        hostLanguages: ["english", "greek"]
     },
     {
         id: 'r8',
@@ -329,7 +728,28 @@ const locations = [
         stayDate: 'Dec 3 - 9',
         category: 'rooms',
         pricePerNight: 34,
-        roomOwner: RoomOwnerProfilePic
+        roomOwner: RoomOwnerProfilePic,
+        beds: 2,
+        bathrooms: 1,
+        amenities: {
+            wifi: true,
+            kitchen: true,
+            privateBath: false,
+            washer: false,
+            airConditioning: true
+        },
+        propertyType: "flat",
+        instantBook: true,
+        selfCheckIn: true,
+        accessibility: {
+            stepFreeGuestEntrance: false,
+            parking: true,
+            entrance32: false,
+            stepFreePath: true
+        },
+        superhost: false,
+        airbnbPlus: false,
+        hostLanguages: ["english"]
     },
     {
         id: 'r9',
@@ -346,7 +766,28 @@ const locations = [
         stayDate: 'Dec 3 - 9',
         category: 'rooms',
         pricePerNight: 41,
-        roomOwner: RoomOwnerProfilePic
+        roomOwner: RoomOwnerProfilePic,
+        beds: 4,
+        bathrooms: 3,
+        amenities: {
+            wifi: true,
+            kitchen: true,
+            privateBath: false,
+            washer: false,
+            airConditioning: true
+        },
+        propertyType: "guesthouse",
+        instantBook: true,
+        selfCheckIn: true,
+        accessibility: {
+            stepFreeGuestEntrance: false,
+            parking: true,
+            entrance32: false,
+            stepFreePath: true
+        },
+        superhost: false,
+        airbnbPlus: true,
+        hostLanguages: ["english", "french", "portuguese", "hindi"]
     },
     {
         id: 'r10',
@@ -362,7 +803,28 @@ const locations = [
         rating: 4.96,
         stayDate: 'Dec 3 - 9',
         category: 'rooms',
-        roomOwner: RoomOwnerProfilePic
+        roomOwner: RoomOwnerProfilePic,
+        beds: 3,
+        bathrooms: 2,
+        amenities: {
+            wifi: true,
+            kitchen: true,
+            privateBath: false,
+            washer: false,
+            airConditioning: true
+        },
+        propertyType: "flat",
+        instantBook: true,
+        selfCheckIn: true,
+        accessibility: {
+            stepFreeGuestEntrance: false,
+            parking: true,
+            entrance32: false,
+            stepFreePath: false
+        },
+        superhost: false,
+        airbnbPlus: false,
+        hostLanguages: ["english"]
     },
     {
         id: 'r11',
@@ -379,7 +841,28 @@ const locations = [
         stayDate: 'Dec 3 - 9',
         category: 'rooms',
         pricePerNight: 19,
-        roomOwner: RoomOwnerProfilePic
+        roomOwner: RoomOwnerProfilePic,
+        beds: 2,
+        bathrooms: 2,
+        amenities: {
+            wifi: true,
+            kitchen: true,
+            privateBath: false,
+            washer: false,
+            airConditioning: true
+        },
+        propertyType: "flat",
+        instantBook: true,
+        selfCheckIn: false,
+        accessibility: {
+            stepFreeGuestEntrance: true,
+            parking: false,
+            entrance32: false,
+            stepFreePath: true
+        },
+        superhost: true,
+        airbnbPlus: false,
+        hostLanguages: ["english", "french"]
     },
     {
         id: 'r12',
@@ -396,7 +879,28 @@ const locations = [
         stayDate: 'Dec 3 - 9',
         category: 'rooms',
         pricePerNight: 27,
-        roomOwner: RoomOwnerProfilePic
+        roomOwner: RoomOwnerProfilePic,
+        beds: 3,
+        bathrooms: 2,
+        amenities: {
+            wifi: true,
+            kitchen: true,
+            privateBath: true,
+            washer: true,
+            airConditioning: true
+        },
+        propertyType: "house",
+        instantBook: true,
+        selfCheckIn: true,
+        accessibility: {
+            stepFreeGuestEntrance: false,
+            parking: true,
+            entrance32: false,
+            stepFreePath: true
+        },
+        superhost: false,
+        airbnbPlus: false,
+        hostLanguages: ["english", "french", "portuguese", "hindi"]
     },
     {
         id: 'r13',
@@ -414,7 +918,28 @@ const locations = [
         price: 412,
         category: 'rooms',
         pricePerNight: 49,
-        roomOwner: RoomOwnerProfilePic
+        roomOwner: RoomOwnerProfilePic,
+        beds: 4,
+        bathrooms: 4,
+        amenities: {
+            wifi: true,
+            kitchen: true,
+            privateBath: true,
+            washer: true,
+            airConditioning: true
+        },
+        propertyType: "house",
+        instantBook: true,
+        selfCheckIn: true,
+        accessibility: {
+            stepFreeGuestEntrance: false,
+            parking: true,
+            entrance32: true,
+            stepFreePath: true
+        },
+        superhost: false,
+        airbnbPlus: true,
+        hostLanguages: ["english", "hindi"]
     },
     {
         id: 'r14',
@@ -431,7 +956,28 @@ const locations = [
         stayDate: 'Dec 3 - 9',
         category: 'rooms',
         pricePerNight: 57,
-        roomOwner: RoomOwnerProfilePic
+        roomOwner: RoomOwnerProfilePic,
+        beds: 3,
+        bathrooms: 3,
+        amenities: {
+            wifi: true,
+            kitchen: true,
+            privateBath: true,
+            washer: true,
+            airConditioning: true
+        },
+        propertyType: "flat",
+        instantBook: true,
+        selfCheckIn: true,
+        accessibility: {
+            stepFreeGuestEntrance: false,
+            parking: true,
+            entrance32: true,
+            stepFreePath: true
+        },
+        superhost: true,
+        airbnbPlus: true,
+        hostLanguages: ["english", "portuguese", "japanese"]
     },
     {
         id: 'r15',
@@ -448,7 +994,28 @@ const locations = [
         stayDate: 'Dec 3 - 9',
         category: 'rooms',
         pricePerNight: 35,
-        roomOwner: RoomOwnerProfilePic
+        roomOwner: RoomOwnerProfilePic,
+        beds: 3,
+        bathrooms: 3,
+        amenities: {
+            wifi: true,
+            kitchen: true,
+            privateBath: true,
+            washer: true,
+            airConditioning: true
+        },
+        propertyType: "flat",
+        instantBook: true,
+        selfCheckIn: true,
+        accessibility: {
+            stepFreeGuestEntrance: false,
+            parking: true,
+            entrance32: false,
+            stepFreePath: true
+        },
+        superhost: false,
+        airbnbPlus: true,
+        hostLanguages: ["english", "french", "portuguese", "hindi", "japanese"]
     },
     {
         id: 'r16',
@@ -464,8 +1031,29 @@ const locations = [
         rating: 4.96,
         stayDate: 'Dec 3 - 9',
         category: 'rooms',
-        pricePerNight: 20,
-        roomOwner: RoomOwnerProfilePic
+        pricePerNight: 16,
+        roomOwner: RoomOwnerProfilePic,
+        beds: 2,
+        bathrooms: 1,
+        amenities: {
+            wifi: true,
+            kitchen: true,
+            privateBath: false,
+            washer: false,
+            airConditioning: true
+        },
+        propertyType: "flat",
+        instantBook: true,
+        selfCheckIn: false,
+        accessibility: {
+            stepFreeGuestEntrance: false,
+            parking: false,
+            entrance32: false,
+            stepFreePath: true
+        },
+        superhost: false,
+        airbnbPlus: false,
+        hostLanguages: ["english"]
     }
 ]
 

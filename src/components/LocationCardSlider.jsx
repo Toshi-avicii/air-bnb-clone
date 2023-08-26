@@ -8,6 +8,9 @@ import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from 'react-redux';
 import WishlistModal from "./WishlistModal";
 import { addToWishlist, removeFromWishlist } from "../store/reducers/wishlistReducer";
+import WishlistToast from "./WishlistToast";
+import { showWishlistToastAddition, showWishlistToastRemoval } from "../store/reducers/globalReducer";
+
 
 function LocationCardSlider({ 
     sliderId, 
@@ -21,14 +24,19 @@ function LocationCardSlider({
     category
 }) {
     const [isLiked, setIsLiked] = useState(false);
+    const [isWishlistModalOpen, setIsWishlistModalOpen] = useState(false);
+    const [displayToast, setDisplayToast] = useState(false);
+    
     const shouldDisplayTaxes = useSelector(state => state.appReducers.global.displayTaxes);
     const wishlist = useSelector(state => state.appReducers.wishlist.wishlists[0].defaultWishlist.rooms);
-    const [isWishlistModalOpen, setIsWishlistModalOpen] = useState(false);
-    const dispatch = useDispatch();
     const loginEmail = useSelector(state => state.appReducers.profile.email);
+    
+    const dispatch = useDispatch();
 
     const likeHandler = () => {
         setIsLiked((prev) => !prev); 
+
+        setDisplayToast(true);
 
         const foundedRoom = wishlist.find((room) => {
             return room.id === sliderId;
@@ -51,7 +59,12 @@ function LocationCardSlider({
                 price: Math.round(Number(`${((price * 7) + (price * 10 / 100))}`))
             }));
         }
-        
+
+        if(isLiked) {
+            dispatch(showWishlistToastRemoval());
+        } else {
+            dispatch(showWishlistToastAddition());
+        }
     }
 
     const closeWishlistModal = () => {
@@ -59,7 +72,6 @@ function LocationCardSlider({
     }
 
     useEffect(() => {
-
         wishlist.find((room) => {
             if(room.id === sliderId) {
                 setIsLiked(true);
@@ -72,7 +84,16 @@ function LocationCardSlider({
         if(isLiked) {
             setIsWishlistModalOpen(true);
         }
-    }, [isLiked])
+    }, [isLiked]);
+
+    // side effect to remove toast in 2s
+    useEffect(() => {
+        if(displayToast) {
+            setTimeout(() => {
+                setDisplayToast(false);
+            }, 3000);
+        }
+    }, [displayToast]);
 
 
   return (
@@ -153,16 +174,9 @@ function LocationCardSlider({
         setOpenWishlistModal={setIsWishlistModalOpen} 
         closeModal={closeWishlistModal} 
     />
-    <div className="p-4 rounded-lg flex justify-between items-center fixed bottom-10 left-6 z-10 bg-white shadow-sm">
-        <div className="flex items-center">
-            <img src={wishlist[0].roomImage} className="max-w-[70px] max-h-[70px] rounded-lg" />
-            <div className="ml-4 flex items-center space-x-2">
-                <p className="text-zinc-500">Saved To</p>
-                <h3 className="font-bold">Rooms {new Date().getFullYear()}</h3>
-            </div>
-        </div>
-        <button className="underline ml-6">Change</button>
-    </div>
+    {
+        displayToast && <WishlistToast wishlist={wishlist} />
+    }
     </>
   )
 }
