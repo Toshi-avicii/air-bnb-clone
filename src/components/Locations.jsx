@@ -45,7 +45,7 @@ function Locations() {
                             images={location.images}
                             mainAddress={location.mainAddress}
                             secondaryAddress={location.secondaryAddress || location.stay}
-                            price={location.price || location.pricePerNight}
+                            price={location.pricePerNight}
                             rating={location.rating}
                             stayDate={location.stayDate}
                             roomOwner={location.roomOwner ? location.roomOwner : null}

@@ -1,6 +1,19 @@
 import ToggleSwitch from "./general/ToggleSwitch"
+import { useSelector, useDispatch } from 'react-redux';
+import { showPricesWithTaxes, showPricesWithoutTaxes } from '../store/reducers/globalReducer';
 
 function DisplayBar() {
+  const shouldDisplayTaxes = useSelector(state => state.appReducers.global.displayTaxes);
+  const dispatch = useDispatch(); 
+
+  const setEnabledCheckbox = (e) => {
+    if(shouldDisplayTaxes) {
+      dispatch(showPricesWithoutTaxes());
+    } else {
+      dispatch(showPricesWithTaxes());
+    }
+  }
+
   return (
     <div className="flex justify-center items-center my-6">
         <div className="ring-1 ring-gray-200 py-4 px-5 flex items-center rounded-lg">
@@ -11,7 +24,10 @@ function DisplayBar() {
             <div className="px-3 min-w-[350px]">
                 <p className="text-gray-400 text-lg">Include all fees, before taxes</p>
             </div>
-            <ToggleSwitch />
+            <ToggleSwitch 
+              isChecked={shouldDisplayTaxes}
+              setIsChecked={setEnabledCheckbox}
+            /> 
         </div>
     </div>
   )
