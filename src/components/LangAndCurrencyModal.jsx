@@ -5,49 +5,9 @@ import { BsTranslate } from 'react-icons/bs';
 import languages from '../mockData/languageData';
 import { GrClose } from 'react-icons/gr';
 import currencies from "../mockData/currencyData";
+import { classNames, childClickHandler, childCurrencyClickHandler } from "../helpers/langAndCurrencyMethods";
 
 function LangAndCurrencyModal({ isOpen, closeModal, setIsOpen }) {
-
-    function classNames(...classes) {
-        return classes.filter(Boolean).join(' ')
-    }
-
-    console.log(currencies);
-
-    // const clickHandler = (e) => {
-    //     const langBtns = document.querySelectorAll('.lang-btn');
-    //     langBtns.forEach((btn) => {
-    //         if(e.target !== btn) return;
-    //         console.log(this);  
-    //         btn.style.border = "3px solid transparent";
-    //         let children = btn.querySelectorAll('.child');
-    //         children[0].style.border = 'none';
-    //         children[1].style.border = "none";
-    //         e.target.style.border = "3px solid gray";
-    //     })
-    // }
-
-    const childClickHandler = (e) => {
-        const langBtnChildren = document.querySelectorAll('.child');
-        langBtnChildren.forEach((child) => {
-            child.style.border = "none";
-            child.parentElement.style.border = '3px solid transparent';
-            child.parentElement.style.backgroundColor = "transparent";
-            e.target.parentElement.style.border = "3px solid gray";
-            e.target.parentElement.style.backgroundColor = "rgba(210, 210, 210, 0.2)";
-        })
-    }
-
-    const childCurrencyClickHandler = (e) => {
-        const currencyBtnChildren = document.querySelectorAll('.currency-child');
-        currencyBtnChildren.forEach((child) => {
-            child.style.border = "none";
-            child.parentElement.style.border = '3px solid transparent';
-            child.parentElement.style.backgroundColor = "transparent";
-            e.target.parentElement.style.border = "3px solid gray";
-            e.target.parentElement.style.backgroundColor = "rgba(210, 210, 210, 0.2)";
-        })
-    }
 
     return (
         <DialogModal isOpen={isOpen} closeModal={closeModal} maxWidthProp={true}>

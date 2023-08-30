@@ -58,7 +58,6 @@ function FiltersModal({ isOpen, setOpenFilterModal, closeModal }) {
     hostLangs: []
   });  
 
-
   return (
     <DialogModal closeModal={closeModal} isOpen={isOpen} maxWidthProp={700}>
         <div className="relative">
@@ -89,7 +88,7 @@ function FiltersModal({ isOpen, setOpenFilterModal, closeModal }) {
                             <ReactSlider 
                                 className="h-[3px] bg-slate-200 relative w-full rounded-full"
                                 thumbClassName="w-[40px] h-[40px] rounded-full shadow-md bg-white flex justify-center items-center absolute -top-4 cursor-pointer"
-                                value={[filters.minPrice, highestPrice]}
+                                value={[filters.minPrice, filters.maxPrice]}
                                 ariaLabel={['Lower thumb', 'Upper thumb']}
                                 min={1}
                                 max={highestPrice}
@@ -164,17 +163,17 @@ function FiltersModal({ isOpen, setOpenFilterModal, closeModal }) {
                 <div className="border-b-2 border-slate-200">
                     <h2 className="font-bold text-2xl">Property type</h2>
                     <div className="flex space-x-3 items-start mt-5 mb-7">
-                        <button className="property-btn border-2 border-gray-300 rounded-lg p-4 min-w-[175px] min-h-[125px] flex items-start flex-col justify-between house-btn" onClick={typeHandler.bind(this, setFilters, filters)}>
+                        <button className={`property-btn border-2 ${filters.propertyType.includes('house') ? 'border-black bg-gray-300' : 'border-gray-300 bg-white' } rounded-lg p-4 min-w-[175px] min-h-[125px] flex items-start flex-col justify-between house-btn`} onClick={typeHandler.bind(this, setFilters, filters)}>
                             <BiHome className="text-4xl mb-3" />
                             <span className="text-xl text-left w-full font-semibold text-black">House</span>
                         </button>
 
-                        <button className="property-btn border-2 border-gray-300 rounded-lg p-4 min-w-[175px] min-h-[125px] flex items-start flex-col justify-between apartment-btn" onClick={typeHandler.bind(this, setFilters, filters)}>
+                        <button className={`property-btn border-2 ${filters.propertyType.includes('apartment') ? 'border-black bg-gray-300' : 'border-gray-300 bg-white' }  rounded-lg p-4 min-w-[175px] min-h-[125px] flex items-start flex-col justify-between apartment-btn`} onClick={typeHandler.bind(this, setFilters, filters)}>
                             <MdApartment className="text-4xl mb-3" />
                             <span className="text-xl text-left w-full font-semibold text-black">Apartment</span>
                         </button>
 
-                        <button className="property-btn border-2 border-gray-300 rounded-lg p-4 min-w-[175px] min-h-[125px] flex items-start flex-col justify-between guesthouse-btn" onClick={typeHandler.bind(this, setFilters, filters)}>
+                        <button className={`property-btn border-2 ${filters.propertyType.includes('guesthouse') ? 'border-black bg-gray-300' : 'border-gray-300 bg-white' } rounded-lg p-4 min-w-[175px] min-h-[125px] flex items-start flex-col justify-between guesthouse-btn`} onClick={typeHandler.bind(this, setFilters, filters)}>
                             <MdOutlineVilla className="text-4xl mb-3" />
                             <span className="text-xl text-left w-full font-semibold text-black">Guesthouse</span>
                         </button>
@@ -195,6 +194,7 @@ function FiltersModal({ isOpen, setOpenFilterModal, closeModal }) {
                                         type="checkbox" 
                                         name="wifi"
                                         onChange={checkboxHandler.bind(this, 'amenities', setFilters, filters)}
+                                        checked={filters.amenities.wifi ? true : false}
                                         className='w-6 h-6 rounded-lg indeterminate:bg-purple-300 border border-black accent-black mix-blend-multiply cursor-pointer'
                                     />
                                     <p className="text-lg">Wifi</p>
@@ -206,6 +206,7 @@ function FiltersModal({ isOpen, setOpenFilterModal, closeModal }) {
                                         name="kitchen"
                                         onChange={checkboxHandler.bind(this, 'amenities', setFilters, filters)}
                                         className='w-6 h-6 rounded-lg indeterminate:bg-purple-300 border border-black accent-black mix-blend-multiply cursor-pointer'
+                                        checked={filters.amenities.kitchen ? true : false}
                                     />
                                     <p className="text-lg">Kitchen</p>
                                 </div>
@@ -217,6 +218,7 @@ function FiltersModal({ isOpen, setOpenFilterModal, closeModal }) {
                                         type="checkbox" 
                                         name="privateBath"
                                         onChange={checkboxHandler.bind(this, 'amenities', setFilters, filters)}
+                                        checked={filters.amenities.privateBath ? true : false}
                                         className='w-6 h-6 rounded-lg indeterminate:bg-purple-300 border border-black accent-black mix-blend-multiply cursor-pointer'
                                     />
                                     <div>
@@ -232,6 +234,7 @@ function FiltersModal({ isOpen, setOpenFilterModal, closeModal }) {
                                         type="checkbox" 
                                         name="washer"
                                         onChange={checkboxHandler.bind(this, 'amenities', setFilters, filters)}
+                                        checked={filters.amenities.washer ? true : false}
                                         className='w-6 h-6 rounded-lg indeterminate:bg-purple-300 border border-black accent-black mix-blend-multiply cursor-pointer'
                                     />
                                     <p className="text-lg">Washer</p>
@@ -244,6 +247,7 @@ function FiltersModal({ isOpen, setOpenFilterModal, closeModal }) {
                                         type="checkbox" 
                                         name="dryer"
                                         onChange={checkboxHandler.bind(this, 'amenities', setFilters, filters)}
+                                        checked={filters.amenities.dryer ? true : false}
                                         className='w-6 h-6 rounded-lg indeterminate:bg-purple-300 border border-black accent-black mix-blend-multiply cursor-pointer'
                                     />
                                     <p className="text-lg">Dryer</p>
@@ -254,6 +258,7 @@ function FiltersModal({ isOpen, setOpenFilterModal, closeModal }) {
                                         type="checkbox" 
                                         name="ac"
                                         onChange={checkboxHandler.bind(this, 'amenities', setFilters, filters)}
+                                        checked={filters.amenities.ac ? true : false}
                                         className='w-6 h-6 rounded-lg indeterminate:bg-purple-300 border border-black accent-black mix-blend-multiply cursor-pointer'
                                     />
                                     <p className="text-lg">Air Conditioning</p>
@@ -313,6 +318,7 @@ function FiltersModal({ isOpen, setOpenFilterModal, closeModal }) {
                                 type="checkbox" 
                                 name="stepFreeGuest"
                                 onChange={checkboxHandler.bind(this, 'accessibility', setFilters, filters)}
+                                checked={filters.accessibility.stepFreeGuest ? true : false}
                                 className='w-6 h-6 rounded-lg indeterminate:bg-purple-300 border border-black accent-black mix-blend-multiply cursor-pointer'
                             />
                             <p className="text-lg">Step free guest entrance</p>
@@ -323,6 +329,7 @@ function FiltersModal({ isOpen, setOpenFilterModal, closeModal }) {
                                 type="checkbox" 
                                 name="guest32"
                                 onChange={checkboxHandler.bind(this, 'accessibility', setFilters, filters)}
+                                checked={filters.accessibility.guest32 ? true : false}
                                 className='w-6 h-6 rounded-lg indeterminate:bg-purple-300 border border-black accent-black mix-blend-multiply cursor-pointer'
                             />
                             <p className="text-lg">Guest entrance wider than 32 inches</p>
@@ -335,6 +342,7 @@ function FiltersModal({ isOpen, setOpenFilterModal, closeModal }) {
                                 type="checkbox" 
                                 name="parking"
                                 onChange={checkboxHandler.bind(this, 'accessibility', setFilters, filters)}
+                                checked={filters.accessibility.parking ? true : false}
                                 className='w-6 h-6 rounded-lg indeterminate:bg-purple-300 border border-black accent-black mix-blend-multiply cursor-pointer'
                             />
                             <p className="text-lg">Accessible parking spot</p>
@@ -345,6 +353,7 @@ function FiltersModal({ isOpen, setOpenFilterModal, closeModal }) {
                                 type="checkbox" 
                                 name="stepFreePath"
                                 onChange={checkboxHandler.bind(this, 'accessibility', setFilters, filters)}
+                                checked={filters.accessibility.stepFreePath ? true : false}
                                 className='w-6 h-6 rounded-lg indeterminate:bg-purple-300 border border-black accent-black mix-blend-multiply cursor-pointer'
                             />
                             <p className="text-lg">Step free path to the guest entrance</p>
@@ -403,6 +412,7 @@ function FiltersModal({ isOpen, setOpenFilterModal, closeModal }) {
                                 type="checkbox" 
                                 name="english"
                                 onChange={checkboxHandler.bind(this, 'hostLangs', setFilters, filters)}
+                                checked={filters.hostLangs.includes('english') ? true : false}
                                 className='w-6 h-6 rounded-lg indeterminate:bg-purple-300 border border-black accent-black mix-blend-multiply cursor-pointer'
                             />
                             <p className="text-lg">English</p>
@@ -413,6 +423,7 @@ function FiltersModal({ isOpen, setOpenFilterModal, closeModal }) {
                                 type="checkbox" 
                                 name="french"
                                 onChange={checkboxHandler.bind(this, 'hostLangs', setFilters, filters)}
+                                checked={filters.hostLangs.includes('french') ? true : false}
                                 className='w-6 h-6 rounded-lg indeterminate:bg-purple-300 border border-black accent-black mix-blend-multiply cursor-pointer'
                             />
                             <p className="text-lg">French</p>
@@ -425,6 +436,7 @@ function FiltersModal({ isOpen, setOpenFilterModal, closeModal }) {
                                 type="checkbox" 
                                 name="german"
                                 onChange={checkboxHandler.bind(this, 'hostLangs', setFilters, filters)}
+                                checked={filters.hostLangs.includes('german') ? true : false}
                                 className='w-6 h-6 rounded-lg indeterminate:bg-purple-300 border border-black accent-black mix-blend-multiply cursor-pointer'
                             />
                             <p className="text-lg">German</p>
@@ -435,6 +447,7 @@ function FiltersModal({ isOpen, setOpenFilterModal, closeModal }) {
                                 type="checkbox" 
                                 name="japanese"
                                 onChange={checkboxHandler.bind(this, 'hostLangs', setFilters, filters)}
+                                checked={filters.hostLangs.includes('japanese') ? true : false}
                                 className='w-6 h-6 rounded-lg indeterminate:bg-purple-300 border border-black accent-black mix-blend-multiply cursor-pointer'
                             />
                             <p className="text-lg">Japanese</p>
@@ -450,7 +463,7 @@ function FiltersModal({ isOpen, setOpenFilterModal, closeModal }) {
             {/* submit and filter clear btns */}
             <div className="sticky bottom-0 left-0 w-full px-6 py-4 border-t-2 border-slate-200 flex justify-between items-center">
                 <button className="underline font-bold" onClick={clearFilters.bind(this, setFilters)}>Clear all</button>
-                <button className="bg-black px-4 py-2 rounded-lg text-white" onClick={filterHandler.bind(this, setFilters, filters)}>Show Results</button>
+                <button className="bg-black px-4 py-2 rounded-lg text-white" onClick={filterHandler.bind(this, setFilters, filters, closeModal, highestPrice)}>Show Results</button>
             </div>
         </div>
     </DialogModal>

@@ -10,6 +10,7 @@ import WishlistModal from "./WishlistModal";
 import { addToWishlist, removeFromWishlist } from "../store/reducers/wishlistReducer";
 import WishlistToast from "./WishlistToast";
 import { showWishlistToastAddition, showWishlistToastRemoval } from "../store/reducers/globalReducer";
+import HostPassportModal from "./HostPassportModal";
 
 
 function LocationCardSlider({ 
@@ -25,6 +26,7 @@ function LocationCardSlider({
 }) {
     const [isLiked, setIsLiked] = useState(false);
     const [isWishlistModalOpen, setIsWishlistModalOpen] = useState(false);
+    const [isHostPassportModalOpen, setIsHostPassportModalOpen] = useState(false);
     const [displayToast, setDisplayToast] = useState(false);
     
     const shouldDisplayTaxes = useSelector(state => state.appReducers.global.displayTaxes);
@@ -69,6 +71,10 @@ function LocationCardSlider({
 
     const closeWishlistModal = () => {
         setIsWishlistModalOpen(false);
+    }
+
+    const closeHostPassportModal = () => {
+        setIsHostPassportModalOpen(false);
     }
 
     useEffect(() => {
@@ -163,8 +169,11 @@ function LocationCardSlider({
 
         {
             roomOwner &&
-            <div className="absolute bottom-44 z-[2] left-4 w-[75px] h-[85px] flex justify-center items-center bg-zinc-300 rounded-r-xl after:absolute after:left-2 after:h-[85px] after:w-[1px] after:bg-slate-500">
-                <img src={roomOwner} className="w-[45px] h-[45px] rounded-full" />
+            <div 
+                className="absolute bottom-44 z-[2] left-4 w-[75px] h-[85px] flex justify-center items-center bg-zinc-300 rounded-r-xl after:absolute after:left-2 after:h-[85px] after:w-[1px] after:bg-slate-500 cursor-pointer"
+                onClick={() => setIsHostPassportModalOpen(true)}
+            >
+                <img src={roomOwner[0] ? roomOwner[0]?.profilePic : null} className="w-[45px] h-[45px] rounded-full" />
             </div>
         }
 
@@ -177,6 +186,13 @@ function LocationCardSlider({
     {
         displayToast && <WishlistToast wishlist={wishlist} />
     }
+
+    <HostPassportModal 
+        isOpen={isHostPassportModalOpen}
+        setOpenHostPassportModal={setIsHostPassportModalOpen}
+        closeModal={closeHostPassportModal}
+        hostDetails={roomOwner[0]}
+    />
     </>
   )
 }

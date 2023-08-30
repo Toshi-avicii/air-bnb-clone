@@ -180,7 +180,7 @@ function setEnabledCheckbox (category, setFilters, filters) {
     }
 }
 
-function filterHandler (setFilters, filters, e) {
+function filterHandler (setFilters, filters, closeModal, highestPrice, e) {
     const houseBtn = document.querySelector('.house-btn');
     const apartmentBtn = document.querySelector('.apartment-btn');
     const guesthouseBtn = document.querySelector('.guesthouse-btn');
@@ -189,7 +189,7 @@ function filterHandler (setFilters, filters, e) {
         setFilters((prev) => {
             if(prev.propertyType.includes('house')) {
                 let replacedPropArr = prev.propertyType.filter(prop => prop !== 'house');
-                return {...prev, propertyType: replacedPropArr}
+                return {...prev, propertyType: replacedPropArr }
             } else {
                 return { ...prev }
             }
@@ -200,7 +200,7 @@ function filterHandler (setFilters, filters, e) {
         setFilters((prev) => {
             if(prev.propertyType.includes('apartment')) {
                 let replacedPropArr = prev.propertyType.filter(prop => prop !== 'apartment');
-                return {...prev, propertyType: replacedPropArr}
+                return {...prev, propertyType: replacedPropArr }
             } else {
                 return { ...prev } 
             }
@@ -211,44 +211,46 @@ function filterHandler (setFilters, filters, e) {
         setFilters((prev) => {
             if(prev.propertyType.includes('guesthouse')) {
                 let replacedPropArr = prev.propertyType.filter(prop => prop !== 'guesthouse');
-                return {...prev, propertyType: replacedPropArr}
+                return {...prev, propertyType: replacedPropArr }
             } else {
                 return { ...prev } 
             }
         })
     }
     console.log(filters);
+
+    closeModal();
 }
 
 function clearFilters (setFilters, e) {
-setFilters({
-    minPrice: 1,
-    maxPrice: 100,
-    bedRooms: 'any',
-    bathRooms: 'any',
-    propertyType: [],
-    amenities: {
-        wifi: false,
-        kitchen: false,
-        privateBath: false,
-        washer: false,
-        dryer: false,
-        ac: false
-    },
-    bookingOptions: {
-        instantBook: false,
-        selfCheckIn: false
-    },
-    accessibility: {
-        stepFreeGuest: false,
-        guest32: false,
-        parking: false,
-        stepFreePath: false
-    },
-    superhost: false,
-    airbnbPlus: false,
-    hostLangs: []
-})
+    setFilters({
+        minPrice: 1,
+        maxPrice: 100,
+        bedRooms: 'any',
+        bathRooms: 'any',
+        propertyType: [],
+        amenities: {
+            wifi: false,
+            kitchen: false,
+            privateBath: false,
+            washer: false,
+            dryer: false,
+            ac: false
+        },
+        bookingOptions: {
+            instantBook: false,
+            selfCheckIn: false
+        },
+        accessibility: {
+            stepFreeGuest: false,
+            guest32: false,
+            parking: false,
+            stepFreePath: false
+        },
+        superhost: false,
+        airbnbPlus: false,
+        hostLangs: []
+    })
 }
 
 export { 

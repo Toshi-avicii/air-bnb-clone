@@ -88,3 +88,26 @@
   color: black !important; 
   background-color: white !important;
 }
+
+/* .reviews-slider {
+  position: relative;
+  z-index: 100 !important;
+} */
+
+.reviews-slider .swiper-button-next {
+  position: absolute;
+  top: 60%;
+  right: 0px;
+  z-index: 100 !important;
+}
+
+.reviews-slider .swiper-button-prev {
+  position: absolute;
+  top: 60%;
+  left: 0px ;
+  z-index: 13 !important;
+}
+
+.listings-slider.swiper.swiper-initialized {
+  padding: 0;
+}

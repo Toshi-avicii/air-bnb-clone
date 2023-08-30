@@ -1,36 +1,11 @@
-import { useCallback, useEffect, useState } from "react";
-import locations from "../mockData/locationData"
 import LocationCardSlider from './LocationCardSlider'
 import SkeletonLocationCard from "./skeletons/SkeletonLocationCard"
-import { useSearchParams } from 'react-router-dom';
+import useGetSelectedLocationData from "../hooks/useGetSelectedLocationData";
+import hosts from '../mockData/hostData';
 
 function Locations() {
-  const [searchParams, setSearchParams] = useSearchParams();
-
-  const handleSelectLocation = useCallback(() => {
-    function filterLocations () {
-        const selectedCategory = searchParams.get('category');
-        const filteredLocations = locations.filter((location) => {
-            if(!selectedCategory) {
-                return location.category === 'amazing_views';
-            }
-            return location.category === selectedCategory;
-        });
-  
-        return filteredLocations;
-    }
-
-    return filterLocations();
-  }, [searchParams]);
-  const [selectedLocations, setSelectedLocations] = useState(handleSelectLocation());
-
-
-  useEffect(() => {
-    setSelectedLocations(handleSelectLocation());
-  }, [handleSelectLocation]);
-
-  console.log(selectedLocations);
-
+  const selectedLocations = useGetSelectedLocationData();
+  console.log(hosts[0]);
 
   return (
     <div className="px-8 my-6">
@@ -48,7 +23,15 @@ function Locations() {
                             price={location.pricePerNight}
                             rating={location.rating}
                             stayDate={location.stayDate}
-                            roomOwner={location.roomOwner ? location.roomOwner : null}
+                            roomOwner={
+                                hosts.filter((host) => {
+                                    const foundedRoom = host.listings.some((listing) => {
+                                        return listing.id === location.id
+                                    })
+
+                                    if(foundedRoom) return host.profilePic;
+                                  })
+                            }
                             key={location.id}
                         />
                     )

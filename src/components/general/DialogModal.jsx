@@ -30,7 +30,7 @@ function DialogModal({ isOpen, closeModal, children, maxWidthProp }) {
                             leaveFrom="opacity-100 scale-100"
                             leaveTo="opacity-0 scale-95"
                         >
-                            <Dialog.Panel className={`w-full transform overflow-hidden rounded-2xl bg-white text-left align-middle shadow-xl transition-all min-w-[550px] ${maxWidthProp ? `max-w-[1250px] my-8` : 'max-w-md'}`}>
+                            <Dialog.Panel className={`w-full transform overflow-hidden my-5 rounded-2xl bg-white text-left align-middle shadow-xl transition-all min-w-[300px] ${maxWidthProp ? `max-w-[1250px] my-8` : 'max-w-md'}`}>
                                 { children }
                             </Dialog.Panel>
                         </Transition.Child>

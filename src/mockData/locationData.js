@@ -1,5 +1,3 @@
-import RoomOwnerProfilePic from '../assets/room-owner-profile-pic.jpg';
-
 const locations = [
     {
         id: 'av1',
@@ -35,8 +33,7 @@ const locations = [
             stepFreePath: true
         },
         superhost: true,
-        airbnbPlus: true,
-        hostLanguages: ["english", "french"]
+        airbnbPlus: true
     },
     {
         id: 'av2',
@@ -73,7 +70,6 @@ const locations = [
         },
         superhost: false,
         airbnbPlus: true,
-        hostLanguages: ["english", "spanish"]
     },
     {
         id: 'av3',
@@ -109,8 +105,7 @@ const locations = [
             stepFreePath: true
         },
         superhost: true,
-        airbnbPlus: true,
-        hostLanguages: ["english", "french", "spanish", "italian"]
+        airbnbPlus: true
     },
     {
         id: 'av4',
@@ -146,8 +141,7 @@ const locations = [
             stepFreePath: false
         },
         superhost: false,
-        airbnbPlus: false,
-        hostLanguages: ["english"]
+        airbnbPlus: false
     },
     {
         id: 'av5',
@@ -183,8 +177,7 @@ const locations = [
             stepFreePath: true
         },
         superhost: false,
-        airbnbPlus: true,
-        hostLanguages: ["english", "french", "portuguese"]
+        airbnbPlus: true
     },
     {
         id: 'av6',
@@ -220,8 +213,7 @@ const locations = [
             stepFreePath: true
         },
         superhost: true,
-        airbnbPlus: true,
-        hostLanguages: ["english", "french", "chinese"]
+        airbnbPlus: true
     },
     {
         id: 'av7',
@@ -257,8 +249,7 @@ const locations = [
             stepFreePath: true
         },
         superhost: true,
-        airbnbPlus: true,
-        hostLanguages: ["english", "french", "chinese", "spanish", "italian", "greek"]
+        airbnbPlus: true
     },
     {
         id: 'av8',
@@ -294,8 +285,7 @@ const locations = [
             stepFreePath: false
         },
         superhost: false,
-        airbnbPlus: true,
-        hostLanguages: ["english"]
+        airbnbPlus: true
     },
     {
         id: 'av9',
@@ -331,8 +321,7 @@ const locations = [
             stepFreePath: true
         },
         superhost: true,
-        airbnbPlus: true,
-        hostLanguages: ["english", "french"]
+        airbnbPlus: true
     },
     {
         id: 'av10',
@@ -368,8 +357,7 @@ const locations = [
             stepFreePath: false
         },
         superhost: true,
-        airbnbPlus: true,
-        hostLanguages: ["spanish", "french"]
+        airbnbPlus: true
     },
     {
         id: 'av11',
@@ -405,8 +393,7 @@ const locations = [
             stepFreePath: true
         },
         superhost: true,
-        airbnbPlus: true,
-        hostLanguages: ["english", "french", "italian"]
+        airbnbPlus: true
     },
     {
         id: 'av12',
@@ -442,8 +429,7 @@ const locations = [
             stepFreePath: true
         },
         superhost: false,
-        airbnbPlus: false,
-        hostLanguages: ["english", "french", "portuguese", "hindi"]
+        airbnbPlus: false
     },
 
     // rooms data
@@ -462,7 +448,6 @@ const locations = [
         stayDate: 'Dec 3 - 9',
         category: 'rooms',
         pricePerNight: 31,
-        roomOwner: RoomOwnerProfilePic,
         beds: 3,
         bathrooms: 2,
         amenities: {
@@ -482,8 +467,7 @@ const locations = [
             stepFreePath: true
         },
         superhost: false,
-        airbnbPlus: false,
-        hostLanguages: ["english", "hindi"]
+        airbnbPlus: false
     },
     {
         id: 'r2',
@@ -500,7 +484,6 @@ const locations = [
         stayDate: 'Dec 3 - 9',
         category: 'rooms',
         pricePerNight: 36,
-        roomOwner: RoomOwnerProfilePic,
         beds: 2,
         bathrooms: 2,
         amenities: {
@@ -520,8 +503,7 @@ const locations = [
             stepFreePath: true
         },
         superhost: false,
-        airbnbPlus: false,
-        hostLanguages: ["english", "french", "portuguese", "hindi"]
+        airbnbPlus: false
     },
     {
         id: 'r3',
@@ -538,7 +520,6 @@ const locations = [
         stayDate: 'Dec 3 - 9',
         category: 'rooms',
         pricePerNight: 21,
-        roomOwner: RoomOwnerProfilePic,
         beds: 1,
         bathrooms: 1,
         amenities: {
@@ -558,8 +539,7 @@ const locations = [
             stepFreePath: true
         },
         superhost: false,
-        airbnbPlus: false,
-        hostLanguages: ["english"]
+        airbnbPlus: false
     },
     {
         id: 'r4',
@@ -576,7 +556,6 @@ const locations = [
         stayDate: 'Dec 3 - 9',
         category: 'rooms',
         pricePerNight: 39,
-        roomOwner: RoomOwnerProfilePic,
         beds: 3,
         bathrooms: 2,
         amenities: {
@@ -596,8 +575,7 @@ const locations = [
             stepFreePath: true
         },
         superhost: false,
-        airbnbPlus: true,
-        hostLanguages: ["english", "french"]
+        airbnbPlus: true
     },
     {
         id: 'r5',
@@ -614,7 +592,6 @@ const locations = [
         stayDate: 'Dec 3 - 9',
         category: 'rooms',
         pricePerNight: 17,
-        roomOwner: RoomOwnerProfilePic,
         beds: 2,
         bathrooms: 2,
         amenities: {
@@ -634,8 +611,7 @@ const locations = [
             stepFreePath: true
         },
         superhost: true,
-        airbnbPlus: false,
-        hostLanguages: ["english"]
+        airbnbPlus: false
     },
     {
         id: 'r6',
@@ -652,7 +628,6 @@ const locations = [
         stayDate: 'Dec 3 - 9',
         category: 'rooms',
         pricePerNight: 25,
-        roomOwner: RoomOwnerProfilePic,
         beds: 2,
         bathrooms: 2,
         amenities: {
@@ -672,8 +647,7 @@ const locations = [
             stepFreePath: true
         },
         superhost: false,
-        airbnbPlus: false,
-        hostLanguages: ["english", "french", "portuguese", "hindi"]
+        airbnbPlus: false
     },
     {
         id: 'r7',
@@ -690,7 +664,6 @@ const locations = [
         stayDate: 'Dec 3 - 9',
         category: 'rooms',
         pricePerNight: 55,
-        roomOwner: RoomOwnerProfilePic,
         beds: 3,
         bathrooms: 2,
         amenities: {
@@ -710,8 +683,7 @@ const locations = [
             stepFreePath: true
         },
         superhost: false,
-        airbnbPlus: false,
-        hostLanguages: ["english", "greek"]
+        airbnbPlus: false
     },
     {
         id: 'r8',
@@ -728,7 +700,6 @@ const locations = [
         stayDate: 'Dec 3 - 9',
         category: 'rooms',
         pricePerNight: 34,
-        roomOwner: RoomOwnerProfilePic,
         beds: 2,
         bathrooms: 1,
         amenities: {
@@ -748,8 +719,7 @@ const locations = [
             stepFreePath: true
         },
         superhost: false,
-        airbnbPlus: false,
-        hostLanguages: ["english"]
+        airbnbPlus: false
     },
     {
         id: 'r9',
@@ -766,7 +736,6 @@ const locations = [
         stayDate: 'Dec 3 - 9',
         category: 'rooms',
         pricePerNight: 41,
-        roomOwner: RoomOwnerProfilePic,
         beds: 4,
         bathrooms: 3,
         amenities: {
@@ -786,8 +755,7 @@ const locations = [
             stepFreePath: true
         },
         superhost: false,
-        airbnbPlus: true,
-        hostLanguages: ["english", "french", "portuguese", "hindi"]
+        airbnbPlus: true
     },
     {
         id: 'r10',
@@ -803,7 +771,6 @@ const locations = [
         rating: 4.96,
         stayDate: 'Dec 3 - 9',
         category: 'rooms',
-        roomOwner: RoomOwnerProfilePic,
         beds: 3,
         bathrooms: 2,
         amenities: {
@@ -824,8 +791,7 @@ const locations = [
             stepFreePath: false
         },
         superhost: false,
-        airbnbPlus: false,
-        hostLanguages: ["english"]
+        airbnbPlus: false
     },
     {
         id: 'r11',
@@ -842,7 +808,6 @@ const locations = [
         stayDate: 'Dec 3 - 9',
         category: 'rooms',
         pricePerNight: 19,
-        roomOwner: RoomOwnerProfilePic,
         beds: 2,
         bathrooms: 2,
         amenities: {
@@ -862,8 +827,7 @@ const locations = [
             stepFreePath: true
         },
         superhost: true,
-        airbnbPlus: false,
-        hostLanguages: ["english", "french"]
+        airbnbPlus: false
     },
     {
         id: 'r12',
@@ -880,7 +844,6 @@ const locations = [
         stayDate: 'Dec 3 - 9',
         category: 'rooms',
         pricePerNight: 27,
-        roomOwner: RoomOwnerProfilePic,
         beds: 3,
         bathrooms: 2,
         amenities: {
@@ -900,8 +863,7 @@ const locations = [
             stepFreePath: true
         },
         superhost: false,
-        airbnbPlus: false,
-        hostLanguages: ["english", "french", "portuguese", "hindi"]
+        airbnbPlus: false
     },
     {
         id: 'r13',
@@ -919,7 +881,6 @@ const locations = [
         price: 412,
         category: 'rooms',
         pricePerNight: 49,
-        roomOwner: RoomOwnerProfilePic,
         beds: 4,
         bathrooms: 4,
         amenities: {
@@ -939,8 +900,7 @@ const locations = [
             stepFreePath: true
         },
         superhost: false,
-        airbnbPlus: true,
-        hostLanguages: ["english", "hindi"]
+        airbnbPlus: true
     },
     {
         id: 'r14',
@@ -957,7 +917,6 @@ const locations = [
         stayDate: 'Dec 3 - 9',
         category: 'rooms',
         pricePerNight: 57,
-        roomOwner: RoomOwnerProfilePic,
         beds: 3,
         bathrooms: 3,
         amenities: {
@@ -977,8 +936,7 @@ const locations = [
             stepFreePath: true
         },
         superhost: true,
-        airbnbPlus: true,
-        hostLanguages: ["english", "portuguese", "japanese"]
+        airbnbPlus: true
     },
     {
         id: 'r15',
@@ -995,7 +953,6 @@ const locations = [
         stayDate: 'Dec 3 - 9',
         category: 'rooms',
         pricePerNight: 35,
-        roomOwner: RoomOwnerProfilePic,
         beds: 3,
         bathrooms: 3,
         amenities: {
@@ -1015,8 +972,7 @@ const locations = [
             stepFreePath: true
         },
         superhost: false,
-        airbnbPlus: true,
-        hostLanguages: ["english", "french", "portuguese", "hindi", "japanese"]
+        airbnbPlus: true
     },
     {
         id: 'r16',
@@ -1033,7 +989,6 @@ const locations = [
         stayDate: 'Dec 3 - 9',
         category: 'rooms',
         pricePerNight: 16,
-        roomOwner: RoomOwnerProfilePic,
         beds: 2,
         bathrooms: 1,
         amenities: {
@@ -1053,8 +1008,7 @@ const locations = [
             stepFreePath: true
         },
         superhost: false,
-        airbnbPlus: false,
-        hostLanguages: ["english"]
+        airbnbPlus: false
     }
 ]
 

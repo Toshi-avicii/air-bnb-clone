@@ -1,6 +1,5 @@
 import { useSelector } from "react-redux"
 
-
 function WishlistToast({ wishlist }) {
 
   const isBeingRemovedFromWishlist = useSelector(state => state.appReducers.global.isBeingRemovedFromWishlist);
