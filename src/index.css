@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .pink-btn {
+    @apply bg-pink-600 p-4 rounded-lg text-white text-center w-full
+  }
+
+  .black-outline-btn {
+    @apply bg-white rounded-lg p-4 border border-black text-center text-black w-full
+  }
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   

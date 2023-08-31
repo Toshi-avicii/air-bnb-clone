@@ -1,6 +1,7 @@
 const locations = [
     {
         id: 'av1',
+        title: 'Cozy room in vegan oasis',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -37,6 +38,7 @@ const locations = [
     },
     {
         id: 'av2',
+        title: 'Hell in a cell',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -73,6 +75,7 @@ const locations = [
     },
     {
         id: 'av3',
+        title: 'Expensive Villa',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -109,6 +112,7 @@ const locations = [
     },
     {
         id: 'av4',
+        title: 'Cozy room in vegan oasis 2',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -145,6 +149,7 @@ const locations = [
     },
     {
         id: 'av5',
+        title: 'Cozy room in vegan oasis 3',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -181,6 +186,7 @@ const locations = [
     },
     {
         id: 'av6',
+        title: 'Cozy room in vegan oasis 4',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -217,6 +223,7 @@ const locations = [
     },
     {
         id: 'av7',
+        title: 'Cozy room in vegan oasis 5',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -253,6 +260,7 @@ const locations = [
     },
     {
         id: 'av8',
+        title: 'Cozy room in vegan oasis 6',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -289,6 +297,7 @@ const locations = [
     },
     {
         id: 'av9',
+        title: 'Cozy room in vegan oasis 7',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -325,6 +334,7 @@ const locations = [
     },
     {
         id: 'av10',
+        title: 'Cozy room in vegan oasis 8',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -361,6 +371,7 @@ const locations = [
     },
     {
         id: 'av11',
+        title: 'Cozy room in vegan oasis 9',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -397,6 +408,7 @@ const locations = [
     },
     {
         id: 'av12',
+        title: 'Cozy room in vegan oasis 10',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -435,6 +447,7 @@ const locations = [
     // rooms data
     {
         id: 'r1',
+        title: 'Cozy room in vegan oasis 11',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -471,6 +484,7 @@ const locations = [
     },
     {
         id: 'r2',
+        title: 'Cozy room in vegan oasis 12',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -507,6 +521,7 @@ const locations = [
     },
     {
         id: 'r3',
+        title: 'Cozy room in vegan oasis 13',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -543,6 +558,7 @@ const locations = [
     },
     {
         id: 'r4',
+        title: 'Cozy room in vegan oasis 14',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -579,6 +595,7 @@ const locations = [
     },
     {
         id: 'r5',
+        title: 'Cozy room in vegan oasis 15',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -615,6 +632,7 @@ const locations = [
     },
     {
         id: 'r6',
+        title: 'Cozy room in vegan oasis 16',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -651,6 +669,7 @@ const locations = [
     },
     {
         id: 'r7',
+        title: 'Cozy room in vegan oasis 17',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -687,6 +706,7 @@ const locations = [
     },
     {
         id: 'r8',
+        title: 'Cozy room in vegan oasis 18',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -723,6 +743,7 @@ const locations = [
     },
     {
         id: 'r9',
+        title: 'Cozy room in vegan oasis 19',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -759,6 +780,7 @@ const locations = [
     },
     {
         id: 'r10',
+        title: 'Cozy room in vegan oasis 20',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -795,6 +817,7 @@ const locations = [
     },
     {
         id: 'r11',
+        title: 'Cozy room in vegan oasis 21',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -831,6 +854,7 @@ const locations = [
     },
     {
         id: 'r12',
+        title: 'Cozy room in vegan oasis 22',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -867,6 +891,7 @@ const locations = [
     },
     {
         id: 'r13',
+        title: 'Cozy room in vegan oasis 23',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -904,6 +929,7 @@ const locations = [
     },
     {
         id: 'r14',
+        title: 'Cozy room in vegan oasis 24',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -940,6 +966,7 @@ const locations = [
     },
     {
         id: 'r15',
+        title: 'Cozy room in vegan oasis 25',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',
@@ -976,6 +1003,7 @@ const locations = [
     },
     {
         id: 'r16',
+        title: 'Cozy room in vegan oasis 26',
         images: [
             'https://a0.muscache.com/im/pictures/miso/Hosting-694576369161952366/original/0f692363-ea7b-4710-89d6-ad4bef9c4528.jpeg?im_w=720',
             'https://a0.muscache.com/im/pictures/e4923537-fb49-40f2-b7d6-5fff94961e7b.jpg?im_w=720',

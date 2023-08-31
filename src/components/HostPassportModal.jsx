@@ -192,7 +192,7 @@ function HostPassportModal({ isOpen, setOpenHostPassportModal, closeModal, hostD
                                         <div className="my-4">
                                             <img src={listing.images[0]} className="w-full h-[150px] rounded-lg" />
                                             <div className="flex justify-between items-center mt-2">
-                                                <h2 className="text-sm font-bold w-full">{listing.stay}</h2>
+                                                <h2 className="text-sm font-bold w-full">{listing.title}</h2>
                                                 <p className="text-black w-full flex justify-end items-center space-x-2">
                                                     <AiFillStar className="text-lg" />
                                                     <span>{listing.rating}</span>

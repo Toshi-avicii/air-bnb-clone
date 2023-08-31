@@ -1,6 +1,7 @@
 import locations from "./locationData";
 import roomOwnerPic from '../assets/room-owner-profile-pic.jpg'
 import naturePic from '../assets/react.svg';
+import stockProfile from '../assets/stock-profile.jpg'
 
 const hosts = [
     {
@@ -79,6 +80,45 @@ const hosts = [
         listings: locations ?  locations.filter((location) => {
             if(location.category === 'rooms') {
                 return location.id === 'r4' || location.id === 'r5'
+            }
+        }) : []
+    },
+    {
+        id: 'host3',
+        name: 'Robert',
+        profilePic: stockProfile,
+        reviews: [
+            {
+                id: new Date() + ' rev1',
+                from: 'Romeo',
+                comment: 'Nice host',
+                date: 'June 2022'
+            },
+            {
+                id: new Date() + ' rev2',
+                from: 'Julia',
+                comment: 'I had a nice chat with her, he is nice...',
+                date: 'September 2022'
+            }
+        ],
+        hostRating: 4.7,
+        yearsHosting: 2,
+        school: 'National institute of art, Warsaw',
+        work: 'Art consultant',
+        obsessions: ['Keeping everything tidy'],
+        tipsForGuests: ['give city tips'],
+        uniquePoints: ['It feels like home'],
+        languages: ['polish', 'english'],
+        info: {
+            city: 'warsaw',
+            country: 'poland',
+            phone: 1122334455,
+            email: 'robert@gmail.com',
+        },
+        offerBreakfast: true,
+        listings: locations ?  locations.filter((location) => {
+            if(location.category === 'rooms') {
+                return location.id === 'r6'
             }
         }) : []
     }

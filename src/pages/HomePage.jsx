@@ -1,13 +1,11 @@
 import DisplayBar from "../components/DisplayBar"
 import Locations from "../components/Locations"
 import TabBar from "../components/menu-tab/TabBar"
-import Navbar from "../components/navbar/Navbar"
 import { FaMap } from 'react-icons/fa';
 
 function HomePage() {
   return (
     <div>
-      <Navbar />
       <TabBar />
       <DisplayBar />
       <Locations />
