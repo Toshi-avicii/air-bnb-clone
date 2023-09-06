@@ -103,7 +103,7 @@ function LocationCardSlider({
 
 
   return (
-    <Link to={`/rooms/${sliderId}`}>
+    <div>
         <div key={sliderId} className="relative">
             <Swiper
                     modules={[ Navigation, Pagination ]}
@@ -123,36 +123,40 @@ function LocationCardSlider({
                             key={index} 
                             className="min-h-[360px] max-w-[375px] relative"
                         >
+                            <Link to={`/rooms/${sliderId}`}>
                             <div className="absolute left-0 top-0 min-h-[360px]" style={{
                                 backgroundColor: 'rgba(0, 0, 0, 0.3)',
                                 width: '100%'
                             }}></div>
-                            <img src={img} alt={img} className="min-h-[360px] max-w-[375px] object-cover" />
+                                <img src={img} alt={img} className="min-h-[360px] max-w-[375px] object-cover" />
+                            </Link>
                         </SwiperSlide>
                     )
                 }) 
                 }
             </Swiper>
             <div className="p-3">
-                <div className="flex justify-between items-center my-1 font-semibold">
-                    <h6>{mainAddress}</h6>
-                    <p>Rating: {rating}</p>
-                </div>
-                <p className="mb-1 text-gray-400">{secondaryAddress}</p>
-                <p className="mb-1 text-gray-400">
-                    {shouldDisplayTaxes ? `7 nights, ${stayDate}` : stayDate}
-                </p>
-                <p className="mb-1 font-semibold">
-                    ${ 
-                        shouldDisplayTaxes ? `${((price * 7) + (price * 10 / 100))}` : 
-                        price
-                    } 
-                    <span className="underline">
-                        {
-                            shouldDisplayTaxes ? ' total before taxes' : ' night'
-                        }
-                    </span>
-                </p>
+                <Link to={`/rooms/${sliderId}`}>
+                    <div className="flex justify-between items-center my-1 font-semibold">
+                        <h6>{mainAddress}</h6>
+                        <p>Rating: {rating}</p>
+                    </div>
+                    <p className="mb-1 text-gray-400">{secondaryAddress}</p>
+                    <p className="mb-1 text-gray-400">
+                        {shouldDisplayTaxes ? `7 nights, ${stayDate}` : stayDate}
+                    </p>
+                    <p className="mb-1 font-semibold">
+                        ${ 
+                            shouldDisplayTaxes ? `${((price * 7) + (price * 10 / 100))}` : 
+                            price
+                        } 
+                        <span className="underline">
+                            {
+                                shouldDisplayTaxes ? ' total before taxes' : ' night'
+                            }
+                        </span>
+                    </p>
+                </Link>
             </div>
             {
                 loginEmail && 
@@ -193,7 +197,7 @@ function LocationCardSlider({
             closeModal={closeHostPassportModal}
             hostDetails={roomOwner[0]}
         />
-    </Link>
+    </div>
   )
 }
 

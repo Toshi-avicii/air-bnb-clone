@@ -10,6 +10,10 @@
   .black-outline-btn {
     @apply bg-white rounded-lg p-4 border border-black text-center text-black w-full
   }
+
+  .black-btn {
+    @apply bg-black rounded-lg p-4 text-center text-white
+  }
 }
 
 :root {
@@ -120,4 +124,16 @@
 
 .listings-slider.swiper.swiper-initialized {
   padding: 0;
+}
+
+.rdp-month {
+  flex: 1 !important;
+}
+
+.rdp-table {
+  width: 100% !important;
+}
+
+.rdp-cell {
+  width: 100% !important;
 }

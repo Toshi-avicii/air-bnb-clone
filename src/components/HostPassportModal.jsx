@@ -1,16 +1,12 @@
 import DialogModal from "./general/DialogModal"
-import { GrClose, GrLanguage } from "react-icons/gr"
-import { AiFillStar, AiOutlineHeart, AiOutlineCheck, AiFillFlag } from 'react-icons/ai';
-import { LuGraduationCap } from 'react-icons/lu';
-import { LiaSuitcaseSolid } from 'react-icons/lia';
-import { BiDish } from 'react-icons/bi';
-import { HiOutlineSparkles } from 'react-icons/hi';
-import { PiGlobeStand } from 'react-icons/pi';
-import { MdOutlineFreeBreakfast } from 'react-icons/md'
+import { GrClose } from "react-icons/gr"
+import { AiFillStar, AiOutlineCheck, AiFillFlag } from 'react-icons/ai';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import HostProfileBox from "./HostProfileBox";
+import HostFeatures from "./HostFeatures";
 
 function HostPassportModal({ isOpen, setOpenHostPassportModal, closeModal, hostDetails }) {
   return (
@@ -24,78 +20,12 @@ function HostPassportModal({ isOpen, setOpenHostPassportModal, closeModal, hostD
                 </div>
                 {
                     hostDetails &&
-                    <div className="rounded-xl bg-white shadow-lg flex justify-between items-center my-4 p-6 space-x-2">
-                        <div className="flex flex-col justify-center items-center flex-1 min-h-full py-2">
-                            <img src={hostDetails.profilePic} className="rounded-full w-[110px] h-[110px] mb-2" />
-                            <h2 className="text-3xl font-bold">{hostDetails.name}</h2>
-                            <p className="text-lg font-bold mt-2">Host</p>
-                        </div>
-                        <div className="flex-1">
-                            <div className="border-b-2 border-gray-300">
-                                <h2 className="text-3xl font-bold mb-2">{hostDetails.reviews.length}</h2>
-                                <p className="text-sm font-bold mb-2">Reviews</p>
-                            </div>
-
-                            <div className="border-b-2 border-gray-300 mt-2">
-                                <h2 className="text-3xl font-bold mb-2 flex space-x-2 items-center">
-                                    <span>{hostDetails.hostRating}</span>
-                                    <AiFillStar className="text-2xl" />
-                                </h2>
-                                <p className="text-sm font-bold mb-2">Rating</p>
-                            </div>
-
-                            <div className="border-b-2 border-gray-300 mt-2">
-                                <h2 className="text-3xl font-bold mb-2">{hostDetails.yearsHosting}</h2>
-                                <p className="text-sm font-bold mb-2">Years Hosting</p>
-                            </div>
-                        </div>
-                    </div>
+                    <HostProfileBox hostDetails={hostDetails} />
                 }
 
                 {
                     hostDetails && 
-                    <div>
-                        <div className="flex space-x-2 items-center my-2">
-                            <LuGraduationCap className="text-2xl" />
-                            <p className="leading-1">Where I went to school: {hostDetails.school}</p>
-                        </div>
-                        <div className="flex space-x-2 items-center my-2">
-                            <LiaSuitcaseSolid className="text-2xl" />
-                            <p className="leading-1">My work: {hostDetails.work}</p>
-                        </div>
-
-                        <div className="flex space-x-2 items-center my-2">
-                            <AiOutlineHeart className="text-2xl" />
-                            <p className="leading-1">I am obsessed with: {hostDetails.obsessions.join(', ')}</p>
-                        </div>
-
-                        <div className="flex space-x-2 items-center my-2">
-                            <BiDish className="text-2xl" />
-                            <p className="leading-1">For guests, I always: {hostDetails.tipsForGuests.join(', ')}</p>
-                        </div>
-
-                        <div className="flex space-x-2 items-center my-2">
-                            <HiOutlineSparkles className="text-2xl" />
-                            <p className="leading-1">What makes my home unique: {hostDetails.uniquePoints.join(', ')}</p>
-                        </div>
-
-                        <div className="flex space-x-2 items-center my-2">
-                            <GrLanguage className="text-xl" />
-                            <p>Speaks: {hostDetails.languages.join(', ')}</p>
-                        </div>
-
-                        <div className="flex space-x-2 items-center my-2">
-                            <PiGlobeStand className="text-2xl" />
-                            <p className="leading-1">Lives in: {hostDetails.info.city}, {hostDetails.info.country}</p>
-                        </div>
-
-                        <div className="flex space-x-2 items-center my-2">
-                            <MdOutlineFreeBreakfast className="text-2xl" />
-                            <p className="leading-1">What&apos;s for breakfast: 
-                                {hostDetails.offerBreakfast ? 'I offer breakfast' : "I don't offer breakfast"}
-                            </p>
-                        </div>
-                    </div>
+                    <HostFeatures hostDetails={hostDetails} />
                 }
 
                 
