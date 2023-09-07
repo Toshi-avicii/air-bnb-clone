@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { AiFillStar } from 'react-icons/ai';
 
 function RoomReservation({

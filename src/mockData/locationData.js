@@ -34,7 +34,81 @@ const locations = [
             stepFreePath: true
         },
         superhost: true,
-        airbnbPlus: true
+        airbnbPlus: true,
+        reviews: [
+            {
+                from: 'victor',
+                date: new Date("2023-05-12"),
+                profile: 'https://image.shutterstock.com/mosaic_250/2780032/1548802709/stock-photo-headshot-portrait-of-happy-millennial-man-in-casual-clothes-isolated-on-grey-studio-background-1548802709.jpg',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.6,
+                communication: 4.7,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5                
+            },
+            {
+                from: 'roberto',
+                date: new Date("2023-04-17"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZC_95EVYM_FcC4b-LJg6XHL4p1E673azPuTMH92vOjnVJE0-dIyTszYt6teIip0PPcQs&usqp=CAU',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.8,
+                communication: 4.9,
+                checkIn: 4.9,
+                accuracy: 4.7,
+                location: 4.8,
+                value: 4.9
+            },
+            {
+                from: 'daniel',
+                date: new Date("2023-06-25"),
+                profile: 'https://media.istockphoto.com/id/1388253782/photo/positive-successful-millennial-business-professional-man-head-shot-portrait.webp?b=1&s=170667a&w=0&k=20&c=KZM6TIhdaJAy28BA9sg0Sn-ZRd160F6HytdAKykza-s=',
+                comment: 'Beautiful.',
+                cleanliness: 4.7,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'niousha',
+                date: new Date("2023-07-12"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1UTR40TNj3O9ch44YiAybjV5FoKVYuBOpXg&usqp=CAU',
+                comment: 'This place was great, the room and style of this place is everything. The host is friendly and safe.',
+                cleanliness: 4.8,
+                communication: 4.5,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'paloma',
+                date: new Date("2023-08-19"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR47eGNB4uktvhbGIeWWDPNl-0L1EBWByWRkg&usqp=CAU',
+                comment: 'Amazing place to stay. Cozy, clean and safe, the host is very helpful/friendly and I felt at home.',
+                cleanliness: 4.5,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'lukas',
+                date: new Date("2023-08-26"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1fmtO1xNV_yphS6OAtcQuuDzupas7MMZotNVJuyvYIoISmh8L827nvt7anM_ZHsKr8EM&usqp=CAU',
+                comment: 'Exactly in the description, friendly and flexible host and lovely food at the place.',
+                cleanliness: 4.8,
+                communication: 4.7,
+                checkIn: 4.8,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            }
+        ]
     },
     {
         id: 'av2',
@@ -72,6 +146,80 @@ const locations = [
         },
         superhost: false,
         airbnbPlus: true,
+        reviews: [
+            {
+                from: 'victor',
+                date: new Date("2023-05-12"),
+                profile: 'https://image.shutterstock.com/mosaic_250/2780032/1548802709/stock-photo-headshot-portrait-of-happy-millennial-man-in-casual-clothes-isolated-on-grey-studio-background-1548802709.jpg',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.6,
+                communication: 4.7,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5                
+            },
+            {
+                from: 'roberto',
+                date: new Date("2023-04-17"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZC_95EVYM_FcC4b-LJg6XHL4p1E673azPuTMH92vOjnVJE0-dIyTszYt6teIip0PPcQs&usqp=CAU',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.8,
+                communication: 4.9,
+                checkIn: 4.9,
+                accuracy: 4.7,
+                location: 4.8,
+                value: 4.9
+            },
+            {
+                from: 'daniel',
+                date: new Date("2023-06-25"),
+                profile: 'https://media.istockphoto.com/id/1388253782/photo/positive-successful-millennial-business-professional-man-head-shot-portrait.webp?b=1&s=170667a&w=0&k=20&c=KZM6TIhdaJAy28BA9sg0Sn-ZRd160F6HytdAKykza-s=',
+                comment: 'Beautiful.',
+                cleanliness: 4.7,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'niousha',
+                date: new Date("2023-07-12"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1UTR40TNj3O9ch44YiAybjV5FoKVYuBOpXg&usqp=CAU',
+                comment: 'This place was great, the room and style of this place is everything. The host is friendly and safe.',
+                cleanliness: 4.8,
+                communication: 4.5,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'paloma',
+                date: new Date("2023-08-19"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR47eGNB4uktvhbGIeWWDPNl-0L1EBWByWRkg&usqp=CAU',
+                comment: 'Amazing place to stay. Cozy, clean and safe, the host is very helpful/friendly and I felt at home.',
+                cleanliness: 4.5,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'lukas',
+                date: new Date("2023-08-26"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1fmtO1xNV_yphS6OAtcQuuDzupas7MMZotNVJuyvYIoISmh8L827nvt7anM_ZHsKr8EM&usqp=CAU',
+                comment: 'Exactly in the description, friendly and flexible host and lovely food at the place.',
+                cleanliness: 4.8,
+                communication: 4.7,
+                checkIn: 4.8,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            }
+        ]
     },
     {
         id: 'av3',
@@ -108,7 +256,81 @@ const locations = [
             stepFreePath: true
         },
         superhost: true,
-        airbnbPlus: true
+        airbnbPlus: true,
+        reviews: [
+            {
+                from: 'victor',
+                date: new Date("2023-05-12"),
+                profile: 'https://image.shutterstock.com/mosaic_250/2780032/1548802709/stock-photo-headshot-portrait-of-happy-millennial-man-in-casual-clothes-isolated-on-grey-studio-background-1548802709.jpg',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.6,
+                communication: 4.7,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5                
+            },
+            {
+                from: 'roberto',
+                date: new Date("2023-04-17"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZC_95EVYM_FcC4b-LJg6XHL4p1E673azPuTMH92vOjnVJE0-dIyTszYt6teIip0PPcQs&usqp=CAU',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.8,
+                communication: 4.9,
+                checkIn: 4.9,
+                accuracy: 4.7,
+                location: 4.8,
+                value: 4.9
+            },
+            {
+                from: 'daniel',
+                date: new Date("2023-06-25"),
+                profile: 'https://media.istockphoto.com/id/1388253782/photo/positive-successful-millennial-business-professional-man-head-shot-portrait.webp?b=1&s=170667a&w=0&k=20&c=KZM6TIhdaJAy28BA9sg0Sn-ZRd160F6HytdAKykza-s=',
+                comment: 'Beautiful.',
+                cleanliness: 4.7,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'niousha',
+                date: new Date("2023-07-12"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1UTR40TNj3O9ch44YiAybjV5FoKVYuBOpXg&usqp=CAU',
+                comment: 'This place was great, the room and style of this place is everything. The host is friendly and safe.',
+                cleanliness: 4.8,
+                communication: 4.5,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'paloma',
+                date: new Date("2023-08-19"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR47eGNB4uktvhbGIeWWDPNl-0L1EBWByWRkg&usqp=CAU',
+                comment: 'Amazing place to stay. Cozy, clean and safe, the host is very helpful/friendly and I felt at home.',
+                cleanliness: 4.5,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'lukas',
+                date: new Date("2023-08-26"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1fmtO1xNV_yphS6OAtcQuuDzupas7MMZotNVJuyvYIoISmh8L827nvt7anM_ZHsKr8EM&usqp=CAU',
+                comment: 'Exactly in the description, friendly and flexible host and lovely food at the place.',
+                cleanliness: 4.8,
+                communication: 4.7,
+                checkIn: 4.8,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            }
+        ]
     },
     {
         id: 'av4',
@@ -145,7 +367,81 @@ const locations = [
             stepFreePath: false
         },
         superhost: false,
-        airbnbPlus: false
+        airbnbPlus: false,
+        reviews: [
+            {
+                from: 'victor',
+                date: new Date("2023-05-12"),
+                profile: 'https://image.shutterstock.com/mosaic_250/2780032/1548802709/stock-photo-headshot-portrait-of-happy-millennial-man-in-casual-clothes-isolated-on-grey-studio-background-1548802709.jpg',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.6,
+                communication: 4.7,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5                
+            },
+            {
+                from: 'roberto',
+                date: new Date("2023-04-17"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZC_95EVYM_FcC4b-LJg6XHL4p1E673azPuTMH92vOjnVJE0-dIyTszYt6teIip0PPcQs&usqp=CAU',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.8,
+                communication: 4.9,
+                checkIn: 4.9,
+                accuracy: 4.7,
+                location: 4.8,
+                value: 4.9
+            },
+            {
+                from: 'daniel',
+                date: new Date("2023-06-25"),
+                profile: 'https://media.istockphoto.com/id/1388253782/photo/positive-successful-millennial-business-professional-man-head-shot-portrait.webp?b=1&s=170667a&w=0&k=20&c=KZM6TIhdaJAy28BA9sg0Sn-ZRd160F6HytdAKykza-s=',
+                comment: 'Beautiful.',
+                cleanliness: 4.7,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'niousha',
+                date: new Date("2023-07-12"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1UTR40TNj3O9ch44YiAybjV5FoKVYuBOpXg&usqp=CAU',
+                comment: 'This place was great, the room and style of this place is everything. The host is friendly and safe.',
+                cleanliness: 4.8,
+                communication: 4.5,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'paloma',
+                date: new Date("2023-08-19"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR47eGNB4uktvhbGIeWWDPNl-0L1EBWByWRkg&usqp=CAU',
+                comment: 'Amazing place to stay. Cozy, clean and safe, the host is very helpful/friendly and I felt at home.',
+                cleanliness: 4.5,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'lukas',
+                date: new Date("2023-08-26"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1fmtO1xNV_yphS6OAtcQuuDzupas7MMZotNVJuyvYIoISmh8L827nvt7anM_ZHsKr8EM&usqp=CAU',
+                comment: 'Exactly in the description, friendly and flexible host and lovely food at the place.',
+                cleanliness: 4.8,
+                communication: 4.7,
+                checkIn: 4.8,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            }
+        ]
     },
     {
         id: 'av5',
@@ -182,7 +478,81 @@ const locations = [
             stepFreePath: true
         },
         superhost: false,
-        airbnbPlus: true
+        airbnbPlus: true,
+        reviews: [
+            {
+                from: 'victor',
+                date: new Date("2023-05-12"),
+                profile: 'https://image.shutterstock.com/mosaic_250/2780032/1548802709/stock-photo-headshot-portrait-of-happy-millennial-man-in-casual-clothes-isolated-on-grey-studio-background-1548802709.jpg',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.6,
+                communication: 4.7,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5                
+            },
+            {
+                from: 'roberto',
+                date: new Date("2023-04-17"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZC_95EVYM_FcC4b-LJg6XHL4p1E673azPuTMH92vOjnVJE0-dIyTszYt6teIip0PPcQs&usqp=CAU',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.8,
+                communication: 4.9,
+                checkIn: 4.9,
+                accuracy: 4.7,
+                location: 4.8,
+                value: 4.9
+            },
+            {
+                from: 'daniel',
+                date: new Date("2023-06-25"),
+                profile: 'https://media.istockphoto.com/id/1388253782/photo/positive-successful-millennial-business-professional-man-head-shot-portrait.webp?b=1&s=170667a&w=0&k=20&c=KZM6TIhdaJAy28BA9sg0Sn-ZRd160F6HytdAKykza-s=',
+                comment: 'Beautiful.',
+                cleanliness: 4.7,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'niousha',
+                date: new Date("2023-07-12"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1UTR40TNj3O9ch44YiAybjV5FoKVYuBOpXg&usqp=CAU',
+                comment: 'This place was great, the room and style of this place is everything. The host is friendly and safe.',
+                cleanliness: 4.8,
+                communication: 4.5,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'paloma',
+                date: new Date("2023-08-19"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR47eGNB4uktvhbGIeWWDPNl-0L1EBWByWRkg&usqp=CAU',
+                comment: 'Amazing place to stay. Cozy, clean and safe, the host is very helpful/friendly and I felt at home.',
+                cleanliness: 4.5,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'lukas',
+                date: new Date("2023-08-26"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1fmtO1xNV_yphS6OAtcQuuDzupas7MMZotNVJuyvYIoISmh8L827nvt7anM_ZHsKr8EM&usqp=CAU',
+                comment: 'Exactly in the description, friendly and flexible host and lovely food at the place.',
+                cleanliness: 4.8,
+                communication: 4.7,
+                checkIn: 4.8,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            }
+        ]
     },
     {
         id: 'av6',
@@ -219,7 +589,81 @@ const locations = [
             stepFreePath: true
         },
         superhost: true,
-        airbnbPlus: true
+        airbnbPlus: true,
+        reviews: [
+            {
+                from: 'victor',
+                date: new Date("2023-05-12"),
+                profile: 'https://image.shutterstock.com/mosaic_250/2780032/1548802709/stock-photo-headshot-portrait-of-happy-millennial-man-in-casual-clothes-isolated-on-grey-studio-background-1548802709.jpg',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.6,
+                communication: 4.7,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5                
+            },
+            {
+                from: 'roberto',
+                date: new Date("2023-04-17"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZC_95EVYM_FcC4b-LJg6XHL4p1E673azPuTMH92vOjnVJE0-dIyTszYt6teIip0PPcQs&usqp=CAU',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.8,
+                communication: 4.9,
+                checkIn: 4.9,
+                accuracy: 4.7,
+                location: 4.8,
+                value: 4.9
+            },
+            {
+                from: 'daniel',
+                date: new Date("2023-06-25"),
+                profile: 'https://media.istockphoto.com/id/1388253782/photo/positive-successful-millennial-business-professional-man-head-shot-portrait.webp?b=1&s=170667a&w=0&k=20&c=KZM6TIhdaJAy28BA9sg0Sn-ZRd160F6HytdAKykza-s=',
+                comment: 'Beautiful.',
+                cleanliness: 4.7,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'niousha',
+                date: new Date("2023-07-12"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1UTR40TNj3O9ch44YiAybjV5FoKVYuBOpXg&usqp=CAU',
+                comment: 'This place was great, the room and style of this place is everything. The host is friendly and safe.',
+                cleanliness: 4.8,
+                communication: 4.5,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'paloma',
+                date: new Date("2023-08-19"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR47eGNB4uktvhbGIeWWDPNl-0L1EBWByWRkg&usqp=CAU',
+                comment: 'Amazing place to stay. Cozy, clean and safe, the host is very helpful/friendly and I felt at home.',
+                cleanliness: 4.5,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'lukas',
+                date: new Date("2023-08-26"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1fmtO1xNV_yphS6OAtcQuuDzupas7MMZotNVJuyvYIoISmh8L827nvt7anM_ZHsKr8EM&usqp=CAU',
+                comment: 'Exactly in the description, friendly and flexible host and lovely food at the place.',
+                cleanliness: 4.8,
+                communication: 4.7,
+                checkIn: 4.8,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            }
+        ]
     },
     {
         id: 'av7',
@@ -256,7 +700,81 @@ const locations = [
             stepFreePath: true
         },
         superhost: true,
-        airbnbPlus: true
+        airbnbPlus: true,
+        reviews: [
+            {
+                from: 'victor',
+                date: new Date("2023-05-12"),
+                profile: 'https://image.shutterstock.com/mosaic_250/2780032/1548802709/stock-photo-headshot-portrait-of-happy-millennial-man-in-casual-clothes-isolated-on-grey-studio-background-1548802709.jpg',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.6,
+                communication: 4.7,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5                
+            },
+            {
+                from: 'roberto',
+                date: new Date("2023-04-17"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZC_95EVYM_FcC4b-LJg6XHL4p1E673azPuTMH92vOjnVJE0-dIyTszYt6teIip0PPcQs&usqp=CAU',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.8,
+                communication: 4.9,
+                checkIn: 4.9,
+                accuracy: 4.7,
+                location: 4.8,
+                value: 4.9
+            },
+            {
+                from: 'daniel',
+                date: new Date("2023-06-25"),
+                profile: 'https://media.istockphoto.com/id/1388253782/photo/positive-successful-millennial-business-professional-man-head-shot-portrait.webp?b=1&s=170667a&w=0&k=20&c=KZM6TIhdaJAy28BA9sg0Sn-ZRd160F6HytdAKykza-s=',
+                comment: 'Beautiful.',
+                cleanliness: 4.7,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'niousha',
+                date: new Date("2023-07-12"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1UTR40TNj3O9ch44YiAybjV5FoKVYuBOpXg&usqp=CAU',
+                comment: 'This place was great, the room and style of this place is everything. The host is friendly and safe.',
+                cleanliness: 4.8,
+                communication: 4.5,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'paloma',
+                date: new Date("2023-08-19"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR47eGNB4uktvhbGIeWWDPNl-0L1EBWByWRkg&usqp=CAU',
+                comment: 'Amazing place to stay. Cozy, clean and safe, the host is very helpful/friendly and I felt at home.',
+                cleanliness: 4.5,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'lukas',
+                date: new Date("2023-08-26"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1fmtO1xNV_yphS6OAtcQuuDzupas7MMZotNVJuyvYIoISmh8L827nvt7anM_ZHsKr8EM&usqp=CAU',
+                comment: 'Exactly in the description, friendly and flexible host and lovely food at the place.',
+                cleanliness: 4.8,
+                communication: 4.7,
+                checkIn: 4.8,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            }
+        ]
     },
     {
         id: 'av8',
@@ -293,7 +811,81 @@ const locations = [
             stepFreePath: false
         },
         superhost: false,
-        airbnbPlus: true
+        airbnbPlus: true,
+        reviews: [
+            {
+                from: 'victor',
+                date: new Date("2023-05-12"),
+                profile: 'https://image.shutterstock.com/mosaic_250/2780032/1548802709/stock-photo-headshot-portrait-of-happy-millennial-man-in-casual-clothes-isolated-on-grey-studio-background-1548802709.jpg',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.6,
+                communication: 4.7,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5                
+            },
+            {
+                from: 'roberto',
+                date: new Date("2023-04-17"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZC_95EVYM_FcC4b-LJg6XHL4p1E673azPuTMH92vOjnVJE0-dIyTszYt6teIip0PPcQs&usqp=CAU',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.8,
+                communication: 4.9,
+                checkIn: 4.9,
+                accuracy: 4.7,
+                location: 4.8,
+                value: 4.9
+            },
+            {
+                from: 'daniel',
+                date: new Date("2023-06-25"),
+                profile: 'https://media.istockphoto.com/id/1388253782/photo/positive-successful-millennial-business-professional-man-head-shot-portrait.webp?b=1&s=170667a&w=0&k=20&c=KZM6TIhdaJAy28BA9sg0Sn-ZRd160F6HytdAKykza-s=',
+                comment: 'Beautiful.',
+                cleanliness: 4.7,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'niousha',
+                date: new Date("2023-07-12"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1UTR40TNj3O9ch44YiAybjV5FoKVYuBOpXg&usqp=CAU',
+                comment: 'This place was great, the room and style of this place is everything. The host is friendly and safe.',
+                cleanliness: 4.8,
+                communication: 4.5,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'paloma',
+                date: new Date("2023-08-19"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR47eGNB4uktvhbGIeWWDPNl-0L1EBWByWRkg&usqp=CAU',
+                comment: 'Amazing place to stay. Cozy, clean and safe, the host is very helpful/friendly and I felt at home.',
+                cleanliness: 4.5,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'lukas',
+                date: new Date("2023-08-26"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1fmtO1xNV_yphS6OAtcQuuDzupas7MMZotNVJuyvYIoISmh8L827nvt7anM_ZHsKr8EM&usqp=CAU',
+                comment: 'Exactly in the description, friendly and flexible host and lovely food at the place.',
+                cleanliness: 4.8,
+                communication: 4.7,
+                checkIn: 4.8,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            }
+        ]
     },
     {
         id: 'av9',
@@ -330,7 +922,81 @@ const locations = [
             stepFreePath: true
         },
         superhost: true,
-        airbnbPlus: true
+        airbnbPlus: true,
+        reviews: [
+            {
+                from: 'victor',
+                date: new Date("2023-05-12"),
+                profile: 'https://image.shutterstock.com/mosaic_250/2780032/1548802709/stock-photo-headshot-portrait-of-happy-millennial-man-in-casual-clothes-isolated-on-grey-studio-background-1548802709.jpg',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.6,
+                communication: 4.7,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5                
+            },
+            {
+                from: 'roberto',
+                date: new Date("2023-04-17"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZC_95EVYM_FcC4b-LJg6XHL4p1E673azPuTMH92vOjnVJE0-dIyTszYt6teIip0PPcQs&usqp=CAU',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.8,
+                communication: 4.9,
+                checkIn: 4.9,
+                accuracy: 4.7,
+                location: 4.8,
+                value: 4.9
+            },
+            {
+                from: 'daniel',
+                date: new Date("2023-06-25"),
+                profile: 'https://media.istockphoto.com/id/1388253782/photo/positive-successful-millennial-business-professional-man-head-shot-portrait.webp?b=1&s=170667a&w=0&k=20&c=KZM6TIhdaJAy28BA9sg0Sn-ZRd160F6HytdAKykza-s=',
+                comment: 'Beautiful.',
+                cleanliness: 4.7,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'niousha',
+                date: new Date("2023-07-12"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1UTR40TNj3O9ch44YiAybjV5FoKVYuBOpXg&usqp=CAU',
+                comment: 'This place was great, the room and style of this place is everything. The host is friendly and safe.',
+                cleanliness: 4.8,
+                communication: 4.5,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'paloma',
+                date: new Date("2023-08-19"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR47eGNB4uktvhbGIeWWDPNl-0L1EBWByWRkg&usqp=CAU',
+                comment: 'Amazing place to stay. Cozy, clean and safe, the host is very helpful/friendly and I felt at home.',
+                cleanliness: 4.5,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'lukas',
+                date: new Date("2023-08-26"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1fmtO1xNV_yphS6OAtcQuuDzupas7MMZotNVJuyvYIoISmh8L827nvt7anM_ZHsKr8EM&usqp=CAU',
+                comment: 'Exactly in the description, friendly and flexible host and lovely food at the place.',
+                cleanliness: 4.8,
+                communication: 4.7,
+                checkIn: 4.8,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            }
+        ]
     },
     {
         id: 'av10',
@@ -367,7 +1033,81 @@ const locations = [
             stepFreePath: false
         },
         superhost: true,
-        airbnbPlus: true
+        airbnbPlus: true,
+        reviews: [
+            {
+                from: 'victor',
+                date: new Date("2023-05-12"),
+                profile: 'https://image.shutterstock.com/mosaic_250/2780032/1548802709/stock-photo-headshot-portrait-of-happy-millennial-man-in-casual-clothes-isolated-on-grey-studio-background-1548802709.jpg',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.6,
+                communication: 4.7,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5                
+            },
+            {
+                from: 'roberto',
+                date: new Date("2023-04-17"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZC_95EVYM_FcC4b-LJg6XHL4p1E673azPuTMH92vOjnVJE0-dIyTszYt6teIip0PPcQs&usqp=CAU',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.8,
+                communication: 4.9,
+                checkIn: 4.9,
+                accuracy: 4.7,
+                location: 4.8,
+                value: 4.9
+            },
+            {
+                from: 'daniel',
+                date: new Date("2023-06-25"),
+                profile: 'https://media.istockphoto.com/id/1388253782/photo/positive-successful-millennial-business-professional-man-head-shot-portrait.webp?b=1&s=170667a&w=0&k=20&c=KZM6TIhdaJAy28BA9sg0Sn-ZRd160F6HytdAKykza-s=',
+                comment: 'Beautiful.',
+                cleanliness: 4.7,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'niousha',
+                date: new Date("2023-07-12"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1UTR40TNj3O9ch44YiAybjV5FoKVYuBOpXg&usqp=CAU',
+                comment: 'This place was great, the room and style of this place is everything. The host is friendly and safe.',
+                cleanliness: 4.8,
+                communication: 4.5,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'paloma',
+                date: new Date("2023-08-19"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR47eGNB4uktvhbGIeWWDPNl-0L1EBWByWRkg&usqp=CAU',
+                comment: 'Amazing place to stay. Cozy, clean and safe, the host is very helpful/friendly and I felt at home.',
+                cleanliness: 4.5,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'lukas',
+                date: new Date("2023-08-26"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1fmtO1xNV_yphS6OAtcQuuDzupas7MMZotNVJuyvYIoISmh8L827nvt7anM_ZHsKr8EM&usqp=CAU',
+                comment: 'Exactly in the description, friendly and flexible host and lovely food at the place.',
+                cleanliness: 4.8,
+                communication: 4.7,
+                checkIn: 4.8,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            }
+        ]
     },
     {
         id: 'av11',
@@ -404,7 +1144,81 @@ const locations = [
             stepFreePath: true
         },
         superhost: true,
-        airbnbPlus: true
+        airbnbPlus: true,
+        reviews: [
+            {
+                from: 'victor',
+                date: new Date("2023-05-12"),
+                profile: 'https://image.shutterstock.com/mosaic_250/2780032/1548802709/stock-photo-headshot-portrait-of-happy-millennial-man-in-casual-clothes-isolated-on-grey-studio-background-1548802709.jpg',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.6,
+                communication: 4.7,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5                
+            },
+            {
+                from: 'roberto',
+                date: new Date("2023-04-17"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZC_95EVYM_FcC4b-LJg6XHL4p1E673azPuTMH92vOjnVJE0-dIyTszYt6teIip0PPcQs&usqp=CAU',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.8,
+                communication: 4.9,
+                checkIn: 4.9,
+                accuracy: 4.7,
+                location: 4.8,
+                value: 4.9
+            },
+            {
+                from: 'daniel',
+                date: new Date("2023-06-25"),
+                profile: 'https://media.istockphoto.com/id/1388253782/photo/positive-successful-millennial-business-professional-man-head-shot-portrait.webp?b=1&s=170667a&w=0&k=20&c=KZM6TIhdaJAy28BA9sg0Sn-ZRd160F6HytdAKykza-s=',
+                comment: 'Beautiful.',
+                cleanliness: 4.7,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'niousha',
+                date: new Date("2023-07-12"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1UTR40TNj3O9ch44YiAybjV5FoKVYuBOpXg&usqp=CAU',
+                comment: 'This place was great, the room and style of this place is everything. The host is friendly and safe.',
+                cleanliness: 4.8,
+                communication: 4.5,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'paloma',
+                date: new Date("2023-08-19"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR47eGNB4uktvhbGIeWWDPNl-0L1EBWByWRkg&usqp=CAU',
+                comment: 'Amazing place to stay. Cozy, clean and safe, the host is very helpful/friendly and I felt at home.',
+                cleanliness: 4.5,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'lukas',
+                date: new Date("2023-08-26"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1fmtO1xNV_yphS6OAtcQuuDzupas7MMZotNVJuyvYIoISmh8L827nvt7anM_ZHsKr8EM&usqp=CAU',
+                comment: 'Exactly in the description, friendly and flexible host and lovely food at the place.',
+                cleanliness: 4.8,
+                communication: 4.7,
+                checkIn: 4.8,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            }
+        ]
     },
     {
         id: 'av12',
@@ -441,7 +1255,81 @@ const locations = [
             stepFreePath: true
         },
         superhost: false,
-        airbnbPlus: false
+        airbnbPlus: false,
+        reviews: [
+            {
+                from: 'victor',
+                date: new Date("2023-05-12"),
+                profile: 'https://image.shutterstock.com/mosaic_250/2780032/1548802709/stock-photo-headshot-portrait-of-happy-millennial-man-in-casual-clothes-isolated-on-grey-studio-background-1548802709.jpg',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.6,
+                communication: 4.7,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5                
+            },
+            {
+                from: 'roberto',
+                date: new Date("2023-04-17"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZC_95EVYM_FcC4b-LJg6XHL4p1E673azPuTMH92vOjnVJE0-dIyTszYt6teIip0PPcQs&usqp=CAU',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.8,
+                communication: 4.9,
+                checkIn: 4.9,
+                accuracy: 4.7,
+                location: 4.8,
+                value: 4.9
+            },
+            {
+                from: 'daniel',
+                date: new Date("2023-06-25"),
+                profile: 'https://media.istockphoto.com/id/1388253782/photo/positive-successful-millennial-business-professional-man-head-shot-portrait.webp?b=1&s=170667a&w=0&k=20&c=KZM6TIhdaJAy28BA9sg0Sn-ZRd160F6HytdAKykza-s=',
+                comment: 'Beautiful.',
+                cleanliness: 4.7,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'niousha',
+                date: new Date("2023-07-12"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1UTR40TNj3O9ch44YiAybjV5FoKVYuBOpXg&usqp=CAU',
+                comment: 'This place was great, the room and style of this place is everything. The host is friendly and safe.',
+                cleanliness: 4.8,
+                communication: 4.5,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'paloma',
+                date: new Date("2023-08-19"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR47eGNB4uktvhbGIeWWDPNl-0L1EBWByWRkg&usqp=CAU',
+                comment: 'Amazing place to stay. Cozy, clean and safe, the host is very helpful/friendly and I felt at home.',
+                cleanliness: 4.5,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'lukas',
+                date: new Date("2023-08-26"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1fmtO1xNV_yphS6OAtcQuuDzupas7MMZotNVJuyvYIoISmh8L827nvt7anM_ZHsKr8EM&usqp=CAU',
+                comment: 'Exactly in the description, friendly and flexible host and lovely food at the place.',
+                cleanliness: 4.8,
+                communication: 4.7,
+                checkIn: 4.8,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            }
+        ]
     },
 
     // rooms data
@@ -480,7 +1368,81 @@ const locations = [
             stepFreePath: true
         },
         superhost: false,
-        airbnbPlus: false
+        airbnbPlus: false,
+        reviews: [
+            {
+                from: 'victor',
+                date: new Date("2023-05-12"),
+                profile: 'https://image.shutterstock.com/mosaic_250/2780032/1548802709/stock-photo-headshot-portrait-of-happy-millennial-man-in-casual-clothes-isolated-on-grey-studio-background-1548802709.jpg',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.6,
+                communication: 4.7,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5                
+            },
+            {
+                from: 'roberto',
+                date: new Date("2023-04-17"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZC_95EVYM_FcC4b-LJg6XHL4p1E673azPuTMH92vOjnVJE0-dIyTszYt6teIip0PPcQs&usqp=CAU',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.8,
+                communication: 4.9,
+                checkIn: 4.9,
+                accuracy: 4.7,
+                location: 4.8,
+                value: 4.9
+            },
+            {
+                from: 'daniel',
+                date: new Date("2023-06-25"),
+                profile: 'https://media.istockphoto.com/id/1388253782/photo/positive-successful-millennial-business-professional-man-head-shot-portrait.webp?b=1&s=170667a&w=0&k=20&c=KZM6TIhdaJAy28BA9sg0Sn-ZRd160F6HytdAKykza-s=',
+                comment: 'Beautiful.',
+                cleanliness: 4.7,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'niousha',
+                date: new Date("2023-07-12"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1UTR40TNj3O9ch44YiAybjV5FoKVYuBOpXg&usqp=CAU',
+                comment: 'This place was great, the room and style of this place is everything. The host is friendly and safe.',
+                cleanliness: 4.8,
+                communication: 4.5,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'paloma',
+                date: new Date("2023-08-19"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR47eGNB4uktvhbGIeWWDPNl-0L1EBWByWRkg&usqp=CAU',
+                comment: 'Amazing place to stay. Cozy, clean and safe, the host is very helpful/friendly and I felt at home.',
+                cleanliness: 4.5,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'lukas',
+                date: new Date("2023-08-26"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1fmtO1xNV_yphS6OAtcQuuDzupas7MMZotNVJuyvYIoISmh8L827nvt7anM_ZHsKr8EM&usqp=CAU',
+                comment: 'Exactly in the description, friendly and flexible host and lovely food at the place.',
+                cleanliness: 4.8,
+                communication: 4.7,
+                checkIn: 4.8,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            }
+        ]
     },
     {
         id: 'r2',
@@ -517,7 +1479,81 @@ const locations = [
             stepFreePath: true
         },
         superhost: false,
-        airbnbPlus: false
+        airbnbPlus: false,
+        reviews: [
+            {
+                from: 'victor',
+                date: new Date("2023-05-12"),
+                profile: 'https://image.shutterstock.com/mosaic_250/2780032/1548802709/stock-photo-headshot-portrait-of-happy-millennial-man-in-casual-clothes-isolated-on-grey-studio-background-1548802709.jpg',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.6,
+                communication: 4.7,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5                
+            },
+            {
+                from: 'roberto',
+                date: new Date("2023-04-17"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZC_95EVYM_FcC4b-LJg6XHL4p1E673azPuTMH92vOjnVJE0-dIyTszYt6teIip0PPcQs&usqp=CAU',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.8,
+                communication: 4.9,
+                checkIn: 4.9,
+                accuracy: 4.7,
+                location: 4.8,
+                value: 4.9
+            },
+            {
+                from: 'daniel',
+                date: new Date("2023-06-25"),
+                profile: 'https://media.istockphoto.com/id/1388253782/photo/positive-successful-millennial-business-professional-man-head-shot-portrait.webp?b=1&s=170667a&w=0&k=20&c=KZM6TIhdaJAy28BA9sg0Sn-ZRd160F6HytdAKykza-s=',
+                comment: 'Beautiful.',
+                cleanliness: 4.7,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'niousha',
+                date: new Date("2023-07-12"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1UTR40TNj3O9ch44YiAybjV5FoKVYuBOpXg&usqp=CAU',
+                comment: 'This place was great, the room and style of this place is everything. The host is friendly and safe.',
+                cleanliness: 4.8,
+                communication: 4.5,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'paloma',
+                date: new Date("2023-08-19"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR47eGNB4uktvhbGIeWWDPNl-0L1EBWByWRkg&usqp=CAU',
+                comment: 'Amazing place to stay. Cozy, clean and safe, the host is very helpful/friendly and I felt at home.',
+                cleanliness: 4.5,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'lukas',
+                date: new Date("2023-08-26"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1fmtO1xNV_yphS6OAtcQuuDzupas7MMZotNVJuyvYIoISmh8L827nvt7anM_ZHsKr8EM&usqp=CAU',
+                comment: 'Exactly in the description, friendly and flexible host and lovely food at the place.',
+                cleanliness: 4.8,
+                communication: 4.7,
+                checkIn: 4.8,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            }
+        ]
     },
     {
         id: 'r3',
@@ -554,7 +1590,81 @@ const locations = [
             stepFreePath: true
         },
         superhost: false,
-        airbnbPlus: false
+        airbnbPlus: false,
+        reviews: [
+            {
+                from: 'victor',
+                date: new Date("2023-05-12"),
+                profile: 'https://image.shutterstock.com/mosaic_250/2780032/1548802709/stock-photo-headshot-portrait-of-happy-millennial-man-in-casual-clothes-isolated-on-grey-studio-background-1548802709.jpg',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.6,
+                communication: 4.7,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5                
+            },
+            {
+                from: 'roberto',
+                date: new Date("2023-04-17"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZC_95EVYM_FcC4b-LJg6XHL4p1E673azPuTMH92vOjnVJE0-dIyTszYt6teIip0PPcQs&usqp=CAU',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.8,
+                communication: 4.9,
+                checkIn: 4.9,
+                accuracy: 4.7,
+                location: 4.8,
+                value: 4.9
+            },
+            {
+                from: 'daniel',
+                date: new Date("2023-06-25"),
+                profile: 'https://media.istockphoto.com/id/1388253782/photo/positive-successful-millennial-business-professional-man-head-shot-portrait.webp?b=1&s=170667a&w=0&k=20&c=KZM6TIhdaJAy28BA9sg0Sn-ZRd160F6HytdAKykza-s=',
+                comment: 'Beautiful.',
+                cleanliness: 4.7,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'niousha',
+                date: new Date("2023-07-12"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1UTR40TNj3O9ch44YiAybjV5FoKVYuBOpXg&usqp=CAU',
+                comment: 'This place was great, the room and style of this place is everything. The host is friendly and safe.',
+                cleanliness: 4.8,
+                communication: 4.5,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'paloma',
+                date: new Date("2023-08-19"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR47eGNB4uktvhbGIeWWDPNl-0L1EBWByWRkg&usqp=CAU',
+                comment: 'Amazing place to stay. Cozy, clean and safe, the host is very helpful/friendly and I felt at home.',
+                cleanliness: 4.5,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'lukas',
+                date: new Date("2023-08-26"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1fmtO1xNV_yphS6OAtcQuuDzupas7MMZotNVJuyvYIoISmh8L827nvt7anM_ZHsKr8EM&usqp=CAU',
+                comment: 'Exactly in the description, friendly and flexible host and lovely food at the place.',
+                cleanliness: 4.8,
+                communication: 4.7,
+                checkIn: 4.8,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            }
+        ]
     },
     {
         id: 'r4',
@@ -591,7 +1701,81 @@ const locations = [
             stepFreePath: true
         },
         superhost: false,
-        airbnbPlus: true
+        airbnbPlus: true,
+        reviews: [
+            {
+                from: 'victor',
+                date: new Date("2023-05-12"),
+                profile: 'https://image.shutterstock.com/mosaic_250/2780032/1548802709/stock-photo-headshot-portrait-of-happy-millennial-man-in-casual-clothes-isolated-on-grey-studio-background-1548802709.jpg',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.6,
+                communication: 4.7,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5                
+            },
+            {
+                from: 'roberto',
+                date: new Date("2023-04-17"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZC_95EVYM_FcC4b-LJg6XHL4p1E673azPuTMH92vOjnVJE0-dIyTszYt6teIip0PPcQs&usqp=CAU',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.8,
+                communication: 4.9,
+                checkIn: 4.9,
+                accuracy: 4.7,
+                location: 4.8,
+                value: 4.9
+            },
+            {
+                from: 'daniel',
+                date: new Date("2023-06-25"),
+                profile: 'https://media.istockphoto.com/id/1388253782/photo/positive-successful-millennial-business-professional-man-head-shot-portrait.webp?b=1&s=170667a&w=0&k=20&c=KZM6TIhdaJAy28BA9sg0Sn-ZRd160F6HytdAKykza-s=',
+                comment: 'Beautiful.',
+                cleanliness: 4.7,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'niousha',
+                date: new Date("2023-07-12"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1UTR40TNj3O9ch44YiAybjV5FoKVYuBOpXg&usqp=CAU',
+                comment: 'This place was great, the room and style of this place is everything. The host is friendly and safe.',
+                cleanliness: 4.8,
+                communication: 4.5,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'paloma',
+                date: new Date("2023-08-19"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR47eGNB4uktvhbGIeWWDPNl-0L1EBWByWRkg&usqp=CAU',
+                comment: 'Amazing place to stay. Cozy, clean and safe, the host is very helpful/friendly and I felt at home.',
+                cleanliness: 4.5,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'lukas',
+                date: new Date("2023-08-26"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1fmtO1xNV_yphS6OAtcQuuDzupas7MMZotNVJuyvYIoISmh8L827nvt7anM_ZHsKr8EM&usqp=CAU',
+                comment: 'Exactly in the description, friendly and flexible host and lovely food at the place.',
+                cleanliness: 4.8,
+                communication: 4.7,
+                checkIn: 4.8,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            }
+        ]
     },
     {
         id: 'r5',
@@ -628,7 +1812,81 @@ const locations = [
             stepFreePath: true
         },
         superhost: true,
-        airbnbPlus: false
+        airbnbPlus: false,
+        reviews: [
+            {
+                from: 'victor',
+                date: new Date("2023-05-12"),
+                profile: 'https://image.shutterstock.com/mosaic_250/2780032/1548802709/stock-photo-headshot-portrait-of-happy-millennial-man-in-casual-clothes-isolated-on-grey-studio-background-1548802709.jpg',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.6,
+                communication: 4.7,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5                
+            },
+            {
+                from: 'roberto',
+                date: new Date("2023-04-17"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZC_95EVYM_FcC4b-LJg6XHL4p1E673azPuTMH92vOjnVJE0-dIyTszYt6teIip0PPcQs&usqp=CAU',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.8,
+                communication: 4.9,
+                checkIn: 4.9,
+                accuracy: 4.7,
+                location: 4.8,
+                value: 4.9
+            },
+            {
+                from: 'daniel',
+                date: new Date("2023-06-25"),
+                profile: 'https://media.istockphoto.com/id/1388253782/photo/positive-successful-millennial-business-professional-man-head-shot-portrait.webp?b=1&s=170667a&w=0&k=20&c=KZM6TIhdaJAy28BA9sg0Sn-ZRd160F6HytdAKykza-s=',
+                comment: 'Beautiful.',
+                cleanliness: 4.7,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'niousha',
+                date: new Date("2023-07-12"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1UTR40TNj3O9ch44YiAybjV5FoKVYuBOpXg&usqp=CAU',
+                comment: 'This place was great, the room and style of this place is everything. The host is friendly and safe.',
+                cleanliness: 4.8,
+                communication: 4.5,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'paloma',
+                date: new Date("2023-08-19"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR47eGNB4uktvhbGIeWWDPNl-0L1EBWByWRkg&usqp=CAU',
+                comment: 'Amazing place to stay. Cozy, clean and safe, the host is very helpful/friendly and I felt at home.',
+                cleanliness: 4.5,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'lukas',
+                date: new Date("2023-08-26"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1fmtO1xNV_yphS6OAtcQuuDzupas7MMZotNVJuyvYIoISmh8L827nvt7anM_ZHsKr8EM&usqp=CAU',
+                comment: 'Exactly in the description, friendly and flexible host and lovely food at the place.',
+                cleanliness: 4.8,
+                communication: 4.7,
+                checkIn: 4.8,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            }
+        ]
     },
     {
         id: 'r6',
@@ -665,7 +1923,81 @@ const locations = [
             stepFreePath: true
         },
         superhost: false,
-        airbnbPlus: false
+        airbnbPlus: false,
+        reviews: [
+            {
+                from: 'victor',
+                date: new Date("2023-05-12"),
+                profile: 'https://image.shutterstock.com/mosaic_250/2780032/1548802709/stock-photo-headshot-portrait-of-happy-millennial-man-in-casual-clothes-isolated-on-grey-studio-background-1548802709.jpg',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.6,
+                communication: 4.7,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5                
+            },
+            {
+                from: 'roberto',
+                date: new Date("2023-04-17"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZC_95EVYM_FcC4b-LJg6XHL4p1E673azPuTMH92vOjnVJE0-dIyTszYt6teIip0PPcQs&usqp=CAU',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.8,
+                communication: 4.9,
+                checkIn: 4.9,
+                accuracy: 4.7,
+                location: 4.8,
+                value: 4.9
+            },
+            {
+                from: 'daniel',
+                date: new Date("2023-06-25"),
+                profile: 'https://media.istockphoto.com/id/1388253782/photo/positive-successful-millennial-business-professional-man-head-shot-portrait.webp?b=1&s=170667a&w=0&k=20&c=KZM6TIhdaJAy28BA9sg0Sn-ZRd160F6HytdAKykza-s=',
+                comment: 'Beautiful.',
+                cleanliness: 4.7,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'niousha',
+                date: new Date("2023-07-12"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1UTR40TNj3O9ch44YiAybjV5FoKVYuBOpXg&usqp=CAU',
+                comment: 'This place was great, the room and style of this place is everything. The host is friendly and safe.',
+                cleanliness: 4.8,
+                communication: 4.5,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'paloma',
+                date: new Date("2023-08-19"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR47eGNB4uktvhbGIeWWDPNl-0L1EBWByWRkg&usqp=CAU',
+                comment: 'Amazing place to stay. Cozy, clean and safe, the host is very helpful/friendly and I felt at home.',
+                cleanliness: 4.5,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'lukas',
+                date: new Date("2023-08-26"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1fmtO1xNV_yphS6OAtcQuuDzupas7MMZotNVJuyvYIoISmh8L827nvt7anM_ZHsKr8EM&usqp=CAU',
+                comment: 'Exactly in the description, friendly and flexible host and lovely food at the place.',
+                cleanliness: 4.8,
+                communication: 4.7,
+                checkIn: 4.8,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            }
+        ]
     },
     {
         id: 'r7',
@@ -702,7 +2034,81 @@ const locations = [
             stepFreePath: true
         },
         superhost: false,
-        airbnbPlus: false
+        airbnbPlus: false,
+        reviews: [
+            {
+                from: 'victor',
+                date: new Date("2023-05-12"),
+                profile: 'https://image.shutterstock.com/mosaic_250/2780032/1548802709/stock-photo-headshot-portrait-of-happy-millennial-man-in-casual-clothes-isolated-on-grey-studio-background-1548802709.jpg',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.6,
+                communication: 4.7,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5                
+            },
+            {
+                from: 'roberto',
+                date: new Date("2023-04-17"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZC_95EVYM_FcC4b-LJg6XHL4p1E673azPuTMH92vOjnVJE0-dIyTszYt6teIip0PPcQs&usqp=CAU',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.8,
+                communication: 4.9,
+                checkIn: 4.9,
+                accuracy: 4.7,
+                location: 4.8,
+                value: 4.9
+            },
+            {
+                from: 'daniel',
+                date: new Date("2023-06-25"),
+                profile: 'https://media.istockphoto.com/id/1388253782/photo/positive-successful-millennial-business-professional-man-head-shot-portrait.webp?b=1&s=170667a&w=0&k=20&c=KZM6TIhdaJAy28BA9sg0Sn-ZRd160F6HytdAKykza-s=',
+                comment: 'Beautiful.',
+                cleanliness: 4.7,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'niousha',
+                date: new Date("2023-07-12"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1UTR40TNj3O9ch44YiAybjV5FoKVYuBOpXg&usqp=CAU',
+                comment: 'This place was great, the room and style of this place is everything. The host is friendly and safe.',
+                cleanliness: 4.8,
+                communication: 4.5,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'paloma',
+                date: new Date("2023-08-19"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR47eGNB4uktvhbGIeWWDPNl-0L1EBWByWRkg&usqp=CAU',
+                comment: 'Amazing place to stay. Cozy, clean and safe, the host is very helpful/friendly and I felt at home.',
+                cleanliness: 4.5,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'lukas',
+                date: new Date("2023-08-26"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1fmtO1xNV_yphS6OAtcQuuDzupas7MMZotNVJuyvYIoISmh8L827nvt7anM_ZHsKr8EM&usqp=CAU',
+                comment: 'Exactly in the description, friendly and flexible host and lovely food at the place.',
+                cleanliness: 4.8,
+                communication: 4.7,
+                checkIn: 4.8,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            }
+        ]
     },
     {
         id: 'r8',
@@ -739,7 +2145,81 @@ const locations = [
             stepFreePath: true
         },
         superhost: false,
-        airbnbPlus: false
+        airbnbPlus: false,
+        reviews: [
+            {
+                from: 'victor',
+                date: new Date("2023-05-12"),
+                profile: 'https://image.shutterstock.com/mosaic_250/2780032/1548802709/stock-photo-headshot-portrait-of-happy-millennial-man-in-casual-clothes-isolated-on-grey-studio-background-1548802709.jpg',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.6,
+                communication: 4.7,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5                
+            },
+            {
+                from: 'roberto',
+                date: new Date("2023-04-17"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZC_95EVYM_FcC4b-LJg6XHL4p1E673azPuTMH92vOjnVJE0-dIyTszYt6teIip0PPcQs&usqp=CAU',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.8,
+                communication: 4.9,
+                checkIn: 4.9,
+                accuracy: 4.7,
+                location: 4.8,
+                value: 4.9
+            },
+            {
+                from: 'daniel',
+                date: new Date("2023-06-25"),
+                profile: 'https://media.istockphoto.com/id/1388253782/photo/positive-successful-millennial-business-professional-man-head-shot-portrait.webp?b=1&s=170667a&w=0&k=20&c=KZM6TIhdaJAy28BA9sg0Sn-ZRd160F6HytdAKykza-s=',
+                comment: 'Beautiful.',
+                cleanliness: 4.7,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'niousha',
+                date: new Date("2023-07-12"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1UTR40TNj3O9ch44YiAybjV5FoKVYuBOpXg&usqp=CAU',
+                comment: 'This place was great, the room and style of this place is everything. The host is friendly and safe.',
+                cleanliness: 4.8,
+                communication: 4.5,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'paloma',
+                date: new Date("2023-08-19"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR47eGNB4uktvhbGIeWWDPNl-0L1EBWByWRkg&usqp=CAU',
+                comment: 'Amazing place to stay. Cozy, clean and safe, the host is very helpful/friendly and I felt at home.',
+                cleanliness: 4.5,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'lukas',
+                date: new Date("2023-08-26"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1fmtO1xNV_yphS6OAtcQuuDzupas7MMZotNVJuyvYIoISmh8L827nvt7anM_ZHsKr8EM&usqp=CAU',
+                comment: 'Exactly in the description, friendly and flexible host and lovely food at the place.',
+                cleanliness: 4.8,
+                communication: 4.7,
+                checkIn: 4.8,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            }
+        ]
     },
     {
         id: 'r9',
@@ -776,7 +2256,81 @@ const locations = [
             stepFreePath: true
         },
         superhost: false,
-        airbnbPlus: true
+        airbnbPlus: true,
+        reviews: [
+            {
+                from: 'victor',
+                date: new Date("2023-05-12"),
+                profile: 'https://image.shutterstock.com/mosaic_250/2780032/1548802709/stock-photo-headshot-portrait-of-happy-millennial-man-in-casual-clothes-isolated-on-grey-studio-background-1548802709.jpg',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.6,
+                communication: 4.7,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5                
+            },
+            {
+                from: 'roberto',
+                date: new Date("2023-04-17"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZC_95EVYM_FcC4b-LJg6XHL4p1E673azPuTMH92vOjnVJE0-dIyTszYt6teIip0PPcQs&usqp=CAU',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.8,
+                communication: 4.9,
+                checkIn: 4.9,
+                accuracy: 4.7,
+                location: 4.8,
+                value: 4.9
+            },
+            {
+                from: 'daniel',
+                date: new Date("2023-06-25"),
+                profile: 'https://media.istockphoto.com/id/1388253782/photo/positive-successful-millennial-business-professional-man-head-shot-portrait.webp?b=1&s=170667a&w=0&k=20&c=KZM6TIhdaJAy28BA9sg0Sn-ZRd160F6HytdAKykza-s=',
+                comment: 'Beautiful.',
+                cleanliness: 4.7,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'niousha',
+                date: new Date("2023-07-12"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1UTR40TNj3O9ch44YiAybjV5FoKVYuBOpXg&usqp=CAU',
+                comment: 'This place was great, the room and style of this place is everything. The host is friendly and safe.',
+                cleanliness: 4.8,
+                communication: 4.5,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'paloma',
+                date: new Date("2023-08-19"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR47eGNB4uktvhbGIeWWDPNl-0L1EBWByWRkg&usqp=CAU',
+                comment: 'Amazing place to stay. Cozy, clean and safe, the host is very helpful/friendly and I felt at home.',
+                cleanliness: 4.5,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'lukas',
+                date: new Date("2023-08-26"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1fmtO1xNV_yphS6OAtcQuuDzupas7MMZotNVJuyvYIoISmh8L827nvt7anM_ZHsKr8EM&usqp=CAU',
+                comment: 'Exactly in the description, friendly and flexible host and lovely food at the place.',
+                cleanliness: 4.8,
+                communication: 4.7,
+                checkIn: 4.8,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            }
+        ]
     },
     {
         id: 'r10',
@@ -813,7 +2367,81 @@ const locations = [
             stepFreePath: false
         },
         superhost: false,
-        airbnbPlus: false
+        airbnbPlus: false,
+        reviews: [
+            {
+                from: 'victor',
+                date: new Date("2023-05-12"),
+                profile: 'https://image.shutterstock.com/mosaic_250/2780032/1548802709/stock-photo-headshot-portrait-of-happy-millennial-man-in-casual-clothes-isolated-on-grey-studio-background-1548802709.jpg',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.6,
+                communication: 4.7,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5                
+            },
+            {
+                from: 'roberto',
+                date: new Date("2023-04-17"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZC_95EVYM_FcC4b-LJg6XHL4p1E673azPuTMH92vOjnVJE0-dIyTszYt6teIip0PPcQs&usqp=CAU',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.8,
+                communication: 4.9,
+                checkIn: 4.9,
+                accuracy: 4.7,
+                location: 4.8,
+                value: 4.9
+            },
+            {
+                from: 'daniel',
+                date: new Date("2023-06-25"),
+                profile: 'https://media.istockphoto.com/id/1388253782/photo/positive-successful-millennial-business-professional-man-head-shot-portrait.webp?b=1&s=170667a&w=0&k=20&c=KZM6TIhdaJAy28BA9sg0Sn-ZRd160F6HytdAKykza-s=',
+                comment: 'Beautiful.',
+                cleanliness: 4.7,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'niousha',
+                date: new Date("2023-07-12"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1UTR40TNj3O9ch44YiAybjV5FoKVYuBOpXg&usqp=CAU',
+                comment: 'This place was great, the room and style of this place is everything. The host is friendly and safe.',
+                cleanliness: 4.8,
+                communication: 4.5,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'paloma',
+                date: new Date("2023-08-19"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR47eGNB4uktvhbGIeWWDPNl-0L1EBWByWRkg&usqp=CAU',
+                comment: 'Amazing place to stay. Cozy, clean and safe, the host is very helpful/friendly and I felt at home.',
+                cleanliness: 4.5,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'lukas',
+                date: new Date("2023-08-26"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1fmtO1xNV_yphS6OAtcQuuDzupas7MMZotNVJuyvYIoISmh8L827nvt7anM_ZHsKr8EM&usqp=CAU',
+                comment: 'Exactly in the description, friendly and flexible host and lovely food at the place.',
+                cleanliness: 4.8,
+                communication: 4.7,
+                checkIn: 4.8,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            }
+        ]
     },
     {
         id: 'r11',
@@ -850,7 +2478,81 @@ const locations = [
             stepFreePath: true
         },
         superhost: true,
-        airbnbPlus: false
+        airbnbPlus: false,
+        reviews: [
+            {
+                from: 'victor',
+                date: new Date("2023-05-12"),
+                profile: 'https://image.shutterstock.com/mosaic_250/2780032/1548802709/stock-photo-headshot-portrait-of-happy-millennial-man-in-casual-clothes-isolated-on-grey-studio-background-1548802709.jpg',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.6,
+                communication: 4.7,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5                
+            },
+            {
+                from: 'roberto',
+                date: new Date("2023-04-17"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZC_95EVYM_FcC4b-LJg6XHL4p1E673azPuTMH92vOjnVJE0-dIyTszYt6teIip0PPcQs&usqp=CAU',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.8,
+                communication: 4.9,
+                checkIn: 4.9,
+                accuracy: 4.7,
+                location: 4.8,
+                value: 4.9
+            },
+            {
+                from: 'daniel',
+                date: new Date("2023-06-25"),
+                profile: 'https://media.istockphoto.com/id/1388253782/photo/positive-successful-millennial-business-professional-man-head-shot-portrait.webp?b=1&s=170667a&w=0&k=20&c=KZM6TIhdaJAy28BA9sg0Sn-ZRd160F6HytdAKykza-s=',
+                comment: 'Beautiful.',
+                cleanliness: 4.7,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'niousha',
+                date: new Date("2023-07-12"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1UTR40TNj3O9ch44YiAybjV5FoKVYuBOpXg&usqp=CAU',
+                comment: 'This place was great, the room and style of this place is everything. The host is friendly and safe.',
+                cleanliness: 4.8,
+                communication: 4.5,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'paloma',
+                date: new Date("2023-08-19"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR47eGNB4uktvhbGIeWWDPNl-0L1EBWByWRkg&usqp=CAU',
+                comment: 'Amazing place to stay. Cozy, clean and safe, the host is very helpful/friendly and I felt at home.',
+                cleanliness: 4.5,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'lukas',
+                date: new Date("2023-08-26"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1fmtO1xNV_yphS6OAtcQuuDzupas7MMZotNVJuyvYIoISmh8L827nvt7anM_ZHsKr8EM&usqp=CAU',
+                comment: 'Exactly in the description, friendly and flexible host and lovely food at the place.',
+                cleanliness: 4.8,
+                communication: 4.7,
+                checkIn: 4.8,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            }
+        ]
     },
     {
         id: 'r12',
@@ -887,7 +2589,81 @@ const locations = [
             stepFreePath: true
         },
         superhost: false,
-        airbnbPlus: false
+        airbnbPlus: false,
+        reviews: [
+            {
+                from: 'victor',
+                date: new Date("2023-05-12"),
+                profile: 'https://image.shutterstock.com/mosaic_250/2780032/1548802709/stock-photo-headshot-portrait-of-happy-millennial-man-in-casual-clothes-isolated-on-grey-studio-background-1548802709.jpg',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.6,
+                communication: 4.7,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5                
+            },
+            {
+                from: 'roberto',
+                date: new Date("2023-04-17"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZC_95EVYM_FcC4b-LJg6XHL4p1E673azPuTMH92vOjnVJE0-dIyTszYt6teIip0PPcQs&usqp=CAU',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.8,
+                communication: 4.9,
+                checkIn: 4.9,
+                accuracy: 4.7,
+                location: 4.8,
+                value: 4.9
+            },
+            {
+                from: 'daniel',
+                date: new Date("2023-06-25"),
+                profile: 'https://media.istockphoto.com/id/1388253782/photo/positive-successful-millennial-business-professional-man-head-shot-portrait.webp?b=1&s=170667a&w=0&k=20&c=KZM6TIhdaJAy28BA9sg0Sn-ZRd160F6HytdAKykza-s=',
+                comment: 'Beautiful.',
+                cleanliness: 4.7,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'niousha',
+                date: new Date("2023-07-12"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1UTR40TNj3O9ch44YiAybjV5FoKVYuBOpXg&usqp=CAU',
+                comment: 'This place was great, the room and style of this place is everything. The host is friendly and safe.',
+                cleanliness: 4.8,
+                communication: 4.5,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'paloma',
+                date: new Date("2023-08-19"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR47eGNB4uktvhbGIeWWDPNl-0L1EBWByWRkg&usqp=CAU',
+                comment: 'Amazing place to stay. Cozy, clean and safe, the host is very helpful/friendly and I felt at home.',
+                cleanliness: 4.5,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'lukas',
+                date: new Date("2023-08-26"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1fmtO1xNV_yphS6OAtcQuuDzupas7MMZotNVJuyvYIoISmh8L827nvt7anM_ZHsKr8EM&usqp=CAU',
+                comment: 'Exactly in the description, friendly and flexible host and lovely food at the place.',
+                cleanliness: 4.8,
+                communication: 4.7,
+                checkIn: 4.8,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            }
+        ]
     },
     {
         id: 'r13',
@@ -925,7 +2701,81 @@ const locations = [
             stepFreePath: true
         },
         superhost: false,
-        airbnbPlus: true
+        airbnbPlus: true,
+        reviews: [
+            {
+                from: 'victor',
+                date: new Date("2023-05-12"),
+                profile: 'https://image.shutterstock.com/mosaic_250/2780032/1548802709/stock-photo-headshot-portrait-of-happy-millennial-man-in-casual-clothes-isolated-on-grey-studio-background-1548802709.jpg',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.6,
+                communication: 4.7,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5                
+            },
+            {
+                from: 'roberto',
+                date: new Date("2023-04-17"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZC_95EVYM_FcC4b-LJg6XHL4p1E673azPuTMH92vOjnVJE0-dIyTszYt6teIip0PPcQs&usqp=CAU',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.8,
+                communication: 4.9,
+                checkIn: 4.9,
+                accuracy: 4.7,
+                location: 4.8,
+                value: 4.9
+            },
+            {
+                from: 'daniel',
+                date: new Date("2023-06-25"),
+                profile: 'https://media.istockphoto.com/id/1388253782/photo/positive-successful-millennial-business-professional-man-head-shot-portrait.webp?b=1&s=170667a&w=0&k=20&c=KZM6TIhdaJAy28BA9sg0Sn-ZRd160F6HytdAKykza-s=',
+                comment: 'Beautiful.',
+                cleanliness: 4.7,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'niousha',
+                date: new Date("2023-07-12"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1UTR40TNj3O9ch44YiAybjV5FoKVYuBOpXg&usqp=CAU',
+                comment: 'This place was great, the room and style of this place is everything. The host is friendly and safe.',
+                cleanliness: 4.8,
+                communication: 4.5,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'paloma',
+                date: new Date("2023-08-19"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR47eGNB4uktvhbGIeWWDPNl-0L1EBWByWRkg&usqp=CAU',
+                comment: 'Amazing place to stay. Cozy, clean and safe, the host is very helpful/friendly and I felt at home.',
+                cleanliness: 4.5,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'lukas',
+                date: new Date("2023-08-26"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1fmtO1xNV_yphS6OAtcQuuDzupas7MMZotNVJuyvYIoISmh8L827nvt7anM_ZHsKr8EM&usqp=CAU',
+                comment: 'Exactly in the description, friendly and flexible host and lovely food at the place.',
+                cleanliness: 4.8,
+                communication: 4.7,
+                checkIn: 4.8,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            }
+        ]
     },
     {
         id: 'r14',
@@ -962,7 +2812,81 @@ const locations = [
             stepFreePath: true
         },
         superhost: true,
-        airbnbPlus: true
+        airbnbPlus: true,
+        reviews: [
+            {
+                from: 'victor',
+                date: new Date("2023-05-12"),
+                profile: 'https://image.shutterstock.com/mosaic_250/2780032/1548802709/stock-photo-headshot-portrait-of-happy-millennial-man-in-casual-clothes-isolated-on-grey-studio-background-1548802709.jpg',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.6,
+                communication: 4.7,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5                
+            },
+            {
+                from: 'roberto',
+                date: new Date("2023-04-17"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZC_95EVYM_FcC4b-LJg6XHL4p1E673azPuTMH92vOjnVJE0-dIyTszYt6teIip0PPcQs&usqp=CAU',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.8,
+                communication: 4.9,
+                checkIn: 4.9,
+                accuracy: 4.7,
+                location: 4.8,
+                value: 4.9
+            },
+            {
+                from: 'daniel',
+                date: new Date("2023-06-25"),
+                profile: 'https://media.istockphoto.com/id/1388253782/photo/positive-successful-millennial-business-professional-man-head-shot-portrait.webp?b=1&s=170667a&w=0&k=20&c=KZM6TIhdaJAy28BA9sg0Sn-ZRd160F6HytdAKykza-s=',
+                comment: 'Beautiful.',
+                cleanliness: 4.7,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'niousha',
+                date: new Date("2023-07-12"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1UTR40TNj3O9ch44YiAybjV5FoKVYuBOpXg&usqp=CAU',
+                comment: 'This place was great, the room and style of this place is everything. The host is friendly and safe.',
+                cleanliness: 4.8,
+                communication: 4.5,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'paloma',
+                date: new Date("2023-08-19"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR47eGNB4uktvhbGIeWWDPNl-0L1EBWByWRkg&usqp=CAU',
+                comment: 'Amazing place to stay. Cozy, clean and safe, the host is very helpful/friendly and I felt at home.',
+                cleanliness: 4.5,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'lukas',
+                date: new Date("2023-08-26"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1fmtO1xNV_yphS6OAtcQuuDzupas7MMZotNVJuyvYIoISmh8L827nvt7anM_ZHsKr8EM&usqp=CAU',
+                comment: 'Exactly in the description, friendly and flexible host and lovely food at the place.',
+                cleanliness: 4.8,
+                communication: 4.7,
+                checkIn: 4.8,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            }
+        ]
     },
     {
         id: 'r15',
@@ -999,7 +2923,81 @@ const locations = [
             stepFreePath: true
         },
         superhost: false,
-        airbnbPlus: true
+        airbnbPlus: true,
+        reviews: [
+            {
+                from: 'victor',
+                date: new Date("2023-05-12"),
+                profile: 'https://image.shutterstock.com/mosaic_250/2780032/1548802709/stock-photo-headshot-portrait-of-happy-millennial-man-in-casual-clothes-isolated-on-grey-studio-background-1548802709.jpg',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.6,
+                communication: 4.7,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5                
+            },
+            {
+                from: 'roberto',
+                date: new Date("2023-04-17"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZC_95EVYM_FcC4b-LJg6XHL4p1E673azPuTMH92vOjnVJE0-dIyTszYt6teIip0PPcQs&usqp=CAU',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.8,
+                communication: 4.9,
+                checkIn: 4.9,
+                accuracy: 4.7,
+                location: 4.8,
+                value: 4.9
+            },
+            {
+                from: 'daniel',
+                date: new Date("2023-06-25"),
+                profile: 'https://media.istockphoto.com/id/1388253782/photo/positive-successful-millennial-business-professional-man-head-shot-portrait.webp?b=1&s=170667a&w=0&k=20&c=KZM6TIhdaJAy28BA9sg0Sn-ZRd160F6HytdAKykza-s=',
+                comment: 'Beautiful.',
+                cleanliness: 4.7,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'niousha',
+                date: new Date("2023-07-12"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1UTR40TNj3O9ch44YiAybjV5FoKVYuBOpXg&usqp=CAU',
+                comment: 'This place was great, the room and style of this place is everything. The host is friendly and safe.',
+                cleanliness: 4.8,
+                communication: 4.5,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'paloma',
+                date: new Date("2023-08-19"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR47eGNB4uktvhbGIeWWDPNl-0L1EBWByWRkg&usqp=CAU',
+                comment: 'Amazing place to stay. Cozy, clean and safe, the host is very helpful/friendly and I felt at home.',
+                cleanliness: 4.5,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'lukas',
+                date: new Date("2023-08-26"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1fmtO1xNV_yphS6OAtcQuuDzupas7MMZotNVJuyvYIoISmh8L827nvt7anM_ZHsKr8EM&usqp=CAU',
+                comment: 'Exactly in the description, friendly and flexible host and lovely food at the place.',
+                cleanliness: 4.8,
+                communication: 4.7,
+                checkIn: 4.8,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            }
+        ]
     },
     {
         id: 'r16',
@@ -1036,7 +3034,81 @@ const locations = [
             stepFreePath: true
         },
         superhost: false,
-        airbnbPlus: false
+        airbnbPlus: false,
+        reviews: [
+            {
+                from: 'victor',
+                date: new Date("2023-05-12"),
+                profile: 'https://image.shutterstock.com/mosaic_250/2780032/1548802709/stock-photo-headshot-portrait-of-happy-millennial-man-in-casual-clothes-isolated-on-grey-studio-background-1548802709.jpg',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.6,
+                communication: 4.7,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5                
+            },
+            {
+                from: 'roberto',
+                date: new Date("2023-04-17"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZC_95EVYM_FcC4b-LJg6XHL4p1E673azPuTMH92vOjnVJE0-dIyTszYt6teIip0PPcQs&usqp=CAU',
+                comment: 'Great place to stay. Host is friendly and helpful. Great place for coffee once you head out or when you get back.',
+                cleanliness: 4.8,
+                communication: 4.9,
+                checkIn: 4.9,
+                accuracy: 4.7,
+                location: 4.8,
+                value: 4.9
+            },
+            {
+                from: 'daniel',
+                date: new Date("2023-06-25"),
+                profile: 'https://media.istockphoto.com/id/1388253782/photo/positive-successful-millennial-business-professional-man-head-shot-portrait.webp?b=1&s=170667a&w=0&k=20&c=KZM6TIhdaJAy28BA9sg0Sn-ZRd160F6HytdAKykza-s=',
+                comment: 'Beautiful.',
+                cleanliness: 4.7,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'niousha',
+                date: new Date("2023-07-12"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1UTR40TNj3O9ch44YiAybjV5FoKVYuBOpXg&usqp=CAU',
+                comment: 'This place was great, the room and style of this place is everything. The host is friendly and safe.',
+                cleanliness: 4.8,
+                communication: 4.5,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'paloma',
+                date: new Date("2023-08-19"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR47eGNB4uktvhbGIeWWDPNl-0L1EBWByWRkg&usqp=CAU',
+                comment: 'Amazing place to stay. Cozy, clean and safe, the host is very helpful/friendly and I felt at home.',
+                cleanliness: 4.5,
+                communication: 4.9,
+                checkIn: 5,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            },
+            {
+                from: 'lukas',
+                date: new Date("2023-08-26"),
+                profile: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1fmtO1xNV_yphS6OAtcQuuDzupas7MMZotNVJuyvYIoISmh8L827nvt7anM_ZHsKr8EM&usqp=CAU',
+                comment: 'Exactly in the description, friendly and flexible host and lovely food at the place.',
+                cleanliness: 4.8,
+                communication: 4.7,
+                checkIn: 4.8,
+                accuracy: 4.9,
+                location: 4.6,
+                value: 5
+            }
+        ]
     }
 ]
 

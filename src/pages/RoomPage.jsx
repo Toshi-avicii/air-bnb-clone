@@ -12,6 +12,9 @@ import { MdOutlineBathtub, MdOutlineKitchen } from 'react-icons/md'
 import { CgSmartHomeWashMachine } from 'react-icons/cg';
 import RoomHostInfo from "../components/roomPageComponents/RoomHostInfo";
 import DayPickerComponent from "../components/roomPageComponents/DayPickerComponent";
+import RoomReviews from "../components/roomPageComponents/RoomReviews";
+import RoomRules from "../components/roomPageComponents/RoomRules";
+import Footer from "../components/Footer";
 
 
 function RoomPage() {
@@ -44,6 +47,7 @@ function RoomPage() {
   }, [room, host]);
 
   return (
+    <>
     <div className="flex justify-center items-center">
       <div className="p-6 sm:w-full md:w-full lg:w-full xl:w-[90%] ">
           {
@@ -207,11 +211,22 @@ function RoomPage() {
                     </div>
                   </div>
                 </div>
+
                 <hr className="bg-gray-300 h-[2px] my-6" />
+
+                <RoomReviews roomReviews={room?.reviews} />
+
+                <hr className="bg-gray-300 h-[2px] my-6" />
+
+                <RoomRules />
+
+
               </>
           }
       </div>
     </div>
+    <Footer />
+    </>
   )
 }
 
