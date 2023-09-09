@@ -110,10 +110,10 @@ function RoomReviews({ roomReviews = [] }) {
                         <div key={index}>
                             <div className='flex space-x-3 items-center'>
                                 <div>
-                                    <img src={review.profilePic} alt="reviewer" className='w-[75px] h-[75px] rounded-full' />
+                                    <img src={review.profile} alt="reviewer" className='w-[75px] h-[75px] rounded-full object-cover' />
                                 </div>
                                 <div>
-                                    <p className='text-xl font-medium'>{review.from}</p>
+                                    <p className='text-xl font-medium'>{review.from[0].toUpperCase() + review.from.slice(1)}</p>
                                     <p className='text-zinc-500'>{months[review.date.getMonth()]} {review.date.getFullYear()}</p>
                                 </div>
                             </div>

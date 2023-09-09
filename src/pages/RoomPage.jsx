@@ -271,7 +271,7 @@ function RoomPage() {
                     <RoomReservation 
                       price={room?.pricePerNight}
                       rating={room?.rating}
-                      noOfReviews={host ? host?.reviews?.length : null}
+                      noOfReviews={room ? room?.reviews?.length : null}
                     />
 
                     <div className="flex space-x-4 items-center self-center mt-4">
