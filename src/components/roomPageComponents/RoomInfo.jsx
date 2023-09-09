@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { MdOutlineBed } from 'react-icons/md';
 import { FaShower, FaBed } from 'react-icons/fa';
 import { FaPeopleRoof } from 'react-icons/fa6';

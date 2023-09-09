@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { BsTranslate } from 'react-icons/bs'
 import { AiFillStar, AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
 import { FiShare } from 'react-icons/fi'

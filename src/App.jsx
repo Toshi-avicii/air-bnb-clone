@@ -4,7 +4,7 @@ import HomePage from './pages/HomePage';
 import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import RoomPage from './pages/RoomPage';
-import Navbar from './components/navbar/Navbar';
+import RoomGalleryPage from './pages/RoomGalleryPage';
 
 function App() {
   const profile = useSelector((state) => state.appReducers.profile);
@@ -23,10 +23,10 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Navbar />
         <Routes>
           <Route path='/' element={<HomePage />} />
           <Route path='/rooms/:roomId' element={<RoomPage />} />
+          <Route path='/rooms/:roomId/gallery' element={<RoomGalleryPage />} />
         </Routes>
       </BrowserRouter>
     </>

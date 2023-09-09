@@ -2,10 +2,12 @@ import DisplayBar from "../components/DisplayBar"
 import Locations from "../components/Locations"
 import TabBar from "../components/menu-tab/TabBar"
 import { FaMap } from 'react-icons/fa';
+import Navbar from '../components/navbar/Navbar';
 
 function HomePage() {
   return (
     <div>
+      <Navbar isSticky={true} />
       <TabBar />
       <DisplayBar />
       <Locations />

@@ -1,8 +1,13 @@
+import { Link } from "react-router-dom"
+import { PiDotsNineLight } from 'react-icons/pi';
+
+/* eslint-disable react/prop-types */
 function RoomImageGrid({
-    images
+    images,
+    roomId
 }) {
   return (
-    <div className="my-6">
+    <div className="my-6 relative" id="photos">
         {
             images.length > 0 &&
             <div className="grid grid-rows-2 grid-cols-4 gap-3 rounded-lg">
@@ -25,9 +30,18 @@ function RoomImageGrid({
                 <div className="col-start-4 row-start-2 col-span-1 row-span-1 cursor-pointer">
                     <img src={images[4]} className="rounded-br-xl" />
                 </div>
-
             </div>
         }
+
+        <div className="absolute bottom-4 right-4">
+            <Link 
+                to={`/rooms/${roomId}/gallery`} 
+                className="px-4 py-2 border border-black rounded-lg flex justify-between items-center space-x-2 bg-gray-100"
+            >
+                <PiDotsNineLight className="text-lg" />
+                <span>Show all photos</span>
+            </Link>
+        </div>
     </div>
   )
 }
