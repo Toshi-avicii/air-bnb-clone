@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .pink-btn {
+    @apply bg-pink-600 p-4 rounded-lg text-white text-center w-full
+  }
+
+  .black-outline-btn {
+    @apply bg-white rounded-lg p-4 border border-black text-center text-black w-full
+  }
+
+  .black-btn {
+    @apply bg-black rounded-lg p-4 text-center text-white
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  
+  font-weight: 400;
+
+  /* color-scheme: light dark; */
+  /* color: rgba(255, 255, 255, 0.87); */
+  /* background-color: #242424; */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* @media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */
+
+.swiper.swiper-initialized {
+  padding: 20px;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 4px #c5c4c4;
+  border: 2px solid rgb(112, 112, 112);
+  transition: all 0.3s;
+}
+
+.swiper-button-next:hover {
+  transform: scale(1.2) !important;
+}
+
+.swiper-button-prev:hover {
+  transform: scale(1.2) !important;
+}
+
+.swiper-button-prev::after, .swiper-button-next::after {
+  font-size: 12px !important;
+  color: black !important;
+}
+
+.tab-slide:hover p {
+  color: black;
+}
+
+.swiper-pagination-bullet {
+  background-color: rgb(255, 255, 255);
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: white;
+}
+
+.swiper .swiper-button-prev {
+  color: black !important; 
+  background-color: white !important;
+}
+
+.swiper .swiper-button-next {
+  color: black !important; 
+  background-color: white !important;
+}
+
+/* .reviews-slider {
+  position: relative;
+  z-index: 100 !important;
+} */
+
+.reviews-slider .swiper-button-next {
+  position: absolute;
+  top: 60%;
+  right: 0px;
+  z-index: 100 !important;
+}
+
+.reviews-slider .swiper-button-prev {
+  position: absolute;
+  top: 60%;
+  left: 0px ;
+  z-index: 13 !important;
+}
+
+.listings-slider.swiper.swiper-initialized {
+  padding: 0;
+}
+
+.rdp-month {
+  flex: 1 !important;
+}
+
+.rdp-table {
+  width: 100% !important;
+}
+
+.rdp-cell {
+  width: 100% !important;
+}
