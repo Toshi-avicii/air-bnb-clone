@@ -6,6 +6,8 @@ import HostReviews from "./host-details/HostReviews";
 import HostConfirmedInfo from "./host-details/HostConfirmedInfo";
 import HostListings from "./host-details/HostListings";
 import ReportHostBtn from "./host-details/ReportHostBtn";
+import HostProfileBox from "./HostProfileBox";
+import HostFeatures from "./HostFeatures";
 
 function HostPassportModal({ isOpen, setOpenHostPassportModal, closeModal, hostDetails }) {
   return (
@@ -46,7 +48,6 @@ function HostPassportModal({ isOpen, setOpenHostPassportModal, closeModal, hostD
                     <hr className="w-full bg-slate-300 h-[3px]" />
                 </div>
             }
-
             <ReportHostBtn />
 
         </div>

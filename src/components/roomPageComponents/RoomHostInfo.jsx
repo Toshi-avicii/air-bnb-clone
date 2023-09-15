@@ -21,9 +21,12 @@ function RoomHostInfo({ host }) {
                     Welcome.
                 </p>
                 <div className='flex flex-col space-y-4 items-start'>
-                    <button className='my-4 underline font-semibold text-lg'>Show more</button>
+                    <button className='my-4 underline font-semibold text-lg'>Show more</button>                      
                     {/* <button className='black-btn px-6'>Message Host</button> */}
                     <Link to={`/hosts/${host.id}`} className='black-btn px-6'>Message Host</Link>
+
+                    <button className='black-btn px-6'>Message Host</button>
+
                 </div>
 
                 <hr className='bg-gray-900 h-[3px] my-6' />

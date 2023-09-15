@@ -118,7 +118,8 @@ function RoomPage() {
       />
     }
     <div className="flex justify-center items-center">
-      <div className="p-6 sm:w-full md:w-full lg:w-full xl:w-[90%]">
+      
+      <div className="p-6 sm:w-full md:w-full lg:w-full xl:w-[90%] ">
           {
               room &&
               <>
