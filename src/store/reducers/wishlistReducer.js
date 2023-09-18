@@ -61,9 +61,19 @@ const wishlistSlice = createSlice({
             state.wishlists[0].defaultWishlist.totalPrice = remainingTotalPrice;
 
             state.wishlists[0].defaultWishlist.totalRooms = remainingRooms.length;
+        },
+
+        createNewWishlist: (state, action) => {
+            state.wishlists.push({
+                [action.payload.name]: {
+                    rooms: [],
+                    totalPrice: 0,
+                    totalRooms: 0
+                }
+            })
         }
     }
 });
 
-export const { addToWishlist, removeFromWishlist } = wishlistSlice.actions;
+export const { addToWishlist, removeFromWishlist, createNewWishlist } = wishlistSlice.actions;
 export default wishlistSlice.reducer;

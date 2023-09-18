@@ -1,12 +1,25 @@
 import DialogModal from "./general/DialogModal"
 import { Dialog } from "@headlessui/react"
+import { useState } from "react";
 import { GrClose } from "react-icons/gr"
 import { useSelector } from "react-redux"
+import CreateWishlistModal from "./CreateWishlistModal";
 
 function WishlistModal({ isOpen, setOpenWishlistModal, closeModal }) {
   const wishlist = useSelector(state => state.appReducers.wishlist.wishlists[0].defaultWishlist);
+  const [isCreateNewWishlistModalOpen, setIsCreateNewWishlistModalOpen] = useState(false);
+
+  const closeCreateWishlistModal = (e) => {
+    setIsCreateNewWishlistModalOpen(false);
+  }
+
+  const openCreateWishlistModal = (e) => {
+    closeModal();
+    setIsCreateNewWishlistModalOpen(true);
+  }
 
   return (
+    <>
     <DialogModal closeModal={closeModal} isOpen={isOpen}>
         <div>
             <div className="border-b-2 border-gray-200 p-6">
@@ -23,7 +36,7 @@ function WishlistModal({ isOpen, setOpenWishlistModal, closeModal }) {
                 </div>
             </div>
 
-            <div className="p-6 overflow-x-auto flex space-x-6">
+            <div className="p-6 overflow-x-auto grid grid-cols-3 gap-4">
                 {
                     wishlist.rooms.map((room) => {
                         return (
@@ -44,12 +57,18 @@ function WishlistModal({ isOpen, setOpenWishlistModal, closeModal }) {
                 <p className="leading-2 font-semibold text-zinc-500 text-sm">{wishlist.totalRooms} saved</p>
             </div>
             <div className="px-6 py-4">
-                <button className="bg-black text-white rounded-lg w-full py-3">
+                <button 
+                    className="bg-black text-white rounded-lg w-full py-3" 
+                    onClick={openCreateWishlistModal}
+                >
                     Create new wishlist
                 </button>
             </div>
         </div>
     </DialogModal>
+
+    <CreateWishlistModal isOpen={isCreateNewWishlistModalOpen} closeModal={closeCreateWishlistModal} />
+    </>
   )
 }
 

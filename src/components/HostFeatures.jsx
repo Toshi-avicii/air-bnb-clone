@@ -6,17 +6,19 @@ import { PiGlobeStand } from 'react-icons/pi';
 import { MdOutlineFreeBreakfast } from 'react-icons/md'
 import { AiOutlineHeart } from 'react-icons/ai';
 import { GrLanguage } from 'react-icons/gr';
+import { capitalize } from '../helpers/misc';
+
 
 function HostFeatures({ hostDetails }) {
     return (
         <div>
             <div className="flex space-x-2 items-center my-2">
                 <LuGraduationCap className="text-2xl" />
-                <p className="leading-1">Where I went to school: {hostDetails?.school}</p>
+                <p className="leading-1">Where I went to school: { capitalize(hostDetails?.school)}</p>
             </div>
             <div className="flex space-x-2 items-center my-2">
                 <LiaSuitcaseSolid className="text-2xl" />
-                <p className="leading-1">My work: {hostDetails?.work}</p>
+                <p className="leading-1">My work: {capitalize(hostDetails?.work)}</p>
             </div>
 
             <div className="flex space-x-2 items-center my-2">
@@ -41,7 +43,11 @@ function HostFeatures({ hostDetails }) {
 
             <div className="flex space-x-2 items-center my-2">
                 <PiGlobeStand className="text-2xl" />
-                <p className="leading-1">Lives in: {hostDetails?.info?.city}, {hostDetails?.info?.country}</p>
+                <p className="leading-1">
+                    Lives in: 
+                    {capitalize(hostDetails?.info?.city)}, 
+                    {capitalize(hostDetails?.info?.country)}
+                </p>
             </div>
 
             <div className="flex space-x-2 items-center my-2">
