@@ -8,8 +8,8 @@ function Locations() {
   console.log(hosts[0]);
 
   return (
-    <div className="px-8 my-6">
-        <div className="grid grid-cols-4 place-items-start gap-5">
+    <div className="px-6 my-4 lg:px-8 lg:my-6">
+        <div className="grid sm:grid-cols-1 sm:place-items-center sm-gap-3 md:grid-cols-1 md:place-items-start md:gap-5 lg:grid-cols-2 lg:place-items-center lg:gap-5 xl:grid-cols-4 xl:place-items-start xl:gap-5">
             {
                 selectedLocations.length > 0 ?
                 selectedLocations.map((location) => {

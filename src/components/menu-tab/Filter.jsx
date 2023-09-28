@@ -15,7 +15,7 @@ function Filter() {
 
   return (
     <>
-      <div className="ml-4 flex-1 flex justify-end items-center px-4" onClick={openFilterModal}>
+      <div className="hidden md:ml-4 md:flex-1 md:flex md:justify-end md:items-center md:px-4" onClick={openFilterModal}>
           <button className='flex items-center border border-gray-300 px-4 py-3 rounded-xl cursor-pointer'>
               <HiOutlineAdjustmentsHorizontal size={20} />
               <span className='font-bold text-xs ml-2'>Filters</span>

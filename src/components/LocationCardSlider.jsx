@@ -112,7 +112,7 @@ function LocationCardSlider({
                     // onSwiper={(swiper) => console.log(swiper)}
                     navigation
                     pagination={{ clickable: true }}
-                    className='overflow-hidden max-w-[375px] rounded-2xl bg-slate-300 min-h-[360px]'
+                    className='overflow-hidden max-w-[330px] md:max-w-[375px] rounded-2xl bg-slate-300 min-h-[360px]'
                     style={{
                         padding: 0
                     }}

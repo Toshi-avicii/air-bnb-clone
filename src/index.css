@@ -145,3 +145,21 @@ html {
 .rdp-cell {
   width: 100% !important;
 }
+
+@media  screen and (max-width: 576px) {
+  .tab-slider {
+    padding: 0 !important;
+  }
+}
+
+@media  screen and (max-width: 768px) {
+  .tab-slider {
+    padding: 0 !important;
+  }
+}
+
+@media  screen and (max-width: 992px) {
+  .tab-slider {
+    padding: 20 !important;
+  }
+}

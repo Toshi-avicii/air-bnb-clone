@@ -18,6 +18,7 @@ import RoomRules from "../components/roomPageComponents/RoomRules";
 import Footer from "../components/Footer";
 import Navbar from '../components/navbar/Navbar';
 import RoomNavbar from "../components/roomPageComponents/RoomNavbar";
+import AmenitiesModal from "../components/AmenitiesModal";
 
 function RoomPage() {
   const { roomId } = useParams();
@@ -26,6 +27,7 @@ function RoomPage() {
   const [isVisible, setIsVisible] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isBoxVisible, setIsBoxVisible] = useState(false);
+  const [isAmenitiesModalOpen,setIsAmenitiesModalOpen] = useState(false);
 
   const css = `
     .my-selected:not([disabled]) { 
@@ -104,6 +106,14 @@ function RoomPage() {
       window.removeEventListener('scroll', handleWindowScroll);
     }
   }, [scrollPosition]); 
+
+  const closeAmenitiesModal = (e) => {
+    setIsAmenitiesModalOpen(false);
+  }
+
+  const openAmenitiesModal = (e) => {
+    setIsAmenitiesModalOpen(true);
+  }
 
   return (
     <>
@@ -251,7 +261,12 @@ function RoomPage() {
                       </div>
 
                       <div className="mt-8 mb-4 w-[25%]">
-                        <button className="black-outline-btn p-3 font-semibold text-lg">Show all amenities</button>
+                        <button 
+                          className="black-outline-btn p-3 font-semibold text-lg"
+                          onClick={openAmenitiesModal}
+                        >
+                          Show all amenities
+                        </button>
                       </div>
 
                     </div>
@@ -293,6 +308,8 @@ function RoomPage() {
           }
       </div>
     </div>
+
+    <AmenitiesModal closeModal={closeAmenitiesModal} isOpen={isAmenitiesModalOpen} amenities={room ? room?.amenities : {}} />
     <Footer />
     </>
   )
