@@ -17,7 +17,7 @@ import historicHomes from '../assets/historical-homes.jpg';
 import tropical from '../assets/tropical.jpg';
 import trending from '../assets/trending.jpg';
 import nationalParks from '../assets/national-parks.jpg';
-import countrySide from '../assets/countrySide.jpg';
+import countrySide from '../assets/countryside.jpg';
 
 const tabs = [
     {
