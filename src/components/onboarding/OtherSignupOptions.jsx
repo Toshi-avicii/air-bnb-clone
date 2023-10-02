@@ -3,7 +3,7 @@ import { FcGoogle } from 'react-icons/fc'
 
 function OtherSignupOptions({ formStep }) {
   return (
-    <>
+    <div className='mb-20 lg:mb-0'>
         {
             (formStep === 1 || formStep === 2) &&
                 <div className="my-4">
@@ -37,7 +37,7 @@ function OtherSignupOptions({ formStep }) {
                     </button>
                 </div>
             }
-    </>
+    </div>
   )
 }
 

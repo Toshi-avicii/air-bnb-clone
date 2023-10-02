@@ -7,6 +7,8 @@ import RoomPage from './pages/RoomPage';
 import RoomGalleryPage from './pages/RoomGalleryPage';
 import HostProfilePage from './pages/HostProfilePage';
 import MapPage from './pages/MapPage';
+import LoginPage from './pages/LoginPage';
+import ProfilePage from './pages/ProfilePage';
 
 function App() {
   const profile = useSelector((state) => state.appReducers.profile);
@@ -31,6 +33,8 @@ function App() {
           <Route path='/rooms/:roomId/gallery' element={<RoomGalleryPage />} />
           <Route path='/hosts/:hostId' element={<HostProfilePage />} />
           <Route path='/map' element={<MapPage />} />
+          <Route path='/login' element={<LoginPage />} />
+          <Route path='/profile' element={<ProfilePage />} />
         </Routes>
       </BrowserRouter>
     </>
