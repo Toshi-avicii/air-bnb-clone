@@ -93,7 +93,7 @@ function RoomHeader({
   }, [isLiked]);
   
   return (
-    <div>
+    <div className='hidden lg:block'>
         <div className='flex space-x-2 items-center'>
             <BsTranslate className='text-2xl' />
             <h1 className='text-3xl font-semibold'>{title}</h1>

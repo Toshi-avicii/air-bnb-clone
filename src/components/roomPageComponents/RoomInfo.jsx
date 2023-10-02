@@ -14,7 +14,7 @@ function RoomInfo({
     beds
 }) {
   return (
-    <div>
+    <div className='hidden lg:block'>
         <div className="flex justify-between items-center mb-6">
             <h1 className="text-2xl font-semibold">Room in a home hosted by {hostName}</h1>
             <img src={hostProfilePic} className="w-[50px] h-[50px] rounded-full" />

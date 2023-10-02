@@ -7,7 +7,7 @@ function RoomImageGrid({
     roomId
 }) {
   return (
-    <div className="my-6 relative" id="photos">
+    <div className="hidden md:block my-6 relative" id="photos">
         {
             images.length > 0 &&
             <div className="grid grid-rows-2 grid-cols-4 gap-3 rounded-lg">

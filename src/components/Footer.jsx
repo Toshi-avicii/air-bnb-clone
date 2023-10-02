@@ -3,9 +3,9 @@ import { FiGlobe } from 'react-icons/fi';
 
 function Footer() {
   return (
-    <div className="p-6 flex justify-center items-center bg-zinc-100 border-t-2 border-t-zinc-400">
+    <div className="p-4 lg:p-6 flex flex-col lg:flex-row justify-center items-center bg-zinc-100 border-t-2 border-t-zinc-400">
         <div className="w-[90%]">
-            <div className="grid grid-cols-4 gap-2">
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-2">
                 <div className="mt-6">
                     <h2 className="font-semibold mb-4">Support</h2>
                     <ul>
@@ -53,9 +53,9 @@ function Footer() {
             </div>
             <hr className="bg-gray-300 h-[2px] my-6" />
 
-            <div className="flex py-4 justify-between items-center">
+            <div className="flex flex-col lg:flex-row py-4 justify-between items-center">
                 <div>
-                    <ul className="flex space-x-3 items-center">
+                    <ul className="flex flex-col lg:flex-row lg:space-x-3 lg:space-y-0 space-y-3 items-center mb-4">
                         <li className='flex items-center space-x-2'>
                             <AiOutlineCopyright />
                             <span>2023 Airbnb.inc</span>

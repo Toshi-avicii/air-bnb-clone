@@ -5,8 +5,8 @@ function RoomNavbar({ isBoxVisible, price, rating, reviews = [] }) {
   let reserveContent;
 
   if(isBoxVisible) {
-      reserveContent = <div>
-        <div className="flex space-x-3 items-center">
+      reserveContent = <div className='hidden lg:block'>
+        <div className="lg:flex lg:space-x-3 lg:items-center">
             <div>
                 <h1 className="font-semibold text-lg">${price}</h1>
                 <p className='font-semibold text-sm'>Total before taxes</p>
@@ -24,7 +24,7 @@ function RoomNavbar({ isBoxVisible, price, rating, reviews = [] }) {
   }
 
   return (
-    <div className={`sticky top-0 left-0 z-10 w-full px-4 ${!isBoxVisible ? 'py-[38px]' : 'py-4' } border-b border-b-zinc-400 bg-white flex justify-center items-center`}>
+    <div className={`hidden sticky top-0 left-0 z-10 w-full px-4 ${!isBoxVisible ? 'py-[38px]' : 'py-4' } border-b border-b-zinc-400 bg-white lg:flex lg:justify-center lg:items-center`}>
         <div className="w-[90%] flex justify-between items-center">
           <nav>
             <ul className="flex items-center justify-start space-x-6">

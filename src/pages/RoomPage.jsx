@@ -19,6 +19,9 @@ import Footer from "../components/Footer";
 import Navbar from '../components/navbar/Navbar';
 import RoomNavbar from "../components/roomPageComponents/RoomNavbar";
 import AmenitiesModal from "../components/AmenitiesModal";
+import ImageSlider from "../components/mobile/roomPage/ImageSlider";
+import RoomBottomBar from "../components/mobile/roomPage/RoomBottomBar";
+import MobileRoomNavbar from "../components/mobile/roomPage/MobileRoomNavbar";
 
 function RoomPage() {
   const { roomId } = useParams();
@@ -28,6 +31,10 @@ function RoomPage() {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isBoxVisible, setIsBoxVisible] = useState(false);
   const [isAmenitiesModalOpen,setIsAmenitiesModalOpen] = useState(false);
+  const [selectedDateRange, setSelectedDateRange] = useState({
+    from: null,
+    to: null
+  });
 
   const css = `
     .my-selected:not([disabled]) { 
@@ -129,182 +136,193 @@ function RoomPage() {
     }
     <div className="flex justify-center items-center">
       
-      <div className="p-6 sm:w-full md:w-full lg:w-full xl:w-[90%] ">
+      <div className="lg:p-6 sm:w-full md:w-full lg:w-full xl:w-[90%] ">
           {
               room &&
-              <>
-                <RoomHeader 
-                    title={room.title}
-                    rating={room.rating}
-                    noOfReviews={host ? host?.reviews?.length : null}
-                    isSuperHost={room.superhost}
-                    address={room.mainAddress}
-                    roomId={room.id}
-                    firstImage={room.images ? room?.images[0] : null}
-                    stay={room.stay}
-                    category={room.category}
-                    stayDate={room.stayDate}
-                    roomOwner={host?.profilePic}
-                    price={room.pricePerNight}
-                />
-
-                <RoomImageGrid images={room.images ? room.images : []} roomId={room.id ? room.id : null} />
-
-                <div className="flex justify-between items-start space-x-4">
-                  <div className="flex-[3]">
-                    <RoomInfo 
-                      hostName={host ? host.name : null}
-                      hostProfilePic={host ? host.profilePic : null}
-                      beds={room?.beds}
-                      privateBath={room?.amenities?.privateBath}
-                      wifi={room?.amenities?.wifi}
-                    />
-
-                    <h1 className="my-5 text-3xl font-semibold">Meet your Host</h1>
-                    <RoomHostInfo host={host ? host : null} />
-
-                    <div className="mt-8">
-                      <h2 className="text-2xl font-semibold my-3">About this place</h2>
-                      <p>
-                        Stay in a vegan home, where we have artisanal factory, shop, restaurant,
-                        spa and lodging. The room is large, with a new soft single bed, comfortable
-                        sofa, table and chair. There&apos;s a shared minibar in the hallway.
-                        The neighbourhood is one of the liveliest in town. The subway is very close.
-                        The company operates from 11am to 7pm, monday to saturday. In the same place,
-                        Eloy lives in another room. How about feeding yourself, doing a spa and
-                        climbing up to rest in your bed, taking a few steps?...
-                      </p>
-
-                      <button className="my-3 underline font-semibold">
-                        <span>Show more</span>
-                      </button>
-
-                    </div>
-
-                    <hr className="bg-gray-300 h-[2px] my-6" />
-
-                    <div className="my-4">
-                      <h2 className="text-2xl font-semibold my-3">Where you&apos;ll sleep</h2>
-                      <div className="flex space-x-4">
-                        <div className="flex flex-col flex-1">
-                          <img src={room?.images && room?.images[0]} className="rounded-lg w-full h-[200px] " />
-                          <p className="my-3 font-semibold text-lg">Bedroom</p>
-                          <p className="font-semibold text-lg text-zinc-600">
-                            {
-                              room?.beds === 1 ? '1 single bed' : `${room?.beds} beds`
-                            }
-                          </p>
-                        </div>
-
-                        <div className="flex flex-col flex-1">
-                          <img src={room?.images && room?.images[0]} className="rounded-lg w-full h-[200px]" />
-                          <p className="my-3 font-semibold text-lg">Living Room</p>
-                          <p className="font-semibold text-lg text-zinc-600">
-                            {
-                              room?.beds === 1 ? '1 single bed' : `${room?.beds} beds`
-                            }
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <hr className="bg-gray-300 h-[2px] my-6" />
-
-                    <div id="amenities">
-                      <h2 className="text-2xl font-semibold my-3">What this place offers</h2>
-
-                      <div className="grid grid-cols-2 grid-rows-3 gap-4">
-                          <div className="flex space-x-4 items-center">
-                            <AiOutlineWifi className="text-lg" />
-                            {
-                              room?.amenities?.wifi ?
-                              <p>High speed wifi</p> : 
-                              <del>High speed wifi</del>
-                            }
-                          </div>
-
-                          <div className="flex space-x-4 items-center w-full">
-                            <LuFan className="text-xl" />
-                            {
-                              room?.amenities?.airConditioning ?
-                              <p>Air conditioner available</p> : 
-                              <del>Air conditioner available</del>
-                            }
-                          </div>
-
-                          <div className="flex space-x-4 items-center w-full">
-                            <MdOutlineKitchen className="text-xl" />
-                            {
-                              room?.amenities?.kitchen ?
-                              <p>A separate kitchen available</p> : 
-                              <del>A separate kitchen available</del>
-                            }
-                          </div>
-
-                          <div className="flex space-x-4 items-center w-full">
-                            <MdOutlineBathtub className="text-xl" />
-                            {
-                              room?.amenities?.privateBath ?
-                              <p>Private bathroom available</p> : 
-                              <del>Private bathroom available</del>
-                            }
-                          </div>
-
-                          <div className="flex space-x-4 items-center w-full">
-                            <CgSmartHomeWashMachine className="text-xl" />
-                            {
-                              room?.amenities?.washer ?
-                              <p>Paid dryer - in unit</p> : 
-                              <del>Paid dryer - in unit</del>
-                            }
-                          </div>
-                      </div>
-
-                      <div className="mt-8 mb-4 w-[25%]">
-                        <button 
-                          className="black-outline-btn p-3 font-semibold text-lg"
-                          onClick={openAmenitiesModal}
-                        >
-                          Show all amenities
-                        </button>
-                      </div>
-
-                    </div>
-                    <div className="my-6">
-                      <style>{css}</style>
-                      <DayPickerComponent 
-                        modifiersClassNames={{
-                          selected: "my-selected",
-                          today: "my-today"
-                        }}
-                        modifiersStyles={{
-                          disabled: { fontSize: "85%" }
-                        }}
-                      />
-                    </div>
-                  </div>
-                  <div className="flex-[2] flex justify-end items-end sticky top-36 flex-col" id="room-info">
-                    <RoomReservation 
-                      price={room?.pricePerNight}
-                      rating={room?.rating}
-                      noOfReviews={room ? room?.reviews?.length : null}
-                    />
-
-                    <div className="flex space-x-4 items-center self-center mt-4">
-                      <AiFillFlag className="text-xl text-zinc-500" />
-                      <span className="underline font-semibold text-zinc-500">Report this listing</span>
-                    </div>
-                  </div>
+              <div>
+                {/* mobile view */}
+                <div className="relative">
+                  <MobileRoomNavbar />
+                  <ImageSlider images={room.images ? room.images : []} />
                 </div>
+                <RoomBottomBar roomPrice={room.pricePerNight} selectedDateRange={selectedDateRange} />
+                <>
+                  <RoomHeader 
+                      title={room.title}
+                      rating={room.rating}
+                      noOfReviews={host ? host?.reviews?.length : null}
+                      isSuperHost={room.superhost}
+                      address={room.mainAddress}
+                      roomId={room.id}
+                      firstImage={room.images ? room?.images[0] : null}
+                      stay={room.stay}
+                      category={room.category}
+                      stayDate={room.stayDate}
+                      roomOwner={host?.profilePic}
+                      price={room.pricePerNight}
+                  />
 
-                <hr className="bg-gray-300 h-[2px] my-6" />
+                  <RoomImageGrid images={room.images ? room.images : []} roomId={room.id ? room.id : null} />
 
-                <RoomReviews roomReviews={room?.reviews} />
+                  <div className="lg:flex lg:justify-between lg:items-start lg:space-x-4">
+                    <div className="lg:flex-[3]">
+                      <RoomInfo 
+                        hostName={host ? host.name : null}
+                        hostProfilePic={host ? host.profilePic : null}
+                        beds={room?.beds}
+                        privateBath={room?.amenities?.privateBath}
+                        wifi={room?.amenities?.wifi}
+                      />
 
-                <hr className="bg-gray-300 h-[2px] my-6" />
+                      <h1 className="hidden lg:my-5 lg:text-3xl lg:font-semibold">Meet your Host</h1>
+                      <RoomHostInfo host={host ? host : null} />
 
-                <RoomRules />
-              </>
+                      <div className="hidden lg:block lg:mt-8">
+                        <h2 className="text-2xl font-semibold my-3">About this place</h2>
+                        <p>
+                          Stay in a vegan home, where we have artisanal factory, shop, restaurant,
+                          spa and lodging. The room is large, with a new soft single bed, comfortable
+                          sofa, table and chair. There&apos;s a shared minibar in the hallway.
+                          The neighbourhood is one of the liveliest in town. The subway is very close.
+                          The company operates from 11am to 7pm, monday to saturday. In the same place,
+                          Eloy lives in another room. How about feeding yourself, doing a spa and
+                          climbing up to rest in your bed, taking a few steps?...
+                        </p>
+
+                        <button className="my-3 underline font-semibold">
+                          <span>Show more</span>
+                        </button>
+
+                      </div>
+
+                      <hr className="hidden lg:block lg:bg-gray-300 lg:h-[2px] lg:my-6" />
+
+                      <div className="hidden lg:block my-4">
+                        <h2 className="text-2xl font-semibold my-3">Where you&apos;ll sleep</h2>
+                        <div className="flex space-x-4">
+                          <div className="flex flex-col flex-1">
+                            <img src={room?.images && room?.images[0]} className="rounded-lg w-full h-[200px] " />
+                            <p className="my-3 font-semibold text-lg">Bedroom</p>
+                            <p className="font-semibold text-lg text-zinc-600">
+                              {
+                                room?.beds === 1 ? '1 single bed' : `${room?.beds} beds`
+                              }
+                            </p>
+                          </div>
+
+                          <div className="flex flex-col flex-1">
+                            <img src={room?.images && room?.images[0]} className="rounded-lg w-full h-[200px]" />
+                            <p className="my-3 font-semibold text-lg">Living Room</p>
+                            <p className="font-semibold text-lg text-zinc-600">
+                              {
+                                room?.beds === 1 ? '1 single bed' : `${room?.beds} beds`
+                              }
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <hr className="hidden lg:block lg:bg-gray-300 lg:h-[2px] lg:my-6" />
+
+                      <div id="amenities" className="hidden lg:block">
+                        <h2 className="text-2xl font-semibold my-3">What this place offers</h2>
+
+                        <div className="grid grid-cols-2 grid-rows-3 gap-4">
+                            <div className="flex space-x-4 items-center">
+                              <AiOutlineWifi className="text-lg" />
+                              {
+                                room?.amenities?.wifi ?
+                                <p>High speed wifi</p> : 
+                                <del>High speed wifi</del>
+                              }
+                            </div>
+
+                            <div className="flex space-x-4 items-center w-full">
+                              <LuFan className="text-xl" />
+                              {
+                                room?.amenities?.airConditioning ?
+                                <p>Air conditioner available</p> : 
+                                <del>Air conditioner available</del>
+                              }
+                            </div>
+
+                            <div className="flex space-x-4 items-center w-full">
+                              <MdOutlineKitchen className="text-xl" />
+                              {
+                                room?.amenities?.kitchen ?
+                                <p>A separate kitchen available</p> : 
+                                <del>A separate kitchen available</del>
+                              }
+                            </div>
+
+                            <div className="flex space-x-4 items-center w-full">
+                              <MdOutlineBathtub className="text-xl" />
+                              {
+                                room?.amenities?.privateBath ?
+                                <p>Private bathroom available</p> : 
+                                <del>Private bathroom available</del>
+                              }
+                            </div>
+
+                            <div className="flex space-x-4 items-center w-full">
+                              <CgSmartHomeWashMachine className="text-xl" />
+                              {
+                                room?.amenities?.washer ?
+                                <p>Paid dryer - in unit</p> : 
+                                <del>Paid dryer - in unit</del>
+                              }
+                            </div>
+                        </div>
+
+                        <div className="mt-8 mb-4 w-[25%]">
+                          <button 
+                            className="black-outline-btn p-3 font-semibold text-lg"
+                            onClick={openAmenitiesModal}
+                          >
+                            Show all amenities
+                          </button>
+                        </div>
+
+                      </div>
+                      <div className="my-6">
+                        <style>{css}</style>
+                        <DayPickerComponent 
+                          modifiersClassNames={{
+                            selected: "my-selected",
+                            today: "my-today"
+                          }}
+                          modifiersStyles={{
+                            disabled: { fontSize: "85%" }
+                          }}
+                          setDateRange={setSelectedDateRange}
+                        />
+                      </div>
+                    </div>
+                    <div className="hidden lg:flex-[2] lg:flex lg:justify-end lg:items-end sticky top-36 lg:flex-col" id="room-info">
+                      <RoomReservation 
+                        price={room?.pricePerNight}
+                        rating={room?.rating}
+                        noOfReviews={room ? room?.reviews?.length : null}
+                      />
+
+                      <div className="flex space-x-4 items-center self-center mt-4">
+                        <AiFillFlag className="text-xl text-zinc-500" />
+                        <span className="underline font-semibold text-zinc-500">Report this listing</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr className="hidden lg:block lg:bg-gray-300 lg:h-[2px] lg:my-6" />
+
+                  <RoomReviews roomReviews={room?.reviews} />
+
+                  <hr className="hidden lg:bg-gray-300 lg:h-[2px] lg:my-6" />
+
+                  <RoomRules />
+                </>
+              </div>
+
+
           }
       </div>
     </div>

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function RoomHostInfo({ host }) {
   return (
-    <div className='bg-neutral-200 flex flex-col items-center rounded-lg p-6'>
+    <div className='hidden lg:bg-neutral-200 lg:flex lg:flex-col lg:items-center lg:rounded-lg lg:p-6'>
         <div className='min-w-[55%] max-w-[55%]'>
             <HostProfileBox hostDetails={host} />
             <div className='my-4'>

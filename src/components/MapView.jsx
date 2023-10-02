@@ -30,7 +30,7 @@ function MapView() {
                 center={{ lat: 51.505, lng: -0.09 }} 
                 zoom={13} 
                 scrollWheelZoom={false} 
-                className="w-full h-[450px] md:h-[450px] lg:h-[500px] xl:h-[600px]"
+                className="w-full min-h-[500px] md:h-[450px] lg:h-[500px] xl:h-[600px]"
             >
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

@@ -41,7 +41,7 @@ function RoomReviews({ roomReviews = [] }) {
   let reviewSum = totalReview('all');
 
   return (
-    <div id='reviews'>
+    <div id='reviews' className='hidden lg:block'>
         <div className="my-6">
             <h1 className='flex space-x-2 items-center font-bold text-xl'>
                 <AiFillStar />

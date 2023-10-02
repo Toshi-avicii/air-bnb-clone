@@ -2,10 +2,10 @@ import { BsChevronRight } from 'react-icons/bs';
 
 function RoomRules() {
   return (
-    <div>
-        <h1 className="text-2xl mb-4 font-bold">Things to know</h1>
+    <div className='p-5'>
+        <h1 className="text-lg lg:text-2xl mb-4 font-bold">Things to know</h1>
 
-        <div className="flex justify-between items-center flex-wrap">
+        <div className="flex justify-between items-start lg:items-center flex-col lg:flex-row flex-wrap">
             <div className="flex-1">
                 <h2 className="text-lg font-semibold">House Rules</h2>
                 <p className="my-2">Check-in: 8:00 AM - 11:00 PM</p>

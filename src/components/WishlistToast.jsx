@@ -6,7 +6,7 @@ function WishlistToast({ wishlist }) {
   const isBeingAddedToWishlist = useSelector(state => state.appReducers.global.isBeingAddedToWishlist);
 
   return (
-    <div className="p-4 rounded-lg flex justify-between items-center fixed bottom-10 left-6 z-10 bg-white shadow-md">
+    <div className="p-4 rounded-lg flex justify-between items-center fixed bottom-24 lg:bottom-10 left-6 z-[20] bg-white shadow-md">
         <div className="flex items-center">
             <img src={wishlist[0]?.roomImage} className="max-w-[70px] max-h-[70px] rounded-lg" />
             <div className="ml-4 flex items-center space-x-2">
