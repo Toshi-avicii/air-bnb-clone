@@ -78,13 +78,13 @@ function FiltersModal({ isOpen, setOpenFilterModal, closeModal }) {
             </div>
 
             {/* price slider */}
-            <div className="p-6">
+            <div className="p-4 lg:p-6">
                 <div className="border-b-2 border-slate-200">
-                    <h2 className="font-bold text-2xl">Price Range</h2>
-                    <p className="text-zinc-500 text-lg mb-4">The average highly price is ${avPrice}, not including fees or taxes.</p>
+                    <h2 className="font-bold text-2xl mb-2">Price Range</h2>
+                    <p className="text-zinc-500 text-base lg:text-lg mb-4">The average highly price is ${avPrice}, not including fees or taxes.</p>
                     {/* rest of the slider and inputs here */}
                     <div className="flex justify-center items-center">
-                        <div className="flex justify-center items-center my-5 w-[70%] flex-col">
+                        <div className="flex justify-center items-center my-5 w-[100%] lg:w-[70%] flex-col">
                             <ReactSlider 
                                 className="h-[3px] bg-slate-200 relative w-full rounded-full"
                                 thumbClassName="w-[40px] h-[40px] rounded-full shadow-md bg-white flex justify-center items-center absolute -top-4 cursor-pointer"
@@ -123,7 +123,7 @@ function FiltersModal({ isOpen, setOpenFilterModal, closeModal }) {
             </div>
 
             {/* beds and bathrooms */}
-            <div className="px-6">
+            <div className="overflow-x-auto px-4 lg:px-6">
                 <div className="border-b-2 border-slate-200">
                     <h2 className="font-bold text-2xl">Beds and Bathrooms</h2>
                     <div className="my-5">
@@ -159,21 +159,21 @@ function FiltersModal({ isOpen, setOpenFilterModal, closeModal }) {
             </div>
 
             {/* property type */}
-            <div className="p-6">
+            <div className="p-4 lg:p-4">
                 <div className="border-b-2 border-slate-200">
                     <h2 className="font-bold text-2xl">Property type</h2>
-                    <div className="flex space-x-3 items-start mt-5 mb-7">
-                        <button className={`property-btn border-2 ${filters.propertyType.includes('house') ? 'border-black bg-gray-300' : 'border-gray-300 bg-white' } rounded-lg p-4 min-w-[175px] min-h-[125px] flex items-start flex-col justify-between house-btn`} onClick={typeHandler.bind(this, setFilters, filters)}>
+                    <div className="flex lg:flex-row items-start mt-5 mb-7 flex-wrap justify-between lg:justify-normal lg:space-x-3">
+                        <button className={`property-btn border-2 ${filters.propertyType.includes('house') ? 'border-black bg-gray-300' : 'border-gray-300 bg-white'} rounded-lg p-4 min-w-[150px] min-h-[125px] flex items-start flex-col justify-between house-btn mb-4`} onClick={typeHandler.bind(this, setFilters, filters)}>
                             <BiHome className="text-4xl mb-3" />
                             <span className="text-xl text-left w-full font-semibold text-black">House</span>
                         </button>
 
-                        <button className={`property-btn border-2 ${filters.propertyType.includes('apartment') ? 'border-black bg-gray-300' : 'border-gray-300 bg-white' }  rounded-lg p-4 min-w-[175px] min-h-[125px] flex items-start flex-col justify-between apartment-btn`} onClick={typeHandler.bind(this, setFilters, filters)}>
+                        <button className={`property-btn border-2 ${filters.propertyType.includes('apartment') ? 'border-black bg-gray-300' : 'bg-white border-gray-300'}  rounded-lg p-4 min-w-[150px] min-h-[125px] flex items-start flex-col justify-between apartment-btn`} onClick={typeHandler.bind(this, setFilters, filters)}>
                             <MdApartment className="text-4xl mb-3" />
                             <span className="text-xl text-left w-full font-semibold text-black">Apartment</span>
                         </button>
 
-                        <button className={`property-btn border-2 ${filters.propertyType.includes('guesthouse') ? 'border-black bg-gray-300' : 'border-gray-300 bg-white' } rounded-lg p-4 min-w-[175px] min-h-[125px] flex items-start flex-col justify-between guesthouse-btn`} onClick={typeHandler.bind(this, setFilters, filters)}>
+                        <button className={`property-btn border-2 ${filters.propertyType.includes('guesthouse') ? 'border-black bg-gray-300' : 'border-gray-300 bg-white'} rounded-lg p-4 min-w-[150px] min-h-[125px] flex items-start flex-col justify-between guesthouse-btn`} onClick={typeHandler.bind(this, setFilters, filters)}>
                             <MdOutlineVilla className="text-4xl mb-3" />
                             <span className="text-xl text-left w-full font-semibold text-black">Guesthouse</span>
                         </button>
@@ -182,13 +182,13 @@ function FiltersModal({ isOpen, setOpenFilterModal, closeModal }) {
             </div>
 
             {/* amenities */}
-            <div className="px-6">
+            <div className="px-4 lg:px-6">
                 <div className="border-b-2 border-slate-200">
                     <h2 className="font-bold text-2xl">Amenities</h2>
                     <div className="my-5">
                         <h2 className="text-xl text-zinc-500 mb-4 font-semibold">Essentials</h2>
                         <div className="flex flex-col">
-                            <div className="flex items-center w-full mb-4">
+                            <div className="flex items-center w-full mb-4 flex-col space-y-4 lg:space-y-0 lg:flex-row lg:space-x-4">
                                 <div className="flex space-x-4 items-center w-full">
                                     <input 
                                         type="checkbox" 
@@ -212,7 +212,7 @@ function FiltersModal({ isOpen, setOpenFilterModal, closeModal }) {
                                 </div>
                             </div>
 
-                            <div className="flex items-center w-full mb-4">
+                            <div className="flex items-center w-full mb-4 flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4">
                                 <div className="flex space-x-4 items-center w-full">
                                     <input 
                                         type="checkbox" 
@@ -241,7 +241,7 @@ function FiltersModal({ isOpen, setOpenFilterModal, closeModal }) {
                                 </div>
                             </div>
 
-                            <div className="flex items-center w-full mb-4">
+                            <div className="flex items-center w-full mb-4 flex-col space-y-4 lg:space-y-0 lg:space-x-4 lg:flex-row">
                                 <div className="flex space-x-4 items-center w-full">
                                     <input 
                                         type="checkbox" 
@@ -274,7 +274,7 @@ function FiltersModal({ isOpen, setOpenFilterModal, closeModal }) {
             </div>
 
             {/* booking options */}
-            <div className="px-6">
+            <div className="px-4 lg:px-6">
                 <div className="border-b-2 border-slate-200">
                     <h2 className="font-bold text-2xl mt-4">Booking Options</h2>
                     <div className="my-5">
@@ -283,7 +283,7 @@ function FiltersModal({ isOpen, setOpenFilterModal, closeModal }) {
                                 <h2 className="text-xl font-semibold">Instant Book</h2>
                                 <p className="text-sm text-zinc-800">Listings you can book without waiting for Host approval</p>
                             </div>
-                            <div className="mr-16">
+                            <div className="lg:mr-16">
                                 <ToggleSwitch 
                                     isChecked={filters.bookingOptions.instantBook}
                                     setIsChecked={setEnabledCheckbox.bind(this, 'instantBook', setFilters, filters)}
@@ -296,7 +296,7 @@ function FiltersModal({ isOpen, setOpenFilterModal, closeModal }) {
                                 <h2 className="text-xl font-semibold">Self check-in</h2>
                                 <p className="text-sm text-zinc-800">Easy access to the property once you arrive</p>
                             </div>
-                            <div className="mr-16">
+                            <div className="lg:mr-16">
                                 <ToggleSwitch 
                                     isChecked={filters.bookingOptions.selfCheckIn}
                                     setIsChecked={setEnabledCheckbox.bind(this, 'selfCheckIn', setFilters, filters)}
@@ -308,11 +308,11 @@ function FiltersModal({ isOpen, setOpenFilterModal, closeModal }) {
             </div>
 
             {/* accessibility features */}
-            <div className="px-6">
+            <div className="px-4 lg:px-6">
                 <div className="border-b-2 border-slate-200">
                     <h2 className="font-bold text-2xl mt-4">Accessibility features</h2>
                     <p className="text-black my-4 font-semibold text-lg">Guest entrance and parking</p>
-                    <div className="flex items-center my-4">
+                    <div className="flex items-center my-4 flex-wrap space-y-4 lg:flex-nowrap">
                         <div className="w-full flex items-center space-x-3">
                             <input 
                                 type="checkbox" 
@@ -336,7 +336,7 @@ function FiltersModal({ isOpen, setOpenFilterModal, closeModal }) {
                         </div>
                     </div>
 
-                    <div className="flex items-center my-4">
+                    <div className="flex items-center my-4 flex-wrap space-y-4 lg:flex-nowrap">
                         <div className="w-full flex items-center space-x-3">
                             <input 
                                 type="checkbox" 
@@ -367,7 +367,7 @@ function FiltersModal({ isOpen, setOpenFilterModal, closeModal }) {
             </div>
 
             {/* top tier stays */}
-            <div className="px-6">
+            <div className="px-4 lg:px-6">
                 <div className="border-b-2 border-slate-200">
                     <h2 className="font-bold text-2xl mt-4">Top tier stays</h2>
                     <div className="my-5">
@@ -377,7 +377,7 @@ function FiltersModal({ isOpen, setOpenFilterModal, closeModal }) {
                                 <p className="text-sm text-zinc-800">Stay with recognized hosts</p>
                                 <button className="underline text-black font-bold text-sm">Learn more</button>
                             </div>
-                            <div className="mr-16">
+                            <div className="lg:mr-16">
                                 <ToggleSwitch 
                                     isChecked={filters.superhost}
                                     setIsChecked={setEnabledCheckbox.bind(this, 'superhost', setFilters, filters)}
@@ -390,7 +390,7 @@ function FiltersModal({ isOpen, setOpenFilterModal, closeModal }) {
                                 <h2 className="text-xl font-semibold">Airbnb plus</h2>
                                 <p className="text-sm text-zinc-800">Every plus home is reviewed for quality</p>
                             </div>
-                            <div className="mr-16">
+                            <div className="lg:mr-16">
                                 <ToggleSwitch 
                                     isChecked={filters.airbnbPlus}
                                     setIsChecked={setEnabledCheckbox.bind(this, 'airbnbPlus', setFilters, filters)}
@@ -402,7 +402,7 @@ function FiltersModal({ isOpen, setOpenFilterModal, closeModal }) {
             </div>
 
             {/* host languages */}
-            <div className="px-6">
+            <div className="px-4 lg:px-6">
                 <div className="border-b-2 border-slate-200">
                     <h2 className="font-bold text-2xl mt-4">Host languages</h2>
                     

@@ -6,8 +6,20 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
 import WishlistModal from '../../WishlistModal';
 import WishlistToast from '../../WishlistToast';
+import { addToWishlist, removeFromWishlist } from '../../../store/reducers/wishlistReducer';
+import { showWishlistToastAddition, showWishlistToastRemoval } from '../../../store/reducers/globalReducer';
 
-function MobileRoomNavbar({ roomId }) {
+function MobileRoomNavbar({
+    rating,
+    address,
+    roomId,
+    firstImage,
+    stay,
+    stayDate,
+    category,
+    roomOwner,
+    price
+}) {
     const wishlist = useSelector(state => state.appReducers.wishlist.wishlists[0].defaultWishlist.rooms);
     const dispatch = useDispatch();
     

@@ -142,7 +142,17 @@ function RoomPage() {
               <div>
                 {/* mobile view */}
                 <div className="relative">
-                  <MobileRoomNavbar />
+                  <MobileRoomNavbar 
+                    address={room.mainAddress}
+                    category={room.category}
+                    firstImage={room.images ? room.images[0] : null}
+                    price={room.pricePerNight}
+                    rating={room.rating}
+                    roomId={room.id}
+                    roomOwner={host?.profilePic}
+                    stay={room.stay}
+                    stayDate={room.stayDate}
+                  />
                   <ImageSlider images={room.images ? room.images : []} />
                 </div>
                 <RoomBottomBar roomPrice={room.pricePerNight} selectedDateRange={selectedDateRange} />

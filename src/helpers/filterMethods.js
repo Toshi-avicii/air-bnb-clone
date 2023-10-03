@@ -48,10 +48,10 @@ function typeHandler (setFilters, filters, e) {
 
     if(e.target.classList.contains('border-black')) {
         e.target.classList.remove('border-black');    
-        e.target.classList.remove('bg-gray-200');
+        e.target.classList.remove('bg-gray-300');
         e.target.classList.add('border-gray-300');
     } else {
-        e.target.classList.add('bg-gray-200');
+        e.target.classList.add('bg-gray-300');
         e.target.classList.remove('border-gray-300');
         e.target.classList.add('border-black');
     }

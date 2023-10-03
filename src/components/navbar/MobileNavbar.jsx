@@ -1,7 +1,19 @@
+import { useState } from 'react';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { HiOutlineAdjustmentsVertical } from 'react-icons/hi2'
+import FiltersModal from '../FiltersModal';
 
 function MobileNavbar() {
+    const [isFilterModalOpen, setIsFilterModalOpen] = useState(false);
+
+    const closeFilterModal = () => {
+      setIsFilterModalOpen(false);
+    }
+  
+    const openFilterModal = () => {
+      setIsFilterModalOpen(true);
+    }
+
   return (
     <div className="p-4 sticky top-0 z-[15] flex justify-between items-center md:hidden bg-white">
         {/* button input */}
@@ -23,10 +35,16 @@ function MobileNavbar() {
 
         {/* filters button */}
         <div className='flex-1'>
-            <button className='p-3 rounded-full flex justify-center items-center border border-gray-400'>
+            <button className='p-3 rounded-full flex justify-center items-center border border-gray-400' onClick={openFilterModal}>
                 <HiOutlineAdjustmentsVertical className='text-lg' />
             </button>
         </div>
+
+        <FiltersModal 
+            isOpen={isFilterModalOpen}
+            closeModal={closeFilterModal}
+            setOpenFilterModal={setIsFilterModalOpen}
+        />
     </div>
   )
 }
